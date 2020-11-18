@@ -3,33 +3,33 @@
 @import "./loading.scss";
 
 // COLOR SYTEM
-$primary-theme: #7B81FF;
+$primary-theme: #7b81ff;
 $primary-theme-light: #e8e9ff;
-$primary-theme-dark: #6029A8;
-$secondary-theme: #FFBB7B;
-$secondary-theme-light: #FCE3B1;
-$secondary-theme-dark: #F9C784;
+$primary-theme-dark: #6029a8;
+$secondary-theme: #ffbb7b;
+$secondary-theme-light: #fce3b1;
+$secondary-theme-dark: #f9c784;
 $secondary-dark-theme: #262867;
-$error-red: #F24D4D;
-$footer-color:#413f57;
+$error-red: #f24d4d;
+$footer-color: #413f57;
 $footer-text-color: rgb(183, 183, 192);
 $footer-text-color-accent: rgb(230, 230, 230);
 
-$light-grey: #F2F2F2;
-$grey: #555C62;
+$light-grey: #f2f2f2;
+$grey: #555c62;
 
 $theme-colors: (
 "primary-theme": $primary-theme,
 "secondary-theme": $secondary-theme,
-"secondary-dark-theme": $secondary-dark-theme
+"secondary-dark-theme": $secondary-dark-theme,
 );
 
 // import fonts
-@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
 .App {
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 	background-color: $footer-color;
 	min-height: 100vh;
 }
@@ -77,11 +77,15 @@ $theme-colors: (
 	font-size: 1rem;
 }
 
-.hero-header { 
+.hero-header {
 	font-family: Raleway, sans-serif;
 	font-weight: bold;
 	font-size: 4.0625rem;
-	line-height: 1.5;
+	line-height: 1.2;
+}
+
+.overlay-text {
+	z-index: 100;
 }
 
 .viewport-height-100 {
@@ -106,7 +110,15 @@ $theme-colors: (
 	transition-timing-function: ease;
 }
 
-.text-grey{
+.partial-background {
+	position: absolute;
+}
+
+.right {
+	right: 0;
+}
+
+.text-grey {
 	color: $grey;
 }
 
@@ -114,32 +126,36 @@ $theme-colors: (
 	color: $light-grey;
 }
 
-.text-black{
+.text-black {
 	color: black;
 }
 
-.hero-subtext{
+.hero-subtext {
 	font-size: 1.6875rem;
 }
 
 .font-weight-medium {
-	font-weight: 600;;
+	font-weight: 600;
 }
 
 .svg-purple {
-	filter: invert(49%) sepia(27%) saturate(2019%) hue-rotate(207deg) brightness(103%) contrast(103%);
+	filter: invert(49%) sepia(27%) saturate(2019%) hue-rotate(207deg)
+	brightness(103%) contrast(103%);
 }
 
 .svg-white {
-	filter: invert(100%) sepia(13%) saturate(7500%) hue-rotate(200deg) brightness(114%) contrast(114%);
+	filter: invert(100%) sepia(13%) saturate(7500%) hue-rotate(200deg)
+	brightness(114%) contrast(114%);
 }
 
-.svg-grey{
-	filter: invert(39%) sepia(8%) saturate(506%) hue-rotate(166deg) brightness(85%) contrast(90%);
+.svg-grey {
+	filter: invert(39%) sepia(8%) saturate(506%) hue-rotate(166deg)
+	brightness(85%) contrast(90%);
 }
 
-.svg-light-grey{
-	filter: invert(77%) sepia(1%) saturate(1697%) hue-rotate(202deg) brightness(98%) contrast(84%);
+.svg-light-grey {
+	filter: invert(77%) sepia(1%) saturate(1697%) hue-rotate(202deg)
+	brightness(98%) contrast(84%);
 }
 
 // Buttons
@@ -149,10 +165,15 @@ $theme-colors: (
 	border-color: $primary-theme;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-	color: white; 
-	background-color: #4B4F9A;
-	border-color: #4B4F9A;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+	color: white;
+	background-color: #4b4f9a;
+	border-color: #4b4f9a;
 }
 
 .btn-outline-primary {
@@ -161,7 +182,11 @@ $theme-colors: (
 	border-color: $primary-theme;
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open>.dropdown-toggle.btn-outline-primary {
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.open > .dropdown-toggle.btn-outline-primary {
 	color: white;
 	background-color: $primary-theme;
 	border-color: $primary-theme;
@@ -173,10 +198,15 @@ $theme-colors: (
 	border-color: $secondary-theme;
 }
 
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:visited, .btn-secondary.active, .open>.dropdown-toggle.btn-secondary {
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary:visited,
+.btn-secondary.active,
+.open > .dropdown-toggle.btn-secondary {
 	color: #000000;
-	background-color: #D79E68;
-	border-color: #D79E68;
+	background-color: #d79e68;
+	border-color: #d79e68;
 }
 
 .btn-outline-secondary {
@@ -185,21 +215,59 @@ $theme-colors: (
 	background-color: white;
 }
 
-.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary:visited, .btn-outline-secondary.active, .open>.dropdown-toggle.btn-outline-secondary {
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active,
+.btn-outline-secondary:visited,
+.btn-outline-secondary.active,
+.open > .dropdown-toggle.btn-outline-secondary {
 	color: #000000;
 	background-color: $secondary-theme;
 	border-color: $secondary-theme;
 }
 
-.footer-brand {
-	filter: invert(45%) sepia(50%) saturate(1499%) hue-rotate(213deg) brightness(104%) contrast(101%);
-	// outline-color: 
+.btn-outline-white {
+	border-color: white;
+	color: white;
 }
 
-.footer-brand-logo{
+.btn-outline-white:hover,
+.btn-outline-white:focus,
+.btn-outline-white:active,
+.btn-outline-white:visited,
+.btn-outline-white.active,
+.open > .dropdown-toggle.btn-outline-white {
+	color: $primary-theme;
+	background-color: white;
+	border-color: white;
+}
+
+.btn-outline-black {
+	border-color: #000000;
+	color: #000000;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:focus,
+.btn-outline-black:active,
+.btn-outline-black:visited,
+.btn-outline-black.active,
+.open > .dropdown-toggle.btn-outline-black {
+	color: $footer-color;
+	background-color: white;
+	border-color: white;
+}
+
+.footer-brand {
+	filter: invert(45%) sepia(50%) saturate(1499%) hue-rotate(213deg)
+	brightness(104%) contrast(101%);
+	// outline-color:
+}
+
+.footer-brand-logo {
 	font-family: Raleway;
 	color: $footer-text-color-accent;
-	margin-top: .8rem;
+	margin-top: 0.8rem;
 	font-weight: bold;
 	font-size: 2.25rem;
 	line-height: 1.3525rem;
@@ -213,7 +281,8 @@ $theme-colors: (
 }
 
 .list-social-icon {
-	filter: invert(45%) sepia(50%) saturate(1499%) hue-rotate(213deg) brightness(104%) contrast(101%);
+	filter: invert(45%) sepia(50%) saturate(1499%) hue-rotate(213deg)
+	brightness(104%) contrast(101%);
 	width: 1.25rem;
 	height: 1.25rem;
 }
@@ -226,6 +295,6 @@ $theme-colors: (
 	color: $footer-text-color-accent !important;
 }
 
-.footer-text-header{
+.footer-text-header {
 	color: $footer-text-color-accent;
 }
