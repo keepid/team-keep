@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { withAlert } from 'react-alert';
-// import ReCAPTCHA from 'react-google-recaptcha';
-// import getServerURL from '../serverOverride';
-// import { reCaptchaKey } from '../configVars';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 // image imports
@@ -18,7 +15,7 @@ import StoryImg2 from '../static/images/story2.png';
 import StoryImg3 from '../static/images/story3.png';
 
 const iconSize = 20;
-class Home extends Component<{}, {}> {
+class AboutUs extends Component<{}, {}> {
   render() {
     return (
       <div>
@@ -26,33 +23,17 @@ class Home extends Component<{}, {}> {
           <title>Welcome</title>
           <meta name="description" content="Keep.id" />
         </Helmet>
-        <div className="bg-gray viewport-height-100">
+        <div className="bg-about-us-hero-img viewport-height-100">
           <div className="container">
-            <div className="row viewport-height-100">
-              <div className="col-md-6 custom-vertical-center">
-                <div>
-                  <h1 className="hero-header pb-4">
-                    Combatting homelessness in the digital age
-                  </h1>
-                  <AnchorLink offset="200" href="#info">
-                    <button type="button" className="btn btn-primary btn-lg">
-                      Learn more
-                      <img
-                        className="ml-1 svg-white"
-                        width={iconSize}
-                        height={iconSize}
-                        src={ArrowDown}
-                        alt="arrow down"
-                      />
-                    </button>
-                  </AnchorLink>
-                </div>
-              </div>
-              <div className="col-md-6 custom-vertical-center">
+            <div className="viewport-height-100 custom-vertical-center">
+              <div>
+                <h1 className="hero-header pb-4 text-white">
+                  What we stand for
+                </h1>
                 <img
-                  className="hero-image w-100"
-                  src={HeroImage}
-                  alt="Personal Identification Cards"
+                  className="svg-white mb-5"
+                  src={RectangleSVG}
+                  alt="rectangle"
                 />
               </div>
             </div>
@@ -61,28 +42,22 @@ class Home extends Component<{}, {}> {
 
         <div className="container">
           <div className="row viewport-height-50">
-            <div className="col-md-10 custom-vertical-center mx-auto text-center">
+            <div className="col-md-11 custom-vertical-center mx-auto text-center">
               <div id="info">
                 <img
                   className="svg-purple mb-5"
                   src={RectangleSVG}
                   alt="rectangle"
                 />
-                <h3 className="hero-subtext text-grey pb-3">
-                  Lacking formal identification is a prevalent issue among
-                  homeless individuals that bars them from accessing many basic
-                  social and financial services in the United States.
+                <h3 className="hero-header text-black pb-3">
+                  Our Mission
                 </h3>
-                <h3 className="hero-subtext text-black font-weight-medium">
-                  We are dedicated to empowering those who are experiencing
-                  homelessness to obtain, secure, and utilize identification.
-                </h3>
-                <button
-                  type="button"
-                  className="mt-4 btn btn-lg btn-outline-primary"
-                >
-                  Unclear where this button goes?
-                </button>
+                <p className="hero-subtext text-greym">
+                  Our mission is to prioritize collaboration with our respective stakeholders, be purpose-led in our technical and non-technical work, and practice empathy in our interactions with those with housing insecurity.
+                </p>
+                <p className="hero-subtext text-black font-weight-medium">
+                  We are dedicated to empowering those who are experiencing homelessness to obtain, secure, and utilize identification.
+                </p>
               </div>
             </div>
           </div>
@@ -257,4 +232,4 @@ class Home extends Component<{}, {}> {
   }
 }
 
-export default withAlert()(Home);
+export default withAlert()(AboutUs);

@@ -130,6 +130,10 @@ $theme-colors: (
 	color: black;
 }
 
+.text-white {
+	color: white;
+}
+
 .hero-subtext {
 	font-size: 1.6875rem;
 }
@@ -297,4 +301,30 @@ $theme-colors: (
 
 .footer-text-header {
 	color: $footer-text-color-accent;
+}
+
+.story-card-img {
+	max-width: 25rem;
+}
+
+.bg-about-us-hero-img {
+	background-image: url("../images/valuesHero.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bg-contact-us-hero-img {
+	background-image: url("../images/valuesHero.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+.bg-story-hero-img {
+	background-image: url("../images/storyHero.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }

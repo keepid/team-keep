@@ -67,7 +67,7 @@ class Header extends Component<{}, {}, {}> {
                 </Link>
               </li>
               <li className="nav-item my-1 mr-2 ml-2">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" to="/about-us">
                   About Us
                 </Link>
               </li>
