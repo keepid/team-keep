@@ -13,6 +13,9 @@ import OurPartners from '../static/images/ourPartners.png';
 import StoryImg1 from '../static/images/story1.png';
 import StoryImg2 from '../static/images/story2.png';
 import StoryImg3 from '../static/images/story3.png';
+import HandshakeImg from '../static/images/handshake.svg';
+import TargetImg from '../static/images/target.svg';
+import WomanImg from '../static/images/businesswoman.svg';
 
 const iconSize = 20;
 class AboutUs extends Component<{}, {}> {
@@ -40,7 +43,7 @@ class AboutUs extends Component<{}, {}> {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container py-4">
           <div className="row viewport-height-50">
             <div className="col-md-11 custom-vertical-center mx-auto text-center">
               <div id="info">
@@ -49,19 +52,90 @@ class AboutUs extends Component<{}, {}> {
                   src={RectangleSVG}
                   alt="rectangle"
                 />
-                <h3 className="hero-header text-black pb-3">
-                  Our Mission
-                </h3>
-                <p className="hero-subtext text-greym">
-                  Our mission is to prioritize collaboration with our respective stakeholders, be purpose-led in our technical and non-technical work, and practice empathy in our interactions with those with housing insecurity.
+                <h3 className="hero-header text-black pb-3">Our Mission</h3>
+                <p className="hero-subtext text-grey">
+                  Our mission is to prioritize collaboration with our respective
+                  stakeholders, be purpose-led in our technical and
+                  non-technical work, and practice empathy in our interactions
+                  with those with housing insecurity.
                 </p>
                 <p className="hero-subtext text-black font-weight-medium">
-                  We are dedicated to empowering those who are experiencing homelessness to obtain, secure, and utilize identification.
+                  We are dedicated to empowering those who are experiencing
+                  homelessness to obtain, secure, and utilize identification.
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <div className="mb-5">
+          <div className="bordered-background">
+            <div className="container">
+              <div className="row custom-vertical-center align-items-center my-5">
+                <div className="col-12">
+                  <div>
+                    <h3 className="hero-header pb-3 text-center mx-auto mt-4">
+                      Our Values
+                    </h3>
+                  </div>
+                </div>
+                <div className="row custom-vertical-center mx-auto align-items-center py-4">
+                  <div className="col-1" />
+                  <div className="col-2 mr-5">
+                    <img src={HandshakeImg} alt="handshake" />
+                  </div>
+                  <div className="col-7">
+                    <div className="home-container-text">
+                      <div className="mb-1">
+                        <b>Collaboration</b>
+                      </div>
+                      We understand that without working closely with existing
+                      organizations and human support networks, we cannot
+                      generate any substantial impact with great technology
+                      alone.
+                    </div>
+                  </div>
+                </div>
+                <div className="row custom-vertical-center mx-auto align-items-center py-4">
+                  <div className="col-1" />
+                  <div className="col-2 mr-5">
+                    <img src={TargetImg} alt="target" />
+                  </div>
+                  <div className="col-7">
+                    <div className="home-container-text">
+                      <div className="mb-1">
+                        <b>Purpose</b>
+                      </div>
+                      We understand the particular position we are in to help a
+                      disadvantaged population. We aim to create sustainable,
+                      impact-driven technology that has beneficial implications
+                      for those who entrust us with their data.
+                    </div>
+                  </div>
+                </div>
+                <div className="row custom-vertical-center mx-auto align-items-center py-4">
+                  <div className="col-1" />
+                  <div className="col-2 mr-5">
+                    <img src={WomanImg} alt="woman" />
+                  </div>
+                  <div className="col-7">
+                    <div className="home-container-text">
+                      <div className="mb-1">
+                        <b>Empathy</b>
+                      </div>
+                      Without practicing empathy, we begin to abandon our
+                      mission and will succumb to the capitalist forces of
+                      systemic greed and exploitation. We need empathy to ensure
+                      that we never demean or exploit those whom we are supposed
+                      to help.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mb-5">
           <div className="bg-secondary-dark w-75 viewport-height-100 partial-background" />
           <div className="container">
@@ -163,14 +237,20 @@ class AboutUs extends Component<{}, {}> {
                     Everyone has a story to tell
                   </h3>
                   <p className="home-container-text pb-4 text-grey">
-                    We want every individual experiencing homelessness to not only reclaim their sense of identity, but also to reclaim their voice. Here are some of their stories.
+                    We want every individual experiencing homelessness to not
+                    only reclaim their sense of identity, but also to reclaim
+                    their voice. Here are some of their stories.
                   </p>
                 </div>
               </div>
             </div>
             <div className="row">
               <div className="col-md-4">
-                <img src={StoryImg1} className="my-3 w-100 story-card-img" alt="homeless individual" />
+                <img
+                  src={StoryImg1}
+                  className="my-3 w-100 story-card-img"
+                  alt="homeless individual"
+                />
                 <h3 className="hero-subtext font-weight-bold pb-1">
                   Dan Smith
                 </h3>
@@ -185,13 +265,15 @@ class AboutUs extends Component<{}, {}> {
                 </button>
               </div>
               <div className="col-md-4">
-                <img src={StoryImg2} className="my-3 w-100 story-card-img" alt="homeless individual" />
+                <img
+                  src={StoryImg2}
+                  className="my-3 w-100 story-card-img"
+                  alt="homeless individual"
+                />
                 <h3 className="hero-subtext font-weight-bold pb-1">
                   Dan Smith
                 </h3>
-                <p className="home-container-text pb-2">
-                  ATLANTA, GA
-                </p>
+                <p className="home-container-text pb-2">ATLANTA, GA</p>
                 <button
                   type="button"
                   className="btn btn-lg btn-outline-primary"
@@ -200,7 +282,11 @@ class AboutUs extends Component<{}, {}> {
                 </button>
               </div>
               <div className="col-md-4">
-                <img src={StoryImg3} className="my-3 w-100 story-card-img" alt="homeless individual" />
+                <img
+                  src={StoryImg3}
+                  className="my-3 w-100 story-card-img"
+                  alt="homeless individual"
+                />
                 <h3 className="hero-subtext font-weight-bold pb-1">
                   Dan Smith
                 </h3>
@@ -217,10 +303,7 @@ class AboutUs extends Component<{}, {}> {
             </div>
             <div className="row py-5">
               <div className="col-md-3 custom-vertical-center mx-auto text-center">
-                <button
-                  type="button"
-                  className="btn btn-lg btn-outline-dark"
-                >
+                <button type="button" className="btn btn-lg btn-outline-dark">
                   All stories
                 </button>
               </div>
