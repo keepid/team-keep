@@ -36,7 +36,7 @@ $theme-colors: (
 
 .app {
 	background-color: white;
-	padding-bottom: 3.75rem;
+	// padding-bottom: 3.75rem;
 }
 
 .bg-gray {
@@ -61,6 +61,10 @@ $theme-colors: (
 .custom-vertical-center {
 	display: flex;
 	align-items: center;
+}
+
+.negative-margin-top {
+	margin-top: -4rem;
 }
 
 .navbar-brand {
@@ -89,7 +93,7 @@ $theme-colors: (
 }
 
 .viewport-height-100 {
-	height: 87vh;
+	height: 100vh;
 }
 
 .viewport-height-50 {
@@ -324,6 +328,13 @@ $theme-colors: (
 
 .bg-story-hero-img {
 	background-image: url("../images/storyHero.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bg-about-us-bottom-img {
+	background-image: url("../images/valuesBottom.png");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
