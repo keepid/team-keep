@@ -125,6 +125,20 @@ class Home extends Component<{}, {}> {
             </div>
           </div>
         </div>
+        <div className="bg-gray">
+          <div className="container row viewport-height-100">
+            <div className="col-md-10 custom-vertical-center mx-auto text-center">
+              <div className="w-100">
+                <h3 className="hero-header pb-3">
+                  Everyone has a story to tell
+                </h3>
+                <p className="home-container-text pb-4">
+                  We want every individual experiencing homelessness to not only reclaim their sense of identity, but also to reclaim their voice. Here are some of their stories.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
