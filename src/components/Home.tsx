@@ -188,14 +188,20 @@ class Home extends Component<{}, {}> {
                     Everyone has a story to tell
                   </h3>
                   <p className="home-container-text pb-4 text-grey">
-                    We want every individual experiencing homelessness to not only reclaim their sense of identity, but also to reclaim their voice. Here are some of their stories.
+                    We want every individual experiencing homelessness to not
+                    only reclaim their sense of identity, but also to reclaim
+                    their voice. Here are some of their stories.
                   </p>
                 </div>
               </div>
             </div>
             <div className="row">
               <div className="col-md-4">
-                <img src={StoryImg1} className="my-3 w-100 story-card-img" alt="homeless individual" />
+                <img
+                  src={StoryImg1}
+                  className="my-3 w-100 story-card-img"
+                  alt="homeless individual"
+                />
                 <h3 className="hero-subtext font-weight-bold pb-1">
                   Dan Smith
                 </h3>
@@ -210,13 +216,15 @@ class Home extends Component<{}, {}> {
                 </button>
               </div>
               <div className="col-md-4">
-                <img src={StoryImg2} className="my-3 w-100 story-card-img" alt="homeless individual" />
+                <img
+                  src={StoryImg2}
+                  className="my-3 w-100 story-card-img"
+                  alt="homeless individual"
+                />
                 <h3 className="hero-subtext font-weight-bold pb-1">
                   Dan Smith
                 </h3>
-                <p className="home-container-text pb-2">
-                  ATLANTA, GA
-                </p>
+                <p className="home-container-text pb-2">ATLANTA, GA</p>
                 <button
                   type="button"
                   className="btn btn-lg btn-outline-primary"
@@ -225,7 +233,11 @@ class Home extends Component<{}, {}> {
                 </button>
               </div>
               <div className="col-md-4">
-                <img src={StoryImg3} className="my-3 w-100 story-card-img" alt="homeless individual" />
+                <img
+                  src={StoryImg3}
+                  className="my-3 w-100 story-card-img"
+                  alt="homeless individual"
+                />
                 <h3 className="hero-subtext font-weight-bold pb-1">
                   Dan Smith
                 </h3>
@@ -242,10 +254,7 @@ class Home extends Component<{}, {}> {
             </div>
             <div className="row py-5">
               <div className="col-md-3 custom-vertical-center mx-auto text-center">
-                <button
-                  type="button"
-                  className="btn btn-lg btn-outline-dark"
-                >
+                <button type="button" className="btn btn-lg btn-outline-dark">
                   All stories
                 </button>
               </div>

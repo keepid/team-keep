@@ -115,6 +115,10 @@ $theme-colors: (
 	transition-timing-function: ease;
 }
 
+.bordered-background {
+	border: 4.375rem solid $primary-theme;
+}
+
 .partial-background {
 	position: absolute;
 }
@@ -326,7 +330,6 @@ $theme-colors: (
 	background-repeat: no-repeat;
 }
 
-
 .bg-story-hero-img {
 	background-image: url("../images/storyHero.png");
 	background-position: center;
@@ -372,3 +375,4 @@ $theme-colors: (
 .grecaptcha-badge { 
 	visibility: hidden;
 }
+
