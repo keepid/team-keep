@@ -16,6 +16,10 @@ import TargetImg from '../static/images/target.svg';
 import WomanImg from '../static/images/businesswoman.svg';
 
 class AboutUs extends Component<{}, {}> {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div>
@@ -66,7 +70,7 @@ class AboutUs extends Component<{}, {}> {
         </div>
 
         <div className="mb-5">
-          <div className="bordered-background">
+          <div className="row bordered-background">
             <div className="container">
               <div className="row custom-vertical-center align-items-center my-5">
                 <div className="col-12">
@@ -183,12 +187,14 @@ class AboutUs extends Component<{}, {}> {
                     populations directly, but local partners can.
                   </li>
                 </ul>
-                <button
-                  type="button"
-                  className="btn btn-lg btn-outline-primary"
-                >
-                  More about Keep.id
-                </button>
+                <a href="https://keep.id/">
+                  <button
+                    type="button"
+                    className="btn btn-lg btn-outline-primary"
+                  >
+                    More about Keep.id
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -200,9 +206,11 @@ class AboutUs extends Component<{}, {}> {
                 <h1 className="hero-header pb-4 text-white">
                   Let’s work to uplift a vulnerable community.
                 </h1>
-                <button type="button" className="btn btn-lg btn-secondary">
-                  Donate Now
-                </button>
+                <a href="https://teamkeep.nationbuilder.com/donate">
+                  <button type="button" className="btn btn-lg btn-secondary">
+                    Donate now
+                  </button>
+                </a>
               </div>
             </div>
           </div>
