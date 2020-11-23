@@ -13,7 +13,7 @@ import RectangleSVG from '../static/images/rectangle.svg';
 import ArrowDown from '../static/images/arrow-down.svg';
 import HomeImg1 from '../static/images/homeImg1.png';
 import HomeImg2 from '../static/images/homeImg2.png';
-import OurPartners from '../static/images/ourPartners.png';
+import Partners from '../static/images/partners.png';
 import StoryImg1 from '../static/images/story1.png';
 import StoryImg2 from '../static/images/story2.png';
 import StoryImg3 from '../static/images/story3.png';
@@ -30,7 +30,7 @@ class Home extends Component<{}, {}> {
         <div className="bg-gray viewport-height-100">
           <div className="container">
             <div className="row py-5 viewport-height-100 negative-margin-top">
-              <div className="col-md-6 custom-vertical-center">
+              <div className="col-lg-6 custom-vertical-center pt-5">
                 <div>
                   <h1 className="hero-header pb-4">
                     Combatting homelessness in the digital age
@@ -49,7 +49,7 @@ class Home extends Component<{}, {}> {
                   </AnchorLink>
                 </div>
               </div>
-              <div className="col-md-6 custom-vertical-center">
+              <div className="col-lg-6 custom-vertical-center">
                 <img
                   className="hero-image w-100"
                   src={HeroImage}
@@ -83,11 +83,11 @@ class Home extends Component<{}, {}> {
           </div>
         </div>
         <div className="mb-5">
-          <div className="bg-secondary-dark w-75 viewport-height-100 partial-background" />
+          <div className="bg-secondary-dark w-sm-100 w-md-100 w-75 viewport-height-100 partial-background toggle-hide" />
           <div className="container">
             <span className="overlay-text">
               <div className="row viewport-height-100 custom-vertical-center">
-                <div className="col-md-7 pr-4">
+                <div className="col-md-7 pr-4 toggle-display-dark py-2 my-3">
                   <div>
                     <h3 className="hero-header text-light-grey pb-3">
                       Identification is key
@@ -120,9 +120,9 @@ class Home extends Component<{}, {}> {
             </span>
           </div>
         </div>
-        <div className="mb-5">
-          <div className="bg-secondary-yellow-dark w-75 viewport-height-100 partial-background right" />
-          <div className="container pt-3">
+        <div>
+          <div className="bg-secondary-yellow-dark w-75 viewport-height-100 partial-background right toggle-hide" />
+          <div className="container">
             <span className="overlay-text">
               <div className="row viewport-height-100 custom-vertical-center">
                 <div className="col-md-4 pr-4">
@@ -132,7 +132,7 @@ class Home extends Component<{}, {}> {
                     alt="Homeless person 2"
                   />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 toggle-display-dark-yellow py-2 my-3">
                   <div>
                     <h3 className="hero-header pb-3">
                       We use technology to empower a vulnerable population.
@@ -171,12 +171,12 @@ class Home extends Component<{}, {}> {
                   alt="divider rectangle"
                 />
                 <h3 className="hero-header text-grey pb-4">Our partnerships</h3>
-                <img className="w-100" src={OurPartners} alt="Our partners" />
+                <img className="w-100" src={Partners} alt="Partners" />
               </div>
             </div>
           </div>
         </div>
-        <div className="bg-gray">
+        {/* <div className="bg-gray">
           <div className="container">
             <div className="row pt-5">
               <div className="col-md-10 custom-vertical-center mx-auto text-center">
@@ -206,7 +206,10 @@ class Home extends Component<{}, {}> {
                   CENTER CITY, PHILADELPHIA, PA
                 </p>
                 <div className="align-bottom mt-auto">
-                  <button type="button" className="btn btn-lg btn-outline-primary">
+                  <button
+                    type="button"
+                    className="btn btn-lg btn-outline-primary"
+                  >
                     Read more
                   </button>
                 </div>
@@ -220,11 +223,12 @@ class Home extends Component<{}, {}> {
                 <h3 className="hero-subtext font-weight-bold pb-1">
                   Dan Smith
                 </h3>
-                <p className="home-container-text pb-2">
-                  ATLANTA, GA
-                </p>
+                <p className="home-container-text pb-2">ATLANTA, GA</p>
                 <div className="align-bottom mt-auto">
-                  <button type="button" className="btn btn-lg btn-outline-primary">
+                  <button
+                    type="button"
+                    className="btn btn-lg btn-outline-primary"
+                  >
                     Read more
                   </button>
                 </div>
@@ -242,7 +246,10 @@ class Home extends Component<{}, {}> {
                   KENSINGTON, PHILADELPHIA, PA
                 </p>
                 <div className="align-bottom mt-auto">
-                  <button type="button" className="btn btn-lg btn-outline-primary">
+                  <button
+                    type="button"
+                    className="btn btn-lg btn-outline-primary"
+                  >
                     Read more
                   </button>
                 </div>
@@ -256,8 +263,8 @@ class Home extends Component<{}, {}> {
               </div>
             </div>
           </div>
-        </div>
-        <div className="row bordered-background viewport-height-100 ">
+        </div> */}
+        <div className="row bordered-background viewport-height-100 w-100 mx-0">
           <div className="container my-auto text-center">
             <div className="custom-vertical-center align-items-center">
               <div>

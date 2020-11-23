@@ -70,7 +70,7 @@ class AboutUs extends Component<{}, {}> {
         </div>
 
         <div className="mb-5">
-          <div className="row bordered-background">
+          <div className="bordered-background">
             <div className="container">
               <div className="row custom-vertical-center align-items-center my-5">
                 <div className="col-12">
@@ -87,7 +87,7 @@ class AboutUs extends Component<{}, {}> {
                   </div>
                   <div className="col-7">
                     <div className="home-container-text">
-                      <div className="mb-1">
+                      <div className="mb-1 font-weight-bold">
                         <b>Collaboration</b>
                       </div>
                       We understand that without working closely with existing
@@ -104,7 +104,7 @@ class AboutUs extends Component<{}, {}> {
                   </div>
                   <div className="col-7">
                     <div className="home-container-text">
-                      <div className="mb-1">
+                      <div className="mb-1 font-weight-bold">
                         <b>Purpose</b>
                       </div>
                       We understand the particular position we are in to help a
@@ -121,7 +121,7 @@ class AboutUs extends Component<{}, {}> {
                   </div>
                   <div className="col-7">
                     <div className="home-container-text">
-                      <div className="mb-1">
+                      <div className="mb-1 font-weight-bold">
                         <b>Empathy</b>
                       </div>
                       Without practicing empathy, we begin to abandon our

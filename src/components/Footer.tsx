@@ -23,24 +23,24 @@ class Footer extends Component<{}, {}> {
             <a className="nav-link text-white mx-2" href="https://keep.id/">
               Keep.id
             </a>
-            <Link className="nav-link text-white mx-2" to="/">
+            {/* <Link className="nav-link text-white mx-2" to="/">
               Stories
-            </Link>
-            <Link className="nav-link text-white mx-2 footer-keep" to="/">
+            </Link> */}
+            {/* <Link className="nav-link text-white mx-2 footer-keep" to="/">
               Team Keep
-            </Link>
+            </Link> */}
             <Link className="nav-link text-white mx-2" to="/contact-us">
               Contact Us
             </Link>
             <Link className="nav-link text-white mx-2" to="/home">
               Donate
             </Link>
-            <Link className="nav-link text-white mx-2" to="/">
+            {/* <Link className="nav-link text-white mx-2" to="/">
               Privacy
             </Link>
             <Link className="nav-link text-white mx-2" to="/">
               Legal
-            </Link>
+            </Link> */}
           </div>
           <hr />
           <div className="d-flex justify-content-center flex-row bd-highlight py-8 py-md-11 flex-wrap py-4">
