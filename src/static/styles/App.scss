@@ -102,6 +102,7 @@ $theme-colors: (
 
 .home-container-text {
 	font-size: 1.25rem;
+	font-weight: 300;
 }
 
 .navbar-grey {
@@ -319,7 +320,7 @@ $theme-colors: (
 }
 
 .bg-contact-us-hero-img {
-	background-image: url("../images/valuesHero.png");
+	background-image: url("../images/contactHero.png");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -338,4 +339,36 @@ $theme-colors: (
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.alert-provider-custom div div {
+	background-color: #F3F3F3 !important;
+	color: #212529 !important;
+	border-radius: .25rem !important;
+	border-color: #B7B7C0 !important;
+	border-style: solid !important;
+	border-width: .125rem !important;
+	min-width: 18.75rem !important;
+	font-family: 'Inter', sans-serif !important;
+	font-size: 1rem !important;
+	width: 33vw !important;
+}
+
+.alert-provider-custom div div button svg{
+	filter: invert(47%) sepia(13%) saturate(298%) hue-rotate(166deg) brightness(93%) contrast(91%) !important;
+	// fill: #6C757D !important;
+}
+
+.recaptcha-login-text {
+	font-size: 0.875rem;
+	line-height: 150%;
+}
+
+.form-purple {
+	border: 0.0625rem solid $primary-theme;
+	border-radius: .35rem;
+}
+
+.grecaptcha-badge { 
+	visibility: hidden;
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../static/images/logoColor.svg';
-import getServerURL from '../serverOverride';
 
 const logoSize = 40;
 class Header extends Component<{}, {}, {}> {
@@ -82,7 +81,7 @@ class Header extends Component<{}, {}, {}> {
                 </Link>
               </li>
               <li className="nav-item my-1 mr-5 ml-2">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" to="/contact-us">
                   Contact Us
                 </Link>
               </li>
