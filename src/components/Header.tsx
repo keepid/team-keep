@@ -71,26 +71,26 @@ class Header extends Component<{}, {}, {}> {
                 </Link>
               </li>
               <li className="nav-item my-1 mr-2 ml-2">
-                <Link className="nav-link" to="/">
+                <a className="nav-link" href="https://keep.id/">
                   Keep.id
-                </Link>
+                </a>
               </li>
-              <li className="nav-item my-1 mr-2 ml-2">
+              {/* <li className="nav-item my-1 mr-2 ml-2">
                 <Link className="nav-link" to="/">
                   Stories
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item my-1 mr-5 ml-2">
                 <Link className="nav-link" to="/contact-us">
                   Contact Us
                 </Link>
               </li>
               <li className="nav-item my-1 mr-3 ml-2">
-                <Link to="/login">
+                <a href="https://teamkeep.nationbuilder.com/donate">
                   <button type="submit" className="btn btn-secondary w-40 mr-2">
                     Donate
                   </button>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
