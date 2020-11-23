@@ -27,7 +27,7 @@ class AboutUs extends Component<{}, {}> {
           <title>About Us</title>
           <meta name="description" content="Keep.id" />
         </Helmet>
-        <div className="bg-about-us-hero-img viewport-height-100 negative-margin-top">
+        <div className="about-us-hero-img viewport-height-100 negative-margin-top">
           <div className="container">
             <div className="viewport-height-100 custom-vertical-center">
               <div>
