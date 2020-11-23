@@ -60,11 +60,11 @@ class Header extends Component<{}, {}, {}> {
 
           <div className="collapse navbar-collapse" id="navbarToggle">
             <ul className="navbar-nav ml-auto ">
-              <li className="nav-item my-1 mr-2 ml-2">
+              {/* <li className="nav-item my-1 mr-2 ml-2">
                 <Link className="nav-link" to="/">
                   The Issue
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item my-1 mr-2 ml-2">
                 <Link className="nav-link" to="/about-us">
                   About Us
