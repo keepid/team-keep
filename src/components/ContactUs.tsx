@@ -286,8 +286,7 @@ class ContactUs extends Component<Props, State, {}> {
             </div>
           </div>
         </div>
-        <div>
-
+        <div className="bordered-background">
           <div className="container my-5 py-4 text-center">
             <div className="row pb-2 mb-2">
               <div className="col-md-8 mx-auto">

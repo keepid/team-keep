@@ -28,7 +28,7 @@ class Home extends Component<{}, {}> {
         </Helmet>
         <div className="bg-gray viewport-height-100">
           <div className="container">
-            <div className="row viewport-height-100 negative-margin-top">
+            <div className="row py-5 viewport-height-100 negative-margin-top">
               <div className="col-md-6 custom-vertical-center">
                 <div>
                   <h1 className="hero-header pb-4">
@@ -59,7 +59,7 @@ class Home extends Component<{}, {}> {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container py-5">
           <div className="row viewport-height-50">
             <div className="col-md-10 custom-vertical-center mx-auto text-center">
               <div id="info">
@@ -125,9 +125,9 @@ class Home extends Component<{}, {}> {
             </span>
           </div>
         </div>
-        <div>
+        <div className="mb-5">
           <div className="bg-secondary-yellow-dark w-75 viewport-height-100 partial-background right" />
-          <div className="container">
+          <div className="container pt-3">
             <span className="overlay-text">
               <div className="row viewport-height-100 custom-vertical-center">
                 <div className="col-md-4 pr-4">
@@ -208,12 +208,11 @@ class Home extends Component<{}, {}> {
                 <p className="home-container-text pb-2">
                   CENTER CITY, PHILADELPHIA, PA
                 </p>
-                <button
-                  type="button"
-                  className="btn btn-lg btn-outline-primary"
-                >
-                  Read more
-                </button>
+                <div className="align-bottom mt-auto">
+                  <button type="button" className="btn btn-lg btn-outline-primary">
+                    Read more
+                  </button>
+                </div>
               </div>
               <div className="col-md-4">
                 <img
@@ -224,13 +223,14 @@ class Home extends Component<{}, {}> {
                 <h3 className="hero-subtext font-weight-bold pb-1">
                   Dan Smith
                 </h3>
-                <p className="home-container-text pb-2">ATLANTA, GA</p>
-                <button
-                  type="button"
-                  className="btn btn-lg btn-outline-primary"
-                >
-                  Read more
-                </button>
+                <p className="home-container-text pb-2">
+                  ATLANTA, GA
+                </p>
+                <div className="align-bottom mt-auto">
+                  <button type="button" className="btn btn-lg btn-outline-primary">
+                    Read more
+                  </button>
+                </div>
               </div>
               <div className="col-md-4">
                 <img
@@ -244,12 +244,11 @@ class Home extends Component<{}, {}> {
                 <p className="home-container-text pb-2">
                   KENSINGTON, PHILADELPHIA, PA
                 </p>
-                <button
-                  type="button"
-                  className="btn btn-lg btn-outline-primary"
-                >
-                  Read more
-                </button>
+                <div className="align-bottom mt-auto">
+                  <button type="button" className="btn btn-lg btn-outline-primary">
+                    Read more
+                  </button>
+                </div>
               </div>
             </div>
             <div className="row py-5">
