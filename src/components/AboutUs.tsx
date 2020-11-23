@@ -15,13 +15,12 @@ import HandshakeImg from '../static/images/handshake.svg';
 import TargetImg from '../static/images/target.svg';
 import WomanImg from '../static/images/businesswoman.svg';
 
-const iconSize = 20;
 class AboutUs extends Component<{}, {}> {
   render() {
     return (
       <div>
         <Helmet>
-          <title>Welcome</title>
+          <title>About Us</title>
           <meta name="description" content="Keep.id" />
         </Helmet>
         <div className="bg-about-us-hero-img viewport-height-100 negative-margin-top">
