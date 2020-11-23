@@ -1,46 +1,68 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../static/images/logo.svg';
-import Email from '../static/images/email-2.svg';
-import FacebookLogo from '../static/images/fb-logo.svg';
-import GithubLogo from '../static/images/github-logo.svg';
+import Email from '../static/images/email-icon.svg';
+import FacebookLogo from '../static/images/facebook.svg';
+import LinkedInLogo from '../static/images/linkedin.svg';
+import TwitterLogo from '../static/images/twitter.svg';
+import GithubLogo from '../static/images/github.svg';
 import InstagramLogo from '../static/images/instagram.svg';
 
 class Footer extends Component<{}, {}> {
   render() {
     return (
-      <footer className="footer custom-footer-color">
+      <footer className="footer custom-footer-color py-4">
         <div className="container">
-          <div className="d-flex flex-row bd-highlight py-8 py-md-11 flex-wrap">
-            <div className="p-2 bd-highlight col-12 col-md-4 col-lg-4 mb-4">
-              <div className="row">
-                <img alt="Keep.id Logo" className="footer-brand img-fluid mb-2 ml-3" src={Logo} />
-                <div className="mb-2 ml-3 footer-brand-logo">Team Keep</div>
-              </div>
-              <p className="text-gray-700 mb-2">Securely Combating Homelessness</p>
-              <ul className="list-unstyled list-inline list-social">
-                <li className="list-inline-item list-social-item mr-3">
-                  <a href="mailto:contact@keep.id" className="text-decoration-none">
-                    <img alt="Email Address" src={Email} className="list-social-icon" />
-                  </a>
-                </li>
-                <li className="list-inline-item list-social-item mr-3">
-                  <a href="https://www.instagram.com/keepidphilly/" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                    <img alt="Instagram Link" src={InstagramLogo} className="list-social-icon" />
-                  </a>
-                </li>
-                <li className="list-inline-item list-social-item mr-3">
-                  <a href="https://github.com/keepid" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                    <img alt="Github Link" src={GithubLogo} className="list-social-icon" />
-                  </a>
-                </li>
-                <li className="list-inline-item list-social-item mr-3">
-                  <a href="https://www.facebook.com/keepidphilly" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
-                    <img alt="Facebook Link" src={FacebookLogo} className="list-social-icon" />
-                  </a>
-                </li>
-              </ul>
-              <span className="text-muted pb-2">&copy; 2020 Keep.id</span>
-            </div>
+          <div className="d-flex justify-content-center flex-row bd-highlight py-8 py-md-11 flex-wrap pb-4 pt-2">
+            <Link className="nav-link text-white mx-2" to="/">
+              The Issue
+            </Link>
+            <Link className="nav-link text-white mx-2" to="/about-us">
+              About Us
+            </Link>
+            <a className="nav-link text-white mx-2" href="https://keep.id/">
+              Keep.id
+            </a>
+            <Link className="nav-link text-white mx-2" to="/">
+              Stories
+            </Link>
+            <Link className="nav-link text-white mx-2 footer-keep" to="/">
+              Team Keep
+            </Link>
+            <Link className="nav-link text-white mx-2" to="/contact-us">
+              Contact Us
+            </Link>
+            <Link className="nav-link text-white mx-2" to="/home">
+              Donate
+            </Link>
+            <Link className="nav-link text-white mx-2" to="/">
+              Privacy
+            </Link>
+            <Link className="nav-link text-white mx-2" to="/">
+              Legal
+            </Link>
+          </div>
+          <hr />
+          <div className="d-flex justify-content-center flex-row bd-highlight py-8 py-md-11 flex-wrap py-4">
+            {/* <img src={Email} alt="email" className="px-2" /> */}
+            <a href="https://github.com/keepid/keepid_client">
+              <img src={GithubLogo} alt="github-logo" className="mx-2" />
+            </a>
+            <a href="https://www.facebook.com/keepidphilly">
+              <img src={FacebookLogo} alt="facebook-logo" className="mx-2" />
+            </a>
+            <a href="https://www.instagram.com/keepidphilly/">
+              <img src={InstagramLogo} alt="instagram-logo" className="mx-2" />
+            </a>
+            <a href="https://www.linkedin.com/company/keep-id-philly/">
+              <img src={LinkedInLogo} alt="linkedin-logo" className="mx-2" />
+            </a>
+            <a href="https://twitter.com/keepidphilly">
+              <img src={TwitterLogo} alt="twitter-logo" className="mx-2" />
+            </a>
+          </div>
+          <div className="d-flex justify-content-center py-4">
+            <p>&copy; 2020 Team Keep</p>
           </div>
         </div>
       </footer>
