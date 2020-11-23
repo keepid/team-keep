@@ -28,6 +28,47 @@ $theme-colors: (
 @import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 36rem;
+
+// Small tablets (portrait view)
+$screen-md-min: 48rem;
+
+// Tablets and small desktops
+$screen-lg-min: 62rem;
+
+// Large tablets and desktops
+$screen-xl-min: 75rem;
+
+// Small devices
+@mixin sm {
+	@media (min-width: #{$screen-sm-min}) {
+		@content;
+	}
+}
+ 
+// Medium devices
+@mixin md {
+	@media (min-width: #{$screen-md-min}) {
+		@content;
+	}
+}
+ 
+// Large devices
+@mixin lg {
+	@media (min-width: #{$screen-lg-min}) {
+		@content;
+	}
+}
+ 
+// Extra large devices
+@mixin xl {
+	@media (min-width: #{$screen-xl-min}) {
+		@content;
+	}
+}
+
 .App {
 	font-family: "Inter", sans-serif;
 	background-color: $footer-color;
@@ -84,8 +125,15 @@ $theme-colors: (
 .hero-header {
 	font-family: Raleway, sans-serif;
 	font-weight: bold;
-	font-size: 4.0625rem;
+	font-size: 2rem;
 	line-height: 1.2;
+	// 992px window width and more
+	@include md {
+		font-size: 2.75rem;
+	}
+	@include lg {
+		font-size: 4.125rem;
+	}
 }
 
 .overlay-text {
@@ -94,6 +142,7 @@ $theme-colors: (
 
 .viewport-height-100 {
 	height: 100vh;
+	min-height: 100%;
 }
 
 .viewport-height-50 {
@@ -121,7 +170,7 @@ $theme-colors: (
 
 .partial-background {
 	position: absolute;
-	min-width: 37.5rem;
+	min-width: #{"min(100vw, 31.25rem)"};
 }
 
 .right {
@@ -145,7 +194,10 @@ $theme-colors: (
 }
 
 .hero-subtext {
-	font-size: 1.6875rem;
+	font-size: 1.375rem;
+	@include lg {
+		font-size: 1.6875rem;
+	}
 }
 
 .font-weight-medium {
@@ -376,4 +428,3 @@ $theme-colors: (
 .grecaptcha-badge { 
 	visibility: hidden;
 }
-
