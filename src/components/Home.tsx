@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { withAlert } from 'react-alert';
+import { Link } from 'react-router-dom';
 // import ReCAPTCHA from 'react-google-recaptcha';
 // import getServerURL from '../serverOverride';
 // import { reCaptchaKey } from '../configVars';
@@ -77,12 +78,6 @@ class Home extends Component<{}, {}> {
                   We are dedicated to empowering those who are experiencing
                   homelessness to obtain, secure, and utilize identification.
                 </h3>
-                <button
-                  type="button"
-                  className="mt-4 btn btn-lg btn-outline-primary"
-                >
-                  Unclear where this button goes?
-                </button>
               </div>
             </div>
           </div>
@@ -152,12 +147,14 @@ class Home extends Component<{}, {}> {
                       identification to gain access to aid and employment
                       opportunities.
                     </p>
-                    <button
-                      type="button"
-                      className="mt-4 btn btn-lg btn-outline-black"
-                    >
-                      What we are doing
-                    </button>
+                    <Link to="/about-us">
+                      <button
+                        type="button"
+                        className="mt-4 btn btn-lg btn-outline-black"
+                      >
+                        What we are doing
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -256,6 +253,22 @@ class Home extends Component<{}, {}> {
                 <button type="button" className="btn btn-lg btn-outline-dark">
                   All stories
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row bordered-background viewport-height-100 ">
+          <div className="container my-auto text-center">
+            <div className="custom-vertical-center align-items-center">
+              <div>
+                <h1 className="hero-header pb-4 text-black text-center">
+                  Let’s build a safety net for our most vulnerable citizens.
+                </h1>
+                <a href="https://teamkeep.nationbuilder.com/donate">
+                  <button type="button" className="btn btn-lg btn-secondary">
+                    Donate now
+                  </button>
+                </a>
               </div>
             </div>
           </div>
