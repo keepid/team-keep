@@ -12,6 +12,7 @@ import Error from './components/Error';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
+import Issue from './components/Issue';
 
 interface State {
   isLoggedIn: boolean;
@@ -40,6 +41,10 @@ class App extends React.Component<{}, State, {}> {
               <Route
                 path="/about-us"
                 render={() => <AboutUs />}
+              />
+              <Route
+                path="/Issue"
+                render={() => <Issue />}
               />
               <Route path="/error">
                 <Error />
