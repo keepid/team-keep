@@ -28,7 +28,7 @@ class Home extends Component<{}, {}> {
         </Helmet>
         <div className="bg-gray viewport-height-100">
           <div className="container">
-            <div className="row viewport-height-100 negative-margin-top">
+            <div className="row py-5 viewport-height-100 negative-margin-top">
               <div className="col-md-6 custom-vertical-center">
                 <div>
                   <h1 className="hero-header pb-4">
@@ -59,7 +59,7 @@ class Home extends Component<{}, {}> {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container py-5">
           <div className="row viewport-height-50">
             <div className="col-md-10 custom-vertical-center mx-auto text-center">
               <div id="info">
