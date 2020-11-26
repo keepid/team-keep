@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
+import Issue from './components/Issue';
 
 interface State {
   isLoggedIn: boolean;
@@ -37,6 +38,10 @@ class App extends React.Component<{}, State, {}> {
               <Route path="/home" render={() => <Home />} />
               <Route path="/contact-us" render={() => <ContactUs />} />
               <Route path="/about-us" render={() => <AboutUs />} />
+              <Route
+                path="/Issue"
+                render={() => <Issue />}
+              />
               <Route path="/error">
                 <Error />
               </Route>
