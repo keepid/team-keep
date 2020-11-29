@@ -101,12 +101,12 @@ class Home extends Component<{}, {}> {
                       Obtaining identification helps individuals access
                       essential services and escape the cycle of homelessness.
                     </p>
-                    <button
+                    {/* <button
                       type="button"
                       className="mt-4 btn btn-lg btn-outline-white"
                     >
                       More about the Issue
-                    </button>
+                    </button> */}
                   </div>
                 </div>
                 <div className="col-md-5">
