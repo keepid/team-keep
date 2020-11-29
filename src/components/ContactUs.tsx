@@ -44,6 +44,10 @@ class ContactUs extends Component<Props, State, {}> {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   clearInput = (): void => {
     this.setState({
       name: '',
@@ -248,10 +252,6 @@ class ContactUs extends Component<Props, State, {}> {
   handleChangeEmail = (event: any) => {
     this.setState({ email: event.target.value });
   };
-
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
 
   render() {
     const {

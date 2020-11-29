@@ -92,6 +92,13 @@ hr {
 	color: white;
 }
 
+.bg-secondary-light {
+	background-color: white;
+	width: 100rem;
+	height: 80%;
+	color: white;
+}
+
 .bg-secondary-yellow-dark {
 	background-color: $secondary-theme-dark;
 	color: black;
@@ -110,6 +117,15 @@ hr {
 .negative-margin-top {
 	margin-top: -4rem;
 }
+
+.margin-left{
+	margin-left: 11.5em;
+}
+
+.align-center{
+	align-items: center;
+}
+
 
 .navbar-brand {
 	color: $primary-theme !important;
@@ -139,8 +155,28 @@ hr {
 	}
 }
 
+.hero-header1 {
+	font-family: Raleway, sans-serif;
+	font-weight: bold;
+	font-size: 4.4625rem;
+	line-height: 1.2;
+}
+
+.hero-header2 {
+	font-family: Raleway, sans-serif;
+	font-weight: bold;
+	font-size: 4.4625rem;
+	line-height: 1.2;
+	color: #f2f2f2;
+	
+}
+
 .overlay-text {
 	z-index: 100;
+}
+
+.viewport-height-120 {
+	height: 120vh;
 }
 
 .viewport-height-100 {
@@ -182,6 +218,7 @@ hr {
 	min-width: #{"min(100vw, 31.25rem)"};
 }
 
+
 .right {
 	right: 0;
 }
@@ -190,8 +227,29 @@ hr {
 	color: $grey;
 }
 
+.text-purple{
+	color: #7b81ff;
+	font-size: 3em;
+	font-weight: bold;
+	align-self: center;
+}
+
+.text-purple1{
+	color: #7b81ff;
+	font-weight: bold;
+	align-self: center;
+	margin-top: 1em;
+}
+
+
 .text-light-grey {
 	color: $light-grey;
+}
+
+.text-light-black {
+	color: #000000;
+	font-size: 1.8900rem;
+	margin-bottom: 2rem;
 }
 
 .text-black {
@@ -200,6 +258,11 @@ hr {
 
 .text-white {
 	color: white;
+}
+
+.text-white-issue {
+	color: white;
+	font-size: 1.8775rem;
 }
 
 .hero-subtext {
@@ -211,6 +274,22 @@ hr {
 
 .font-weight-medium {
 	font-weight: 600;
+}
+
+.miniborder-background{
+	background-color: #262867;
+}
+
+.bordered-background {
+	border: 4.375rem solid $primary-theme;
+}
+
+.bordered-background1 {
+	border: 4.775rem solid #262867;
+}
+
+.bordered-background2 {
+	border: 4.075rem solid white;
 }
 
 .svg-purple {
@@ -404,6 +483,13 @@ hr {
 	background-repeat: no-repeat;
 }
 
+.bg-issue-home1-img {
+	background-image: url("../images/home1.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .bg-about-us-bottom-img {
 	background-image: url("../images/valuesBottom.png");
 	background-position: center;
@@ -443,3 +529,35 @@ hr {
 .grecaptcha-badge {
 	visibility: hidden;
 }
+
+.bg-issue-stat-img {
+	background-image: url("../images/homeStat.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+.bg-issue-stat2-img {
+	background-image: url("../images/homeStat2.png");
+	background-position: center;
+	background-size: 100% 130%;
+	background-repeat: no-repeat;
+}
+
+.bg-issue-bg-img {
+	background-image: url("../images/issuebg.png");
+	background-position: center;
+	width: 100%;
+	height: 95%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.bg-issue-bgseclast-img {
+	background-image: url("../images/secondlast.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
