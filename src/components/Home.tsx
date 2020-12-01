@@ -271,7 +271,7 @@ class Home extends Component<{}, {}> {
                 <h1 className="hero-header pb-4 text-black text-center">
                   Let’s build a safety net for our most vulnerable citizens.
                 </h1>
-                <a href="https://www.paypal.com/donate?hosted_button_id=6MC72JSU6KA7E">
+                <a href="https://teamkeep.nationbuilder.com/donate">
                   <button type="button" className="btn btn-lg btn-secondary">
                     Donate now
                   </button>
