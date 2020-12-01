@@ -203,7 +203,7 @@ hr {
 }
 
 .bordered-background {
-	border: 2rem solid $primary-theme;
+	border: 0.7rem solid $primary-theme;
 
 	@include md {
 		border: 3rem solid $primary-theme;
