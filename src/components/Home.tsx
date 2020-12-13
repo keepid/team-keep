@@ -264,6 +264,20 @@ class Home extends Component<{}, {}> {
             </div>
           </div>
         </div> */}
+        <div className="row bg-secondary-dark viewport-height-100 w-100 mx-0">
+          <div className="container my-auto text-left px-sm-5 px-4">
+            <h1 className="hero-header pb-4 text-white">
+              Win a gift for you or a loved one in our
+              <span className="text-light-yellow"> Holiday Gifting Exchange</span>
+            </h1>
+            <Link to="/holiday-gifting-exchange">
+              <button type="button" className="btn btn-lg btn-secondary">
+                Learn more
+              </button>
+            </Link>
+          </div>
+
+        </div>
         <div className="row bordered-background viewport-height-100 w-100 mx-0">
           <div className="container my-auto text-center">
             <div className="custom-vertical-center align-items-center">
