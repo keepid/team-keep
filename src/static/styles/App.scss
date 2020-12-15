@@ -280,6 +280,10 @@ hr {
 	font-weight: 600;
 }
 
+.font-weight-bold   { 
+	font-weight: bold; 
+}
+
 .miniborder-background{
 	background-color: #262867;
 }
@@ -473,6 +477,13 @@ hr {
 	background-repeat: no-repeat;
 }
 
+.holiday-hero-img {
+	background-image: url("../images/presents.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .bg-contact-us-hero-img {
 	background-image: url("../images/contactHero.png");
 	background-position: center;
@@ -563,5 +574,16 @@ hr {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.carousel-indicators li {
+	width: 0.625rem;
+	height: 0.625rem;
+	border-radius: 100%;
+	background-color: #D3D3D3;
+}
+
+.carousel-indicators .active{
+	background-color: #6129a8;
 }
 
