@@ -17,6 +17,7 @@ import Partners from '../static/images/partners.png';
 import StoryImg1 from '../static/images/story1.png';
 import StoryImg2 from '../static/images/story2.png';
 import StoryImg3 from '../static/images/story3.png';
+import ornaments from '../static/images/ornaments.svg';
 
 const iconSize = 20;
 class Home extends Component<{}, {}> {
@@ -265,18 +266,26 @@ class Home extends Component<{}, {}> {
           </div>
         </div> */}
         <div className="row bg-secondary-dark viewport-height-100 w-100 mx-0">
-          <div className="container my-auto text-left px-sm-5 px-4">
-            <h1 className="hero-header pb-4 text-white">
-              Win a gift for you or a loved one in our
-              <span className="text-light-yellow"> Holiday Gifting Exchange</span>
-            </h1>
-            <Link to="/holiday-gifting-exchange">
-              <button type="button" className="btn btn-lg btn-secondary">
-                Learn more
-              </button>
-            </Link>
+          <div className="col-8 custom-vertical-center">
+            <div className="container my-auto text-left px-sm-5 px-4">
+              <h1 className="hero-header pb-4 text-white">
+                Win a gift for you or a loved one in our
+                <span className="text-light-yellow"> Holiday Gifting Exchange</span>
+              </h1>
+              <Link to="/holiday-gifting-exchange">
+                <button type="button" className="btn btn-lg btn-secondary">
+                  Learn more
+                </button>
+              </Link>
+            </div>
           </div>
-
+          <div className="col-4 mt-n2 pt-0">
+            <img
+              className="hero-image w-100"
+              src={ornaments}
+              alt="christmas tree ornaments"
+            />
+          </div>
         </div>
         <div className="row bordered-background viewport-height-100 w-100 mx-0">
           <div className="container my-auto text-center">
