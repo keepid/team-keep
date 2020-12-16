@@ -28,6 +28,9 @@ $theme-colors: (
 @import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
+// Extra small phone screens
+$screen-xs-max: 36rem;
+
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 36rem;
 
@@ -39,6 +42,13 @@ $screen-lg-min: 62rem;
 
 // Large tablets and desktops
 $screen-xl-min: 75rem;
+
+// Exra small phone screens
+@mixin xs{
+	@media (max-width: #{$screen-xs-max}){
+		@content;
+	}
+}
 
 // Small devices
 @mixin sm {
@@ -70,6 +80,13 @@ $screen-xl-min: 75rem;
 
 hr {
 	border-color: white;
+}
+
+@media (max-width: #{$screen-xs-max}) {
+	.font-small-mobile{
+		font-size: 1.09rem;
+		line-height: 1.5;
+	}
 }
 
 .App {
