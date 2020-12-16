@@ -43,7 +43,7 @@ class HolidayGiftingExchange extends Component<{}, {}> {
         <div className="container py-4">
           <div className="row viewport-height-50">
             <div className="col-md-11 custom-vertical-center mx-auto text-center">
-              <div id="info px-5">
+              <div id="info">
                 <img
                   className="svg-purple mb-5 pt-5"
                   src={RectangleSVG}
@@ -52,7 +52,7 @@ class HolidayGiftingExchange extends Component<{}, {}> {
                 <h3 className="hero-header text-black pb-4 font-weight-bold">
                   Donations for the holidays
                 </h3>
-                <p className="hero-subtext text-grey pb-4">
+                <p className="hero-subtext text-grey pb-4 px-sm-0 px-3">
                   To donate and receive the gift, you must donate the minimum
                   amount for that gift. There may be a limited number of gifts
                   (noted in the photo description), so donate before it runs out
@@ -60,19 +60,19 @@ class HolidayGiftingExchange extends Component<{}, {}> {
                   will run from December 16, and up until midnight December 19
                   ET. Donating and claiming a gift is a two-step process:
                 </p>
-                <div className="row pb-2">
+                <div className="row pb-2 px-sm-0 px-3">
                   <h2 className="col-1 hero-subtext text-black font-weight-bold">
                     1.
                   </h2>
-                  <p className="col-11 hero-subtext text-black font-weight-medium text-left">
+                  <p className="col-sm-11 col-10 hero-subtext text-black font-weight-medium text-left">
                     Donate through our donation link (paypal) and make sure to include your email and phone.
                   </p>
                 </div>
-                <div className="row pb-4">
+                <div className="row pb-4 px-sm-0 px-3">
                   <h2 className="col-1 hero-subtext text-black font-weight-bold">
                     2.
                   </h2>
-                  <p className="col-11 hero-subtext text-black font-weight-medium text-left">
+                  <p className="col-sm-11 col-10 hero-subtext text-black font-weight-medium text-left">
                     Fill out our form using the corresponding email or phone number for contact. Specify which gift you would like in return, and we will contact you on December 20th for further details.
                   </p>
                 </div>
