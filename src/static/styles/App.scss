@@ -28,6 +28,9 @@ $theme-colors: (
 @import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
+// Extra small phone screens
+$screen-xs-max: 36rem;
+
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 36rem;
 
@@ -39,6 +42,13 @@ $screen-lg-min: 62rem;
 
 // Large tablets and desktops
 $screen-xl-min: 75rem;
+
+// Exra small phone screens
+@mixin xs{
+	@media (max-width: #{$screen-xs-max}){
+		@content;
+	}
+}
 
 // Small devices
 @mixin sm {
@@ -70,6 +80,13 @@ $screen-xl-min: 75rem;
 
 hr {
 	border-color: white;
+}
+
+@media (max-width: #{$screen-xs-max}) {
+	.font-small-mobile{
+		font-size: 1.09rem;
+		line-height: 1.5;
+	}
 }
 
 .App {
@@ -265,6 +282,10 @@ hr {
 	font-size: 1.8775rem;
 }
 
+.text-light-yellow {
+	color: #fce3b1;
+}
+
 .hero-subtext {
 	font-size: 1.375rem;
 	@include lg {
@@ -274,6 +295,10 @@ hr {
 
 .font-weight-medium {
 	font-weight: 600;
+}
+
+.font-weight-bold   { 
+	font-weight: bold; 
 }
 
 .miniborder-background{
@@ -469,6 +494,13 @@ hr {
 	background-repeat: no-repeat;
 }
 
+.holiday-hero-img {
+	background-image: url("../images/presents.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .bg-contact-us-hero-img {
 	background-image: url("../images/contactHero.png");
 	background-position: center;
@@ -559,5 +591,16 @@ hr {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.carousel-indicators li {
+	width: 0.625rem;
+	height: 0.625rem;
+	border-radius: 100%;
+	background-color: #D3D3D3;
+}
+
+.carousel-indicators .active{
+	background-color: #6129a8;
 }
 
