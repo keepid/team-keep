@@ -15,6 +15,8 @@ import vectorArt from '../static/images/vectorArt.png';
 class HolidayGiftingExchange extends Component<{}, {}> {
   componentDidMount() { window.scrollTo(0, 0); }
 
+  hello
+
   render() {
     return (
       <div>
