@@ -21,7 +21,7 @@ class HolidayGiftingExchange extends Component<{}, {}> {
             <div className="viewport-height-100 custom-vertical-center">
               <div>
                 <h1 className="hero-header pb-0 text-white mb-4 font-weight-bold">
-                  Holiday Gifting
+                  Holiday Gift
                   {' '}
                   <br />
                   {' '}
@@ -43,7 +43,7 @@ class HolidayGiftingExchange extends Component<{}, {}> {
         <div className="container py-4">
           <div className="row viewport-height-50">
             <div className="col-md-11 custom-vertical-center mx-auto text-center">
-              <div id="info">
+              <div id="info px-5">
                 <img
                   className="svg-purple mb-5 pt-5"
                   src={RectangleSVG}
@@ -148,9 +148,9 @@ class HolidayGiftingExchange extends Component<{}, {}> {
             </div>
           </div>
         </div>
-        <div className="row bordered-background w-100 py-5 px-sm-2 px-5-xs">
+        <div className="row bordered-background w-100 py-5 px-3 mx-auto">
           <div className="container my-auto">
-            <h3 className="text-grey text-left mx-md-5 mx-0">
+            <h3 className="text-grey text-left font-small-mobile mx-md-5 mx-0">
               We thank you for your support this holiday season. All proceeds go to support Team Keep’s mission of providing those experiencing homeless with legal identification documentation and storage resources that open access to critical resources.
             </h3>
           </div>
