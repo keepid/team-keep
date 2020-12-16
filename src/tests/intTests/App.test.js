@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../../App';
 import { transitions, Provider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
-import renderer from'react-test-renderer';
+import renderer from 'react-test-renderer';
+import App from '../../App';
 
 const options = {
   position: 'top right',
@@ -27,4 +27,3 @@ it('renders without crashing', () => {
   ReactDOM.render(<Root />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
-
