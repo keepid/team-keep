@@ -59,7 +59,7 @@ class HolidayGiftingExchange extends Component<{}, {}> {
                   amount for that gift. There may be a limited number of gifts
                   (noted in the photo description), so donate before it runs out
                   in order to receive the gift or send it to a loved one! This event
-                  will run from December 16, and up until midnight December 19
+                  will run from December 16, and up until midnight December 23
                   ET. Donating and claiming a gift is a two-step process:
                 </p>
                 <div className="row pb-2 px-sm-0 px-3">
@@ -75,7 +75,7 @@ class HolidayGiftingExchange extends Component<{}, {}> {
                     2.
                   </h2>
                   <p className="col-sm-11 col-10 hero-subtext text-black font-weight-medium text-left">
-                    Fill out our form using the corresponding email or phone number for contact. Specify which gift you would like in return, and we will contact you on December 20th for further details.
+                    Fill out our form using the corresponding email or phone number for contact. Specify which gift you would like in return, and we will contact you within two days for further details.
                   </p>
                 </div>
                 <div className="row pb-5">
