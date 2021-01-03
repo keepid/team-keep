@@ -14,7 +14,6 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Issue from './components/Issue';
-import HolidayGiftingExchange from './components/HolidayGiftingExchange';
 
 interface State {
   isLoggedIn: boolean;
@@ -43,7 +42,6 @@ class App extends React.Component<{}, State, {}> {
                 path="/Issue"
                 render={() => <Issue />}
               />
-              <Route path="/holiday-gifting-exchange" render={() => <HolidayGiftingExchange />} />
               <Route path="/error">
                 <Error />
               </Route>
