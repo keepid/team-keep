@@ -17,6 +17,8 @@ import Partners from '../static/images/partners.png';
 import StoryImg1 from '../static/images/story1.png';
 import StoryImg2 from '../static/images/story2.png';
 import StoryImg3 from '../static/images/story3.png';
+import AnnualReport from '../static/images/2020AnnualReport.pdf';
+import fireworks from '../static/images/fireworks.svg';
 
 const iconSize = 20;
 class Home extends Component<{}, {}> {
@@ -161,6 +163,54 @@ class Home extends Component<{}, {}> {
             </span>
           </div>
         </div>
+
+        <div className="container py-5">
+          <div className="row viewport-height-50">
+            <div className="col-md-10 custom-vertical-center mx-auto text-center">
+              <div id="info">
+                <img
+                  className="svg-purple mb-5"
+                  src={RectangleSVG}
+                  alt="rectangle"
+                />
+                <h3 className="hero-subtext text-grey pb-3">
+                  Lacking formal identification is a prevalent issue among
+                  homeless individuals that bars them from accessing many basic
+                  social and financial services in the United States.
+                </h3>
+                <h3 className="hero-subtext text-black font-weight-medium">
+                  We are dedicated to empowering those who are experiencing
+                  homelessness to obtain, secure, and utilize identification.
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-5">
+          <div className="bg-secondary-dark w-100 viewport-height-100 partial-background toggle-hide" />
+          <div className="container">
+            <span className="overlay-text">
+              <div className="row viewport-height-100 custom-vertical-center">
+                <div className="col-md-12 text-center">
+                  <div>
+                    <img src={fireworks} height="90" width="100" className="float-left" alt="confetti" />
+                    <img src={fireworks} height="90" width="100" className="float-right" alt="confetti" />
+                    <h3 className="hero-header text-light-grey pb-3">
+                      Our 2020 Annual Report
+                    </h3>
+                    <a href={AnnualReport}>
+                      <button type="button" className="btn btn-lg btn-primary">
+                        View PDF
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+
         <div className="container">
           <div className="row viewport-height-50">
             <div className="col-md-10 custom-vertical-center mx-auto text-center">
