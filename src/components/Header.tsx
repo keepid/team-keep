@@ -15,9 +15,10 @@ class Header extends Component<{}, {}, {}> {
       || window.location.pathname === '/home'
     ) {
       document.addEventListener('scroll', () => {
-        const isTop = window.scrollY < 200;
-        if (isTop !== this.state.isTop) {
-          this.setState({ isTop });
+        const isTopCurrent = window.scrollY < 200;
+        const { isTop } = this.state;
+        if (isTopCurrent !== isTop) {
+          this.setState({ isTop: isTopCurrent });
         }
       });
     } else {
