@@ -5,9 +5,8 @@ import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from
 const CustomForm = ({
   status, message, onValidated, name, email, submitButtonListener,
 }) => {
-  const nameArr = name.split(' ');
-  const firstName = nameArr[0];
-  const lastName = nameArr[1];
+  const firstName = name.substr(0, name.indexOf(' '));
+  const lastName = name.substr(name.indexOf(' ') + 1).trim();
   const submit = () => (email
         && firstName
         && lastName
@@ -45,9 +44,6 @@ const CustomForm = ({
           { ReactHtmlParser(message) }
         </div>
       )}
-      {/* <button style={{ fontSize: '2em', padding: 5 }} onClick={(e)=>submit(e)}>
-              Submit
-            </button> */}
     </div>
   );
 };

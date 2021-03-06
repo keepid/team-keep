@@ -101,8 +101,16 @@ class ContactUs extends Component<Props, State, {}> {
   };
 
   validateName = async (): Promise<void> => {
-    const { name } = this.state;
-    if (name !== '') {
+    const { name, checked } = this.state;
+    if (checked === true) {
+      const firstName = name.substr(0, name.indexOf(' '));
+      const lastName = name.substr(name.indexOf(' ') + 1).trim();
+      if (firstName && lastName) {
+        await new Promise((resolve) => this.setState({ nameValidator: 'true' }, resolve));
+      } else {
+        await new Promise((resolve) => this.setState({ nameValidator: 'false' }, resolve));
+      }
+    } else if (name !== '') {
       await new Promise((resolve) => this.setState({ nameValidator: 'true' }, resolve));
     } else {
       await new Promise((resolve) => this.setState({ nameValidator: 'false' }, resolve));
@@ -117,7 +125,7 @@ class ContactUs extends Component<Props, State, {}> {
     if (nameValidator === 'false') {
       return (
         <div className="invalid-feedback text-left">
-          Please enter a valid name.
+          Please enter a valid name. Include first and last if subscribing to our newsletter.
         </div>
       );
     }
@@ -195,7 +203,7 @@ class ContactUs extends Component<Props, State, {}> {
     } = this.state;
     let { description, recaptchaPayload } = this.state;
     // if user wanted to subscribe to email list
-    if (checked) {
+    if (checked && nameValidator === 'true') {
       this.setState((prevState) => ({ submitButtonListener: !prevState.submitButtonListener }));
     }
     if (
