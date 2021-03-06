@@ -25,7 +25,7 @@ interface State {
   descriptionValidator: string;
   recaptchaPayload: string;
   checked: boolean;
-  submitEmailSubscription: boolean;
+  submitButtonListener: boolean;
 }
 
 const recaptchaRef: React.RefObject<ReCAPTCHA> = React.createRef();
@@ -45,7 +45,7 @@ class ContactUs extends Component<Props, State, {}> {
       descriptionValidator: '',
       recaptchaPayload: '',
       checked: false,
-      submitEmailSubscription: false,
+      submitButtonListener: false,
     };
   }
 
@@ -196,7 +196,7 @@ class ContactUs extends Component<Props, State, {}> {
     let { description, recaptchaPayload } = this.state;
     // if user wanted to subscribe to email list
     if (checked) {
-      this.setState({ submitEmailSubscription: true });
+      this.setState((prevState) => ({ submitButtonListener: !prevState.submitButtonListener }));
     }
     if (
       emailValidator !== 'true'
@@ -275,7 +275,7 @@ class ContactUs extends Component<Props, State, {}> {
       emailValidator,
       descriptionValidator,
       checked,
-      submitEmailSubscription,
+      submitButtonListener,
     } = this.state;
     const url = 'https://keep.us7.list-manage.com/subscribe/post?u=9896e51b9ee0605d5e6745f82&amp;id=f16b440eb5';
     return (
@@ -436,22 +436,19 @@ class ContactUs extends Component<Props, State, {}> {
                         Submit
                         <div className="ld ld-ring ld-spin" />
                       </button>
-                      {submitEmailSubscription
-                        ? (
-                          <MailchimpSubscribe
-                            url={url}
-                            render={({ subscribe, status, message }) => (
-                              <CustomForm
-                                status={status}
-                                message={message}
-                                name={name}
-                                email={email}
-                                submitEmailSubscription={submitEmailSubscription}
-                                onValidated={(formData) => subscribe(formData)}
-                              />
-                            )}
+                      <MailchimpSubscribe
+                        url={url}
+                        render={({ subscribe, status, message }) => (
+                          <CustomForm
+                            status={status}
+                            message={message}
+                            name={name}
+                            email={email}
+                            submitButtonListener={submitButtonListener}
+                            onValidated={(formData) => subscribe(formData)}
                           />
-                        ) : <div />}
+                        )}
+                      />
                     </div>
                   </div>
                 </form>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 const CustomForm = ({
-  status, message, onValidated, name, email, submitEmailSubscription,
+  status, message, onValidated, name, email, submitButtonListener,
 }) => {
   const nameArr = name.split(' ');
   const firstName = nameArr[0];
@@ -18,12 +18,8 @@ const CustomForm = ({
           LNAME: lastName,
         }));
   useEffect(() => {
-    let mounted = true;
     submit();
-    return function cleanup() {
-      mounted = false;
-    };
-  }, []);
+  }, [submitButtonListener]);
 
   return (
     <div
@@ -62,7 +58,7 @@ CustomForm.propTypes = {
   onValidated: PropTypes.func,
   name: PropTypes.string,
   email: PropTypes.string,
-  submitEmailSubscription: PropTypes.bool,
+  submitButtonListener: PropTypes.bool,
 };
 
 CustomForm.defaultProps = {
@@ -71,7 +67,7 @@ CustomForm.defaultProps = {
   onValidated: () => {},
   name: '',
   email: '',
-  submitEmailSubscription: false,
+  submitButtonListener: false,
 };
 
 export default (CustomForm);
