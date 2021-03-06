@@ -328,8 +328,8 @@ class ContactUs extends Component<Props, State, {}> {
                   <input type="hidden" name="c" value="?" />
                   <div className="form-row form-group d-flex align-content-start pb-3">
                     <label
-                      htmlFor="MERGE1"
-                      className="text-left w-100 font-weight-bold pr-3"
+                      htmlFor="name"
+                      className="w-100 text-left font-weight-bold pr-3"
                     >
                       Name
                       <input
@@ -337,10 +337,11 @@ class ContactUs extends Component<Props, State, {}> {
                         className={`w-100 form-control form-purple ${this.colorToggle(
                           nameValidator,
                         )}`}
-                        id="MERGE1"
+                        id="name"
                         placeholder="Your name"
                         onChange={this.handleChangeName}
                         value={name}
+                        onBlur={this.validateName}
                         required
                       />
                       {this.nameMessage()}
@@ -368,7 +369,7 @@ class ContactUs extends Component<Props, State, {}> {
                   </div>
                   <div className="form-row form-group d-flex align-content-start pb-3">
                     <label
-                      htmlFor="MERGE0"
+                      htmlFor="email"
                       className="text-left w-100 font-weight-bold pr-3"
                     >
                       Email address
@@ -377,7 +378,7 @@ class ContactUs extends Component<Props, State, {}> {
                         className={`w-100 form-control form-purple ${this.colorToggle(
                           emailValidator,
                         )}`}
-                        id="MERGE0"
+                        id="email"
                         placeholder="Enter your email"
                         value={email}
                         onChange={this.handleChangeEmail}
@@ -431,7 +432,7 @@ class ContactUs extends Component<Props, State, {}> {
                       </span>
                     </div>
                   </div>
-                  <div className="form-row my-4">
+                  <div className="form-row my-2">
                     <div className="d-flex pt-3 mx-auto">
                       {/* onClick={this.handleSubmitWithRecaptcha} */}
                       <button
@@ -444,20 +445,22 @@ class ContactUs extends Component<Props, State, {}> {
                         Submit
                         <div className="ld ld-ring ld-spin" />
                       </button>
-                      <MailchimpSubscribe
-                        url={url}
-                        render={({ subscribe, status, message }) => (
-                          <CustomForm
-                            status={status}
-                            message={message}
-                            name={name}
-                            email={email}
-                            submitButtonListener={submitButtonListener}
-                            onValidated={(formData) => subscribe(formData)}
-                          />
-                        )}
-                      />
                     </div>
+                  </div>
+                  <div className="form-row">
+                    <MailchimpSubscribe
+                      url={url}
+                      render={({ subscribe, status, message }) => (
+                        <CustomForm
+                          status={status}
+                          message={message}
+                          name={name}
+                          email={email}
+                          submitButtonListener={submitButtonListener}
+                          onValidated={(formData) => subscribe(formData)}
+                        />
+                      )}
+                    />
                   </div>
                 </form>
               </div>

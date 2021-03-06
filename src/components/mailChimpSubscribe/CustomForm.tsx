@@ -26,7 +26,7 @@ const CustomForm = ({
         background: '#ffffff',
         borderRadius: 2,
         padding: 10,
-        display: 'inline-block',
+        display: 'block',
       }}
     >
       {status === 'sending' && <div style={{ color: 'blue' }}>sending...</div>}
