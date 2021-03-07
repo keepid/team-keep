@@ -21,7 +21,7 @@ const CustomForm = ({
   }, [submitButtonListener]);
 
   return (
-    <div>
+    <div className="mx-auto text center">
       {status === 'sending' && <div style={{ color: 'blue' }}>sending...</div>}
       {status === 'error' && (
         <div
