@@ -391,7 +391,7 @@ class ContactUs extends Component<Props, State, {}> {
                   <div className="form-row form-group d-flex align-content-start pb-3 form-check">
                     <label htmlFor="emailSubscribe" className="font-weight-bold form-check-label">
                       <input id="emailSubscribe" type="checkbox" className="form-check-input" name="subscribe" onChange={(e) => { this.setState({ checked: e.target.checked }); }} />
-                      Subscribe to Email List
+                      Subscribe to our newsletter
                     </label>
                   </div>
                   <div className="form-row form-group d-flex align-content-start">
