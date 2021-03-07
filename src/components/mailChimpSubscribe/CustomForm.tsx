@@ -21,14 +21,7 @@ const CustomForm = ({
   }, [submitButtonListener]);
 
   return (
-    <div
-      style={{
-        background: '#ffffff',
-        borderRadius: 2,
-        padding: 10,
-        display: 'block',
-      }}
-    >
+    <div>
       {status === 'sending' && <div style={{ color: 'blue' }}>sending...</div>}
       {status === 'error' && (
         <div
