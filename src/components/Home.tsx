@@ -36,7 +36,7 @@ class Home extends Component<{}, {}> {
               We condemn the rising wave of violence and xenophobic rhetoric against members of the Asian
               American Pacific Islander (AAPI) community. Read our Statement of Solidarity with
               the AAPI Community
-              <a href={statementOfSolidarity} target="_blank" rel="noreferrer">Here</a>
+              <a href={statementOfSolidarity} target="_blank" rel="noreferrer"> Here</a>
             </p>
           </div>
         </div>
