@@ -76,12 +76,12 @@ class Header extends Component<{}, {}, {}> {
                   Keep.id
                 </a>
               </li>
-              {/* <li className="nav-item my-1 mr-2 ml-2">
-                <Link className="nav-link" to="/">
-                  Stories
-                </Link>
-              </li> */}
-              <li className="nav-item my-1 mr-5 ml-2">
+              <li className="nav-item my-1 mr-2 ml-2">
+                <a className="nav-link" href="https://Medium.com/keep-informed">
+                  Blog
+                </a>
+              </li>
+              <li className="nav-item my-1 mr-3 ml-2">
                 <Link className="nav-link" to="/contact-us">
                   Contact Us
                 </Link>
