@@ -33,10 +33,11 @@ class Home extends Component<{}, {}> {
         <div className="bg-secondary-yellow-dark pb-5 w-sm-100 w-md-100 w-100">
           <div className="container text-center py-2">
             <p>
-              We condemn the rising wave of violence and xenophobic rhetoric against members of the Asian
-              American Pacific Islander (AAPI) community. Read our Statement of Solidarity with
-              the AAPI Community
-              <a href={statementOfSolidarity} target="_blank" rel="noreferrer"> Here</a>
+              We have received official 501(c)(3) nonprofit tax-exempt status from the IRS!
+              Join our fundraiser May 5 - 12 to celebrate. Click the Donate button up top,
+              or click here
+              <a href="https://www.facebook.com/events/2908815029385369" target="_blank" rel="noreferrer"> here </a>
+              to learn more.
             </p>
           </div>
         </div>
