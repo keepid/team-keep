@@ -61,8 +61,11 @@ class Footer extends Component<{}, {}> {
               <img src={TwitterLogo} alt="twitter-logo" className="mx-2" />
             </a>
           </div>
-          <div className="d-flex justify-content-center py-4">
+          <div className="d-flex justify-content-center pt-4">
             <p>&copy; 2020 Team Keep</p>
+          </div>
+          <div className="d-flex justify-content-center pb-4">
+            <p>Team Keep is a nonprofit corporation exempt from federal income tax under Section 501(c)(3) of the Internal Revenue Code.</p>
           </div>
         </div>
       </footer>

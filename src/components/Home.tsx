@@ -30,7 +30,7 @@ class Home extends Component<{}, {}> {
           <title>Welcome</title>
           <meta name="description" content="Keep.id" />
         </Helmet>
-        <div className="bg-secondary-yellow-dark pb-5 w-sm-100 w-md-100 w-100">
+        {/* <div className="bg-secondary-yellow-dark pb-5 w-sm-100 w-md-100 w-100">
           <div className="container text-center py-2">
             <p>
               We have received official 501(c)(3) nonprofit tax-exempt status from the IRS!
@@ -40,7 +40,7 @@ class Home extends Component<{}, {}> {
               to learn more.
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="bg-gray viewport-height-100">
           <div className="container">
             <div className="row py-5 viewport-height-100 negative-margin-top">
