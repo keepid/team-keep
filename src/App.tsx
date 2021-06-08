@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import './static/styles/App.scss';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 import Header from './components/Header';
 import Error from './components/Error';
 import Footer from './components/Footer';
@@ -14,6 +15,11 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Issue from './components/Issue';
+
+window.onload = () => {
+  ReactGA.initialize('G-H1CSQJ6BGQ');
+  ReactGA.pageview(window.location.pathname + window.location.search);
+};
 
 interface State {
   isLoggedIn: boolean;
