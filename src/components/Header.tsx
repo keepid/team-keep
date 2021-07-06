@@ -87,9 +87,9 @@ class Header extends Component<{}, {}, {}> {
                 </Link>
               </li>
               <li className="nav-item my-1 mr-2 ml-2">
-                <Link className="nav-link" to="/store">
+                <Link className="nav-link" to="/Donate">
                   <button type="submit" className="btn btn-secondary w-40 mr-2">
-                    Store
+                    Donate
                   </button>
                 </Link>
               </li>

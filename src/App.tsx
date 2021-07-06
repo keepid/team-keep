@@ -16,7 +16,6 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Issue from './components/Issue';
 import Donate from './components/Donate';
-import Store from './components/Store';
 
 window.onload = () => {
   ReactGA.initialize('G-H1CSQJ6BGQ');
@@ -47,7 +46,6 @@ class App extends React.Component<{}, State, {}> {
               <Route path="/contact-us" render={() => <ContactUs />} />
               <Route path="/about-us" render={() => <AboutUs />} />
               <Route path="/donate" render={() => <Donate />} />
-              <Route path="/store" render={() => <Store />} />
               <Route
                 path="/Issue"
                 render={() => <Issue />}
