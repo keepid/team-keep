@@ -56,28 +56,30 @@ class Donate extends React.Component<{}, {clientToken: string, amount: string, s
               options={{ authorization: this.state.clientToken }}
               onInstance={(instance) => (this.instance = instance)}
             />
-            <button type="button" onClick={this.buy.bind(this)}>Buy</button>
+            <button className="btn btn-primary m-1" type="button" onClick={this.buy.bind(this)}>Buy</button>
           </div>
         );
         console.log(this.state.showDropin);
       }
 
       return (
-        <div>
+        <div className="container">
           <div>
             <Helmet>
               <title>Welcome</title>
               <meta name="description" content="Keep.id" />
             </Helmet>
-            <header className="text-left m-2">Hello! Click a button or put in your own amount</header>
-            <div className="btn-group" role="group">
-              <button className="btn btn-primary m-1" type="button" onClick={() => this.setState({ amount: '5' })}>5</button>
-              <button className="btn btn-primary m-1" type="button" onClick={() => this.setState({ amount: '10' })}>10</button>
-              <button className="btn btn-primary m-1" type="button" onClick={() => this.setState({ amount: '15' })}>15</button>
-              <button className="btn btn-primary m-1" type="button" onClick={() => this.setState({ amount: '20' })}>20</button>
-              <div className="input-group m-1">
-                <input type="text" className="form-control" value={this.state.amount} />
-                <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={() => this.setState({ showDropin: true })}>Donate!</button>
+            <div className="justify-content-center">
+              <header className="m-2 h4">Hello! Click a button or put in your own amount</header>
+              <div className="btn-group" role="group">
+                <button className="btn btn-primary m-1" type="button" onClick={() => this.setState({ amount: '5' })}>5</button>
+                <button className="btn btn-primary m-1" type="button" onClick={() => this.setState({ amount: '10' })}>10</button>
+                <button className="btn btn-primary m-1" type="button" onClick={() => this.setState({ amount: '15' })}>15</button>
+                <button className="btn btn-primary m-1" type="button" onClick={() => this.setState({ amount: '20' })}>20</button>
+                <div className="input-group m-1">
+                  <input type="text" className="form-control" value={this.state.amount} />
+                  <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={() => this.setState({ showDropin: true })}>Donate!</button>
+                </div>
               </div>
             </div>
           </div>
@@ -89,4 +91,4 @@ class Donate extends React.Component<{}, {clientToken: string, amount: string, s
 
 // card: 4111 1111 1111 1111, year: 01/24
 
-export default Donate;
+export default (Donate);
