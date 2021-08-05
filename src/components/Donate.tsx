@@ -1,7 +1,7 @@
 import React from 'react';
 import DropIn from 'braintree-web-drop-in-react';
 import { Helmet } from 'react-helmet';
-// import Braintree from 'braintree-web';
+import { Braintree, HostedField } from 'react-braintree-fields';
 import getServerURL from '../serverOverride';
 
 import RectangleSVG from '../static/images/story2.png';
