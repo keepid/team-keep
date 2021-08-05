@@ -175,11 +175,36 @@ hr {
 	}
 }
 
+//fix home: use this same techine on yellow part, previous color was .bg-secondary-dark
+.smallbluebox{
+	background-color: blue;
+	@include md{
+		background-color: transparent;
+	}
+}
+
+.bigbluebox{
+	background-color: transparent;
+	@include md{
+		background-color: green;
+	}
+}
+
+//the culprit, fix these font sizes to fix issues. also change border width
 .hero-header1 {
 	font-family: Raleway, sans-serif;
 	font-weight: bold;
-	font-size: 4.4625rem;
+	font-size: 2rem;
 	line-height: 1.2;
+	@include sm {
+		font-size: 3.5rem;
+	}
+	@include md {
+		font-size: 3.9rem;
+	}
+	@include lg {
+		font-size: 4.4625rem;
+	}
 }
 
 .hero-header2 {
@@ -207,6 +232,7 @@ hr {
 	min-height: 60vh;
 }
 
+//fix this for about us page
 .home-container-text {
 	font-size: 1.25rem;
 	font-weight: 300;

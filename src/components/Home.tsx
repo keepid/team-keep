@@ -42,7 +42,7 @@ class Home extends Component<{}, {}> {
           </div>
         </div> */}
         <div className="bg-gray viewport-height-100">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row py-5 viewport-height-100 negative-margin-top">
               <div className="col-lg-6 custom-vertical-center pt-5">
                 <div>
@@ -96,42 +96,45 @@ class Home extends Component<{}, {}> {
             </div>
           </div>
         </div>
-        <div className="mb-5">
-          <div className="bg-secondary-dark w-sm-100 w-md-100 w-75 viewport-height-100 partial-background toggle-hide" />
-          <div className="container">
-            <span className="overlay-text">
-              <div className="row viewport-height-100 custom-vertical-center">
-                <div className="col-md-7 pr-4 toggle-display-dark py-2 my-3">
-                  <div>
-                    <h3 className="hero-header text-light-grey pb-3">
-                      Identification is key
-                    </h3>
-                    <p className="text-light-grey home-container-text">
-                      Homelessness falls at the intersection of many social
-                      issues: income inequality, substance abuse, unaffordable
-                      healthcare, and more.
-                    </p>
-                    <p className="text-light-grey home-container-text">
-                      Obtaining identification helps individuals access
-                      essential services and escape the cycle of homelessness.
-                    </p>
-                    {/* <button
+
+        <div>
+          <div className="container-fluid bigbluebox w-75 viewport-height-100 partial-background mb-5" />
+          <div className="container-fluid smallbluebox mb-5">
+            <div className="container">
+              <span className="overlay-text">
+                <div className="row viewport-height-100 custom-vertical-center">
+                  <div className="col-md-7 pr-4 toggle-display-dark py-2 my-3">
+                    <div>
+                      <h3 className="hero-header text-light-grey pb-3">
+                        Identification is key
+                      </h3>
+                      <p className="text-light-grey home-container-text">
+                        Homelessness falls at the intersection of many social
+                        issues: income inequality, substance abuse, unaffordable
+                        healthcare, and more.
+                      </p>
+                      <p className="text-light-grey home-container-text">
+                        Obtaining identification helps individuals access
+                        essential services and escape the cycle of homelessness.
+                      </p>
+                      {/* <button
                       type="button"
                       className="mt-4 btn btn-lg btn-outline-white"
                     >
                       More about the Issue
                     </button> */}
+                    </div>
+                  </div>
+                  <div className="col-md-5 pb-4 pb-md-0">
+                    <img
+                      src={HomeImg1}
+                      className="w-100"
+                      alt="Homeless person 1"
+                    />
                   </div>
                 </div>
-                <div className="col-md-5">
-                  <img
-                    src={HomeImg1}
-                    className="w-100"
-                    alt="Homeless person 1"
-                  />
-                </div>
-              </div>
-            </span>
+              </span>
+            </div>
           </div>
         </div>
         <div>
