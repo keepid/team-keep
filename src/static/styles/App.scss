@@ -177,7 +177,7 @@ hr {
 
 //fix home: use this same techine on yellow part, previous color was .bg-secondary-dark
 .smallbluebox{
-	background-color: blue;
+	background-color: $secondary-dark-theme;
 	@include md{
 		background-color: transparent;
 	}
@@ -186,7 +186,21 @@ hr {
 .bigbluebox{
 	background-color: transparent;
 	@include md{
-		background-color: green;
+		background-color: $secondary-dark-theme;
+	}
+}
+
+.smallyellowbox{
+	background-color: $secondary-theme-dark;
+	@include md{
+		background-color: transparent;
+	}
+}
+
+.bigyellowbox{
+	background-color: transparent;
+	@include md{
+		background-color: $secondary-theme-dark;
 	}
 }
 
@@ -210,10 +224,18 @@ hr {
 .hero-header2 {
 	font-family: Raleway, sans-serif;
 	font-weight: bold;
-	font-size: 4.4625rem;
+	font-size: 2rem;
 	line-height: 1.2;
 	color: #f2f2f2;
-	
+	@include lg{
+		font-size: 4.4625rem;
+	}
+	@include md{
+		font-size: 3.5rem;
+	}
+	@include sm{
+		font-size: 2.5rem;
+	}
 }
 
 .overlay-text {
@@ -232,7 +254,7 @@ hr {
 	min-height: 60vh;
 }
 
-//fix this for about us page
+//used in home, issues, and about us
 .home-container-text {
 	font-size: 1.25rem;
 	font-weight: 300;
@@ -275,9 +297,12 @@ hr {
 
 .text-purple{
 	color: #7b81ff;
-	font-size: 3em;
+	font-size: 1.7rem;
 	font-weight: bold;
 	align-self: center;
+	@include sm{
+		font-size: 3em;;
+	}
 }
 
 .text-purple1{
@@ -335,11 +360,17 @@ hr {
 }
 
 .bordered-background1 {
-	border: 4.775rem solid #262867;
+	border: 3rem solid #262867;
+	@include md{
+		border: 4.775rem solid #262867;
+	}
 }
 
 .bordered-background2 {
-	border: 4.075rem solid white;
+	border: 3rem solid white;
+	@include md{
+		border: 4.075rem solid white;
+	}
 }
 
 .svg-purple {

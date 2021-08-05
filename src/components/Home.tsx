@@ -42,8 +42,8 @@ class Home extends Component<{}, {}> {
           </div>
         </div> */}
         <div className="bg-gray viewport-height-100">
-          <div className="container-fluid">
-            <div className="row py-5 viewport-height-100 negative-margin-top">
+          <div className="container">
+            <div className="row py-5 viewport-height-100 negative-margin-top align-c">
               <div className="col-lg-6 custom-vertical-center pt-5">
                 <div>
                   <h1 className="hero-header pb-4">
@@ -103,7 +103,7 @@ class Home extends Component<{}, {}> {
             <div className="container">
               <span className="overlay-text">
                 <div className="row viewport-height-100 custom-vertical-center">
-                  <div className="col-md-7 pr-4 toggle-display-dark py-2 my-3">
+                  <div className="col-md-7 pr-4 toggle-display-dark py-2 mt-3">
                     <div>
                       <h3 className="hero-header text-light-grey pb-3">
                         Identification is key
@@ -113,7 +113,7 @@ class Home extends Component<{}, {}> {
                         issues: income inequality, substance abuse, unaffordable
                         healthcare, and more.
                       </p>
-                      <p className="text-light-grey home-container-text">
+                      <p className="text-light-grey home-container-text mb-0 mb-md-1">
                         Obtaining identification helps individuals access
                         essential services and escape the cycle of homelessness.
                       </p>
@@ -125,7 +125,7 @@ class Home extends Component<{}, {}> {
                     </button> */}
                     </div>
                   </div>
-                  <div className="col-md-5 pb-4 pb-md-0">
+                  <div className="col-md-5 pb-4 pb-md-0 pt-0 pt-md-1">
                     <img
                       src={HomeImg1}
                       className="w-100"
@@ -138,44 +138,46 @@ class Home extends Component<{}, {}> {
           </div>
         </div>
         <div>
-          <div className="bg-secondary-yellow-dark w-75 viewport-height-100 partial-background right toggle-hide" />
-          <div className="container">
-            <span className="overlay-text">
-              <div className="row viewport-height-100 custom-vertical-center">
-                <div className="col-md-4 pr-4">
-                  <img
-                    src={HomeImg2}
-                    className="w-100"
-                    alt="Homeless person 2"
-                  />
-                </div>
-                <div className="col-md-8 toggle-display-dark-yellow py-2 my-3">
-                  <div>
-                    <h3 className="hero-header pb-3">
-                      We use technology to empower a vulnerable population.
-                    </h3>
-                    <p className="home-container-text">
-                      We build long-term partnerships with homeless services and
-                      bring them on to our cloud platform, Keep.id.
-                    </p>
-                    <p className="home-container-text">
-                      Keep.id assists individuals experiencing homelessness in
-                      the acquisition, storage, and application of
-                      identification to gain access to aid and employment
-                      opportunities.
-                    </p>
-                    <Link to="/about-us">
-                      <button
-                        type="button"
-                        className="mt-4 btn btn-lg btn-outline-black"
-                      >
-                        What we are doing
-                      </button>
-                    </Link>
+          <div className="bigyellowbox w-75 viewport-height-100 partial-background right toggle-hide" />
+          <div className="container-fluid smallyellowbox">
+            <div className="container">
+              <span className="overlay-text">
+                <div className="row viewport-height-100 custom-vertical-center">
+                  <div className="col-md-4 pr-4 pt-4 pt-md-0">
+                    <img
+                      src={HomeImg2}
+                      className="w-100"
+                      alt="Homeless person 2"
+                    />
+                  </div>
+                  <div className="col-md-8 toggle-display-dark-yellow py-2 my-3">
+                    <div>
+                      <h3 className="hero-header pb-3">
+                        We use technology to empower a vulnerable population.
+                      </h3>
+                      <p className="home-container-text">
+                        We build long-term partnerships with homeless services and
+                        bring them on to our cloud platform, Keep.id.
+                      </p>
+                      <p className="home-container-text">
+                        Keep.id assists individuals experiencing homelessness in
+                        the acquisition, storage, and application of
+                        identification to gain access to aid and employment
+                        opportunities.
+                      </p>
+                      <Link to="/about-us">
+                        <button
+                          type="button"
+                          className="mt-4 btn btn-lg btn-outline-black"
+                        >
+                          What we are doing
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </span>
+              </span>
+            </div>
           </div>
         </div>
 
@@ -202,7 +204,7 @@ class Home extends Component<{}, {}> {
           </div>
         </div>
 
-        <div className="mb-5">
+        <div>
           <div className="bg-secondary-dark w-100 viewport-height-100 partial-background toggle-hide" />
           <div className="container">
             <span className="overlay-text">
