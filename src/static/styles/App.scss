@@ -227,14 +227,14 @@ hr {
 	font-size: 2rem;
 	line-height: 1.2;
 	color: #f2f2f2;
-	@include lg{
-		font-size: 4.4625rem;
+	@include sm{
+		font-size: 2.5rem;
 	}
 	@include md{
 		font-size: 3.5rem;
 	}
-	@include sm{
-		font-size: 2.5rem;
+	@include lg{
+		font-size: 4.4625rem;
 	}
 }
 
