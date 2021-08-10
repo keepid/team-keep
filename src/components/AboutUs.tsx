@@ -72,7 +72,7 @@ class AboutUs extends Component<{}, {}> {
         <div className="mb-5">
           <div className="bordered-background">
             <div className="container">
-              <div className="row custom-vertical-center align-items-center my-5">
+              <div className="row custom-vertical-center align-items-center my-4">
                 <div className="col-12">
                   <div>
                     <h3 className="hero-header pb-3 text-center mx-auto mt-4">
@@ -80,13 +80,14 @@ class AboutUs extends Component<{}, {}> {
                     </h3>
                   </div>
                 </div>
-                <div className="row custom-vertical-center mx-auto align-items-center py-4">
-                  <div className="col-1" />
-                  <div className="col-2 mr-5">
-                    <img src={HandshakeImg} alt="handshake" />
+                <div className="row custom-vertical-center justify-content-center p-4">
+                  <div className="col-8 col-md-2 p-4 p-md-0 mr-md-5">
+                    <div className="row justify-content-center">
+                      <img src={HandshakeImg} alt="handshake" />
+                    </div>
                   </div>
-                  <div className="col-7">
-                    <div className="home-container-text">
+                  <div className="col-9 col-md-7 mb-3">
+                    <div className="home-container-text text-center text-md-left">
                       <div className="mb-1 font-weight-bold">
                         <b>Collaboration</b>
                       </div>
@@ -97,13 +98,14 @@ class AboutUs extends Component<{}, {}> {
                     </div>
                   </div>
                 </div>
-                <div className="row custom-vertical-center mx-auto align-items-center py-4">
-                  <div className="col-1" />
-                  <div className="col-2 mr-5">
-                    <img src={TargetImg} alt="target" />
+                <div className="row custom-vertical-center justify-content-center p-4">
+                  <div className="col-8 col-md-2 p-4 p-md-0 mr-md-5">
+                    <div className="row justify-content-center">
+                      <img src={TargetImg} alt="target" />
+                    </div>
                   </div>
-                  <div className="col-7">
-                    <div className="home-container-text">
+                  <div className="col-9 col-md-7 mb-3">
+                    <div className="home-container-text text-center text-md-left">
                       <div className="mb-1 font-weight-bold">
                         <b>Purpose</b>
                       </div>
@@ -114,13 +116,14 @@ class AboutUs extends Component<{}, {}> {
                     </div>
                   </div>
                 </div>
-                <div className="row custom-vertical-center mx-auto align-items-center py-4">
-                  <div className="col-1" />
-                  <div className="col-2 mr-5">
-                    <img src={WomanImg} alt="woman" />
+                <div className="row custom-vertical-center justify-content-center p-4">
+                  <div className="col-8 col-md-2 p-4 p-md-0 mr-md-5">
+                    <div className="row justify-content-center">
+                      <img src={WomanImg} alt="woman" />
+                    </div>
                   </div>
-                  <div className="col-7">
-                    <div className="home-container-text">
+                  <div className="col-9 col-md-7 mb-3">
+                    <div className="home-container-text text-center text-md-left">
                       <div className="mb-1 font-weight-bold">
                         <b>Empathy</b>
                       </div>

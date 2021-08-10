@@ -175,20 +175,67 @@ hr {
 	}
 }
 
+//fix home: use this same techine on yellow part, previous color was .bg-secondary-dark
+.smallbluebox{
+	background-color: $secondary-dark-theme;
+	@include md{
+		background-color: transparent;
+	}
+}
+
+.bigbluebox{
+	background-color: transparent;
+	@include md{
+		background-color: $secondary-dark-theme;
+	}
+}
+
+.smallyellowbox{
+	background-color: $secondary-theme-dark;
+	@include md{
+		background-color: transparent;
+	}
+}
+
+.bigyellowbox{
+	background-color: transparent;
+	@include md{
+		background-color: $secondary-theme-dark;
+	}
+}
+
+//the culprit, fix these font sizes to fix issues. also change border width
 .hero-header1 {
 	font-family: Raleway, sans-serif;
 	font-weight: bold;
-	font-size: 4.4625rem;
+	font-size: 2rem;
 	line-height: 1.2;
+	@include sm {
+		font-size: 3.5rem;
+	}
+	@include md {
+		font-size: 3.9rem;
+	}
+	@include lg {
+		font-size: 4.4625rem;
+	}
 }
 
 .hero-header2 {
 	font-family: Raleway, sans-serif;
 	font-weight: bold;
-	font-size: 4.4625rem;
+	font-size: 2rem;
 	line-height: 1.2;
 	color: #f2f2f2;
-	
+	@include sm{
+		font-size: 2.5rem;
+	}
+	@include md{
+		font-size: 3.5rem;
+	}
+	@include lg{
+		font-size: 4.4625rem;
+	}
 }
 
 .overlay-text {
@@ -207,6 +254,7 @@ hr {
 	min-height: 60vh;
 }
 
+//used in home, issues, and about us
 .home-container-text {
 	font-size: 1.25rem;
 	font-weight: 300;
@@ -249,9 +297,12 @@ hr {
 
 .text-purple{
 	color: #7b81ff;
-	font-size: 3em;
+	font-size: 1.7rem;
 	font-weight: bold;
 	align-self: center;
+	@include sm{
+		font-size: 3em;;
+	}
 }
 
 .text-purple1{
@@ -309,11 +360,17 @@ hr {
 }
 
 .bordered-background1 {
-	border: 4.775rem solid #262867;
+	border: 3rem solid #262867;
+	@include md{
+		border: 4.775rem solid #262867;
+	}
 }
 
 .bordered-background2 {
-	border: 4.075rem solid white;
+	border: 3rem solid white;
+	@include md{
+		border: 4.075rem solid white;
+	}
 }
 
 .svg-purple {
