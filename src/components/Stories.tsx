@@ -1,17 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Card from './Card';
 
-// TODOS:
-// create a simple card
-// get access to team keep medium account
-// create access token to use medium api
-// make a simple request to get article metadata
-// display the metadata via the card
-// implement the request and card display for all medium articles in a useEffect call
+const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/keep-informed';
 
-const Stories = () => (
-  <div>
-    <h1>Story</h1>
-  </div>
-);
+const Stories = () => {
+  const [mediumData, setMediumData] = useState([]);
+  useEffect(() => {
+    axios.get(url).then((response) => {
+      console.log(response.data.items);
+      setMediumData(response.data.items);
+    });
+  }, []);
+  return (
+    <div>
+      <h1>Stories Boilerplate</h1>
+      <div className="card-columns section">
+        {mediumData.map((article) => (
+          <Card
+            key={article['guid']}
+            imgUrl={article['thumbnail']}
+            title={article['title']}
+            url={article['link']}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Stories;
