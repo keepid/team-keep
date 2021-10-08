@@ -14,16 +14,19 @@ const Stories = () => {
   }, []);
   return (
     <div>
-      <h1>Stories Boilerplate</h1>
-      <div className="card-columns section">
-        {mediumData.map((article) => (
-          <Card
-            key={article['guid']}
-            imgUrl={article['thumbnail']}
-            title={article['title']}
-            url={article['link']}
-          />
-        ))}
+      <h1>A collection of writing by Team Keep about the homeless experience.</h1>
+      <div className="stories-sizing stories-body">
+        <div className="grid">
+          {mediumData.map((article) => (
+            <Card
+              key={article['guid']}
+              imgUrl={article['thumbnail']}
+              title={article['title']}
+              url={article['link']}
+              description={article['description']}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
