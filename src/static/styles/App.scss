@@ -175,6 +175,20 @@ hr {
 	}
 }
 
+.hero-header-2 {
+	font-family: Raleway, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	// 992px window width and more
+	@include md {
+		font-size: 2rem;
+	}
+	@include lg {
+		font-size: 3.25rem;
+	}
+}
+
 //fix home: use this same techine on yellow part, previous color was .bg-secondary-dark
 .smallbluebox{
 	background-color: $secondary-dark-theme;
@@ -661,72 +675,88 @@ hr {
 }
 
 .stories-sizing {
-  box-sizing: border-box;
-  font-size: 62.5%;
+	box-sizing: border-box;
+	font-size: 62.5%;
 }
 
 .stories-body {
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 2.5em;
 }
 
 .grid {
-  display: grid;
-  width: 110em;
-  grid-gap: 7rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  align-items: start;
+	display: grid;
+	width: 140em;
+	grid-gap: 5rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	align-items: start;
 }
 
 .grid-item {
-  background-color: #fff;
-  border-radius: 0.4rem;
-  overflow: hidden;
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: 0.2s;
+	background-color: #fff;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.125);
+	transition: 0.2s;
 }
 
 .grid-item:hover {
-  transform: translateY(-0.5%);
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+	transform: translateY(-0.5%);
+	box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
 }
 
 .card-img {
-  display: block;
-  width: 100%;
-  height: 25rem;
-  object-fit: cover;
+	display: block;
+	width: 100%;
+	height: 25rem;
+	object-fit: cover;
 }
 
 .card-content {
-  padding: 3rem;
+	padding: 1rem;
 }
 
 .card-header {
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: #0d0d0d;
-  margin-bottom: 1.5rem;
+	font-size: 1.75rem;
+	font-weight: 520;
+	color: #0d0d0d;
+	margin-bottom: 1.5rem;
+	background-color: #fff;
 }
 
 .card-text {
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  line-height: 1.7;
-  color: #3d3d3d;
-  margin-bottom: 2.5rem;
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.7;
+	color: #3d3d3d;
+	margin-bottom: 2.5rem;
+}
+
+.card-btn {
+	display: block;
+	width: 32.5%;
+	padding: 0.5rem;
+	font-size: 0.75rem;
+	text-align: center;
+	color: #fafafa;
+	background-color: #315efd;
+	border: none;
+	border-radius: 0.4rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
 }
 
 @media only screen and (max-width: 60em) {
-  body {
-    padding: 3rem;
-  }
+	body {
+		padding: 3rem;
+	}
 
-  .grid {
-    grid-gap: 3rem;
-  }
+	.grid {
+		grid-gap: 3rem;
+	}
 }
