@@ -10,7 +10,6 @@ const Stories = () => {
   const [mediumData, setMediumData] = useState([]);
   useEffect(() => {
     axios.get(url).then((response) => {
-      console.log(response.data.items);
       setMediumData(response.data.items);
     });
   }, []);
@@ -50,13 +49,14 @@ const Stories = () => {
       </div>
       <div className="stories-sizing stories-body">
         <div className="grid">
-          {mediumData.map((article) => (
+          {mediumData.map((article: any) => (
             <Card
               key={article.guid}
               imgUrl={article.thumbnail}
               title={article.title}
               url={article.link}
               description={article.description}
+              date={article.date}
             />
           ))}
         </div>
