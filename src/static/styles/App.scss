@@ -14,9 +14,12 @@ $error-red: #f24d4d;
 $footer-color: #413f57;
 $footer-text-color: rgb(183, 183, 192);
 $footer-text-color-accent: rgb(230, 230, 230);
+$card-header-color: #31303f;
+$card-text-color: #42464b;
 
 $light-grey: #f2f2f2;
 $grey: #555c62;
+$white: #ffffff;
 
 $theme-colors: (
 "primary-theme": $primary-theme,
@@ -680,7 +683,7 @@ hr {
 }
 
 .stories-body {
-	font-family: "Poppins", sans-serif;
+	font-family: "Inter", sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -723,9 +726,9 @@ hr {
 .card-header {
 	font-size: 1.75rem;
 	font-weight: 520;
-	color: #0d0d0d;
+	color: $card-header-color;
 	margin-bottom: 1rem;
-	background-color: #fff;
+	background-color: $white;
 	text-align: left;
 	padding-right: 2rem;
 	padding-left: 0rem;
@@ -735,7 +738,7 @@ hr {
 	font-size: 1rem;
 	letter-spacing: 0.1rem;
 	line-height: 1.7;
-	color: #3d3d3d;
+	color: $card-text-color;
 	margin-bottom: 2.5rem;
 }
 
@@ -743,7 +746,7 @@ hr {
 	font-size: 0.9rem;
 	letter-spacing: 0.05rem;
 	line-height: 1.7;
-	color: #6d6d6d;
+	color: $grey;
 }
 
 .card-btn {
@@ -752,8 +755,8 @@ hr {
 	padding: 0.5rem;
 	font-size: 0.75rem;
 	text-align: center;
-	color: #fafafa;
-	background-color: #315efd;
+	color: $white;
+	background-color: $primary-theme;
 	border: none;
 	border-radius: 0.4rem;
 	transition: 0.2s;

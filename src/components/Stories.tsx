@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import Card from './Card';
 import RectangleSVG from '../static/images/rectangle.svg';
@@ -9,8 +8,11 @@ const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/fee
 const Stories = () => {
   const [mediumData, setMediumData] = useState([]);
   useEffect(() => {
-    axios.get(url).then((response) => {
-      setMediumData(response.data.items);
+    fetch(url).then((response) => response.json()).then((responseJSON) => {
+      const { status } = responseJSON;
+      if (status === 'ok') {
+        setMediumData(responseJSON.items);
+      }
     });
   }, []);
   return (
