@@ -14,9 +14,12 @@ $error-red: #f24d4d;
 $footer-color: #413f57;
 $footer-text-color: rgb(183, 183, 192);
 $footer-text-color-accent: rgb(230, 230, 230);
+$card-header-color: #31303f;
+$card-text-color: #42464b;
 
 $light-grey: #f2f2f2;
 $grey: #555c62;
+$white: #ffffff;
 
 $theme-colors: (
 "primary-theme": $primary-theme,
@@ -172,6 +175,20 @@ hr {
 	}
 	@include lg {
 		font-size: 4.125rem;
+	}
+}
+
+.hero-header-2 {
+	font-family: Raleway, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	// 992px window width and more
+	@include md {
+		font-size: 2rem;
+	}
+	@include lg {
+		font-size: 3.25rem;
 	}
 }
 
@@ -660,3 +677,99 @@ hr {
 	background-color: #6129a8;
 }
 
+.stories-sizing {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+.stories-body {
+	font-family: "Inter", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 2.5em;
+}
+
+.grid {
+	display: grid;
+	width: 140em;
+	grid-gap: 5rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	align-items: start;
+}
+
+.grid-item {
+	background-color: #fff;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.125);
+	transition: 0.2s;
+}
+
+.grid-item:hover {
+	transform: translateY(-0.5%);
+	box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+	display: block;
+	width: 100%;
+	height: 25rem;
+	object-fit: cover;
+}
+
+.card-content {
+	padding: 1rem;
+}
+
+.card-header {
+	font-size: 1.75rem;
+	font-weight: 520;
+	color: $card-header-color;
+	margin-bottom: 1rem;
+	background-color: $white;
+	text-align: left;
+	padding-right: 2rem;
+	padding-left: 0rem;
+}
+
+.card-text {
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.7;
+	color: $card-text-color;
+	margin-bottom: 2.5rem;
+}
+
+.card-date-text {
+	font-size: 0.9rem;
+	letter-spacing: 0.05rem;
+	line-height: 1.7;
+	color: $grey;
+}
+
+.card-btn {
+	display: block;
+	width: 32.5%;
+	padding: 0.5rem;
+	font-size: 0.75rem;
+	text-align: center;
+	color: $white;
+	background-color: $primary-theme;
+	border: none;
+	border-radius: 0.4rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 60em) {
+	body {
+		padding: 3rem;
+	}
+
+	.grid {
+		grid-gap: 3rem;
+	}
+}

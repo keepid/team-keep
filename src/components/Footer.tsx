@@ -23,9 +23,9 @@ class Footer extends Component<{}, {}> {
             <a className="nav-link text-white mx-2" href="https://keep.id/">
               Keep.id
             </a>
-            {/* <Link className="nav-link text-white mx-2" to="/">
+            <Link className="nav-link text-white mx-2" to="/stories">
               Stories
-            </Link> */}
+            </Link>
             {/* <Link className="nav-link text-white mx-2 footer-keep" to="/">
               Team Keep
             </Link> */}
