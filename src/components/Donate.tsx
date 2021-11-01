@@ -1,6 +1,12 @@
 import React from 'react';
 import { Braintree, HostedField } from 'react-braintree-fields';
 
+// The client side donation component takes in the user's payment information
+// and generates a nonce token. This nonce token is sent to the server, where
+// the actual transaction is attempted.
+
+// TODO: Need a client token or tokenization key in order to generate the nonce token.
+
 const Donate = () => {
   const [tokenize, setTokenizeFunc]: any = React.useState();
   const [cardType, setCardType] = React.useState('');
