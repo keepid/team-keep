@@ -186,7 +186,7 @@ class AboutUs extends Component<{}, {}> {
                   <h1 className="hero-header text-black align-items-center ">
                     We are here to help!
                   </h1>
-                  <a href="https://teamkeep.nationbuilder.com/donate">
+                  <a href="https://www.paypal.com/donate/?hosted_button_id=UZ3C7N5LSXQQC">
                     <button type="button" className="btn btn-lg btn-secondary">
                       Donate Now
                     </button>
