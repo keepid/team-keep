@@ -2,61 +2,57 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
-const CustomForm = ({
-  status, message, onValidated, name, email, submitButtonListener,
+const CustomFormButton = ({
+  status, onValidated, message, email, submitButtonListener,
 }) => {
-  const firstName = name.substr(0, name.indexOf(' '));
-  const lastName = name.substr(name.indexOf(' ') + 1).trim();
   const submit = () => (email
-        && firstName
-        && lastName
         && email.indexOf('@') > -1
         && onValidated({
           EMAIL: email,
-          FNAME: firstName,
-          LNAME: lastName,
         }));
   useEffect(() => {
     submit();
   }, [submitButtonListener]);
 
   return (
-    <div className="mx-auto text center">
+    <div className="mx-auto">
       {status === 'sending' && <div style={{ color: 'blue' }}>sending...</div>}
       {status === 'error' && (
         <div
+          className="mx-center"
           style={{ color: 'red' }}
         >
-          { ReactHtmlParser(message) }
+          <li className="mx-center">
+            { ReactHtmlParser(message) }
+            {' '}
+          </li>
         </div>
       )}
       {status === 'success' && (
         <div
           style={{ color: 'green' }}
         >
-          { ReactHtmlParser(message) }
+          <li className="mx-center">{ ReactHtmlParser(message) }</li>
         </div>
       )}
     </div>
   );
 };
 
-CustomForm.propTypes = {
+CustomFormButton.propTypes = {
   status: PropTypes.string,
   message: PropTypes.string,
   onValidated: PropTypes.func,
-  name: PropTypes.string,
   email: PropTypes.string,
   submitButtonListener: PropTypes.bool,
 };
 
-CustomForm.defaultProps = {
+CustomFormButton.defaultProps = {
   status: '',
   message: '',
   onValidated: () => {},
-  name: '',
   email: '',
   submitButtonListener: false,
 };
 
-export default (CustomForm);
+export default (CustomFormButton);
