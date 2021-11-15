@@ -415,6 +415,7 @@ hr {
 	color: white;
 	background-color: $primary-theme;
 	border-color: $primary-theme;
+	
 }
 
 .btn-primary:hover,
@@ -510,6 +511,18 @@ hr {
 	border-color: white;
 }
 
+.signupbutton-size{
+	border-bottom-left-radius: 0rem;
+	border-top-left-radius: 0rem;
+	
+}
+
+.emailbutton1-size{
+	border-bottom-right-radius: 0rem;
+	border-top-right-radius: 0rem;
+	
+}
+
 .footer-brand {
 	filter: invert(45%) sepia(50%) saturate(1499%) hue-rotate(213deg)
 	brightness(104%) contrast(101%);
@@ -554,6 +567,10 @@ hr {
 
 .footer-text-header {
 	color: $footer-text-color-accent;
+}
+
+.signupheading{
+	color: white;
 }
 
 .story-card-img {
@@ -627,8 +644,10 @@ hr {
 }
 
 .form-purple {
-	border: 0.0625rem solid $primary-theme;
-	border-radius: 0.35rem;
+	border: 0.2rem solid $primary-theme;
+	border-radius: 0.50rem;
+	border-bottom-right-radius: 0rem;
+	border-top-right-radius: 0rem;
 }
 
 .grecaptcha-badge {

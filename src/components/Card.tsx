@@ -10,7 +10,7 @@ const formatDescription = (description) => {
 };
 
 const Card = ({
-  imgUrl, title, url, description, date
+  imgUrl, title, url, description, date,
 }) => (
   <div className="grid-item">
     <div className="card">
