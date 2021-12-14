@@ -10,7 +10,7 @@ import InstagramLogo from '../static/images/instagram.svg';
 import CustomForm from './mailChimpSubscribe/CustomForm';
 import CustomFormButton from './mailChimpSubscribe/CustomFormButton';
 import ContactUs from './ContactUs';
-import Mailchimpbutton from './mailchimpbutton';
+import Mailchimpbutton from './MailchimpButton';
 
 class Footer extends Component<{}, {}> {
   render() {

@@ -22,17 +22,14 @@ const CustomFormButton = ({
           className="mx-center"
           style={{ color: 'red' }}
         >
-          <li className="mx-center">
-            { ReactHtmlParser(message) }
-            {' '}
-          </li>
+          <ul className="mx-center">{ ReactHtmlParser(message) }</ul>
         </div>
       )}
       {status === 'success' && (
         <div
           style={{ color: 'green' }}
         >
-          <li className="mx-center">{ ReactHtmlParser(message) }</li>
+          <ul className="mx-center">{ ReactHtmlParser(message) }</ul>
         </div>
       )}
     </div>

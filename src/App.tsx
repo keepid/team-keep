@@ -43,7 +43,7 @@ class App extends React.Component<{}, State, {}> {
             <Switch>
               <Route exact path="/" render={() => <Redirect to="/home" />} />
               <Route path="/home" render={() => <Home />} />
-              {/* <Route path="/contact-us" render={() => <ContactUs />} /> */}
+              <Route path="/contact-us" render={() => <ContactUs />} />
               <Route path="/about-us" render={() => <AboutUs />} />
               <Route path="/stories" render={() => <Stories />} />
               <Route

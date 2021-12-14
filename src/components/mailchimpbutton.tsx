@@ -102,7 +102,7 @@ class Mailchimpbutton extends Component<Props, State, {}> {
           );
           this.clearInput();
         } else {
-          alert.show('Failed to submit. Please fill out all fields correctly.');
+          alert.show('Please enter a valid email address');
           this.setState({ buttonState: '' });
         }
       })
@@ -125,18 +125,18 @@ class Mailchimpbutton extends Component<Props, State, {}> {
     const url = 'https://keep.us7.list-manage.com/subscribe/post?u=9896e51b9ee0605d5e6745f82&amp;id=f16b440eb5';
     return (
       <div>
-        <div className="signupheading">
+        <div className="signup-heading">
           <div className="text-center font-weight-bold">Sign up for our monthly email newsletter</div>
         </div>
         <form>
-          <div className=" form-group input-group d-flex justify-content-center ">
+          <div className="form-group input-group d-flex justify-content-center ">
             <label
               htmlFor="email"
             >
-              <div className="emailbar">
+              <div>
                 <input
                   type="email"
-                  className={`form-control w-100 form-purple emailbutton-size ${this.colorToggle(
+                  className={`form-control w-100 mailchimp-email-input-button ${this.colorToggle(
                     emailValidator,
                   )}`}
                   id="email"
@@ -147,9 +147,8 @@ class Mailchimpbutton extends Component<Props, State, {}> {
                   required
                 />
               </div>
-              <div className="buttonmessage">
+              <div>
                 {this.emailMessage()}
-                {' '}
               </div>
             </label>
             <div id="custom-button-container" style={{ height: 50 }}>
