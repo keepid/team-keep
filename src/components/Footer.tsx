@@ -7,6 +7,10 @@ import LinkedInLogo from '../static/images/linkedin.svg';
 import TwitterLogo from '../static/images/twitter.svg';
 import GithubLogo from '../static/images/github.svg';
 import InstagramLogo from '../static/images/instagram.svg';
+import CustomForm from './mailChimpSubscribe/CustomForm';
+import CustomFormButton from './mailChimpSubscribe/CustomFormButton';
+import ContactUs from './ContactUs';
+import Mailchimpbutton from './MailchimpButton';
 
 class Footer extends Component<{}, {}> {
   render() {
@@ -43,6 +47,7 @@ class Footer extends Component<{}, {}> {
             </Link> */}
           </div>
           <hr />
+          <Mailchimpbutton />
           <div className="d-flex justify-content-center flex-row bd-highlight py-8 py-md-11 flex-wrap py-4">
             {/* <img src={Email} alt="email" className="px-2" /> */}
             <a href="https://github.com/keepid/keepid_client">
