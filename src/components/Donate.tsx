@@ -1,17 +1,16 @@
 import React from 'react';
 import { Braintree, HostedField } from 'react-braintree-fields';
+import getServerURL from '../serverOverride';
 
 // The client side donation component takes in the user's payment information
 // and generates a nonce token. This nonce token is sent to the server, where
 // the actual transaction is attempted.
 
-// TODO: Need a client token or tokenization key in order to generate the nonce token.
-
 const Donate = () => {
   const [tokenize, setTokenizeFunc]: any = React.useState();
   const [cardType, setCardType] = React.useState('');
   const [error, setError] = React.useState(null);
-  const [token, setToken] = React.useState(null);
+  const [token, setToken] = React.useState({ nonce: null });
   const [focusedFieldName, setFocusedField] = React.useState('');
   const numberField: any = React.useRef();
   const cvvField: any = React.useRef();
@@ -49,9 +48,23 @@ const Donate = () => {
     }
   };
 
+  const sendTokenToServer = () => {
+    fetch(`${getServerURL()}/donation-checkout`, {
+      method: 'POST',
+      body: JSON.stringify({
+        payment_method_nonce: token.nonce,
+      }),
+    })
+      .then((response) => response.text())
+      .then((responseJSON) => {
+        console.log(responseJSON);
+      });
+  };
+
   const getToken = () => {
     tokenize()
       .then(setToken)
+      .then(sendTokenToServer)
       .catch(handleError);
   };
 
@@ -72,7 +85,7 @@ const Donate = () => {
     <div>
       <Braintree
         className="demo"
-        authorization="sandbox_g42y39zw_348pk9cgf3bgyw2b"
+        authorization="Look in ENV file for tokenization key"
         onAuthorizationSuccess={onAuthorizationSuccess}
         onDataCollectorInstanceReady={onDataCollectorInstanceReady}
         onError={handleError}
