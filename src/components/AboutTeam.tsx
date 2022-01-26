@@ -20,6 +20,7 @@ import seanChungImg from "../static/images/seanChung Small.png";
 import steffenCornwellImg from "../static/images/steffenCornwell Small.png";
 import trangNguyenImg from "../static/images/trangNguyen Small.png";
 import yingTangImg from "../static/images/yingTang Small.png";
+import tirthaKharelImg from "../static/images/tirthaKharel.png";
 
 const AboutTeam = () => (
   <div>
@@ -194,7 +195,7 @@ const AboutTeam = () => (
             During my free time, I love hiking, biking, and pet sitting."
           />
           <ProfileCard
-            imgUrl={ConnorChongImg}
+            imgUrl={tirthaKharelImg}
             title="Tirtha Kharel"
             description="Back-end Developer"
             info="#tirtha"
