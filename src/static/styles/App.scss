@@ -807,6 +807,7 @@ hr {
 	gap: 2rem;
 
 }
+
 .profileCard-header {
 	font-size: 1.30rem;
 	font-weight: 600;
@@ -836,10 +837,11 @@ hr {
 	padding-left: 2rem;
 
 }
+
 .profileCard-img {
 	width: 260px; /* You can set the dimensions to whatever you want */
-    height: 255px;
-    object-fit: cover;
+	height: 255px;
+	object-fit: cover;
 }
 
 .profileCard-content {
@@ -879,7 +881,7 @@ hr {
 		font-size: 4.125rem;
 	}
 	text-align: center;
-	padding-top: 3.5rem;
+	padding-top: 1.5rem;
 	padding-bottom: 0rem;
 }
 
@@ -918,9 +920,5 @@ hr {
 	padding-top: 0.1rem;
 	padding-bottom: 0.05rem;
 	position: relative;
-    left: 32.5px;
-}
-
-.card{
-	height: cover;
+	left: 32.5px;
 }
