@@ -21,6 +21,7 @@ import steffenCornwellImg from "../static/images/steffenCornwell Small.png";
 import trangNguyenImg from "../static/images/trangNguyen Small.png";
 import yingTangImg from "../static/images/yingTang Small.png";
 import tirthaKharelImg from "../static/images/tirthaKharel.png";
+import blankImg from "../static/images/noPicture.png";
 
 const AboutTeam = () => (
   <div>
@@ -75,7 +76,7 @@ const AboutTeam = () => (
             logistical barriers preventing them from reaching their full potential."
           />
           <ProfileCard
-            imgUrl={ConnorChongImg}
+            imgUrl={blankImg}
             title="Daniel Joo"
             description="Legal and Operations Lead"
             info="#daniel"
@@ -94,7 +95,7 @@ const AboutTeam = () => (
             will accomplish next year!"
           />
           <ProfileCard
-            imgUrl={ConnorChongImg}
+            imgUrl={blankImg}
             title="Michael Hagan"
             description="Nonprofit Liaison"
             info="#michael"
