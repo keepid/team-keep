@@ -1,5 +1,5 @@
-import React from 'react';
-import moment from 'moment';
+import React from "react";
+import moment from "moment";
 
 const ProfileCard = ({
   imgUrl,
@@ -13,10 +13,7 @@ const ProfileCard = ({
     <div className="card">
       <img className="profileCard-img" src={imgUrl} alt="" />
       <h1 className="profileCard-header">{`${title}`}</h1>
-      <h2 className="profileCard-text">
-        {`${description}`}
-        {' '}
-      </h2>
+      <h2 className="profileCard-text">{`${description}`} </h2>
       <a
         className="collapsed"
         type="button"
