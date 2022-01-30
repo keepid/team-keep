@@ -598,6 +598,13 @@ hr {
 	background-repeat: no-repeat;
 }
 
+.bg-our-team-cover-img {
+	background-image: url("../images/OurTeamCover.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .bg-story-hero-img {
 	background-image: url("../images/storyHero.png");
 	background-position: center;
@@ -726,7 +733,6 @@ hr {
 
 .grid-item:hover {
 	transform: translateY(-0.5%);
-	box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
 }
 
 .card-img {
@@ -789,4 +795,130 @@ hr {
 	.grid {
 		grid-gap: 3rem;
 	}
+}
+
+.card {
+	padding-bottom: 4%;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+	gap: 2rem;
+
+}
+
+.profileCard-header {
+	font-size: 1.30rem;
+	font-weight: 600;
+	color: $card-header-color;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	background-color: $white;
+	// text-align: center;
+	padding-right: 3rem;
+	padding-left: 2rem;
+	line-height: 70%;
+	
+}
+
+.profileCard-text {
+	font-family: Inter;
+	font-size: 0.7rem;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+	line-height: 1.7;
+	color: $card-text-color;
+	margin-bottom: 0.5rem;
+	// text-align: center;
+	line-height: 70%;
+	vertical-align: bottom;
+	// padding-right: 2rem;
+	padding-left: 2rem;
+
+}
+
+.profileCard-img {
+	width: 260px; /* You can set the dimensions to whatever you want */
+	height: 255px;
+	object-fit: cover;
+}
+
+.profileCard-content {
+	padding: 1rem;
+
+}
+
+.profileGrid {
+	display: grid;
+	width: 140em;
+	grid-gap: 5rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	align-items: start;
+}
+
+.profileGrid-item {
+	background-color: #fff;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.125);
+	transition: 0.2s;
+}
+
+.profileGrid-item:hover {
+	transform: translateY(-0.5%);
+}
+
+.hero-header-aboutus {
+	font-family: Raleway;
+	font-weight: 900;
+	font-size: 12rem;
+	line-height: 1.2;
+	@include md {
+		font-size: 2.75rem;
+	}
+	@include lg {
+		font-size: 4.125rem;
+	}
+	text-align: center;
+	padding-top: 1.5rem;
+	padding-bottom: 0rem;
+}
+
+.profile-sizing {
+	box-sizing: border-box;
+	font-size: 100%;
+	
+}
+
+.profile-body {
+	font-family: "Inter", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 7.7rem;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+
+.card-btn1 {
+	display: block;
+	width: 33%;
+	padding: 0.1rem;
+	font-size: 0.75rem;
+	font-weight: 400;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.2rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+	color: white;
+	background-color: $primary-theme;
+	border-color: $primary-theme;
+	padding-top: 0.1rem;
+	padding-bottom: 0.05rem;
+	position: relative;
+	left: 32.5px;
 }

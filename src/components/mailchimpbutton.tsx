@@ -1,9 +1,9 @@
-import React, { Component, ReactElement } from 'react';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import { withAlert } from 'react-alert';
-import getServerURL from '../serverOverride';
-import { isValidEmail } from '../lib/Validations/Validations';
-import CustomFormButton from './mailChimpSubscribe/CustomFormButton';
+import React, { Component, ReactElement } from "react";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import { withAlert } from "react-alert";
+import getServerURL from "../serverOverride";
+import { isValidEmail } from "../lib/Validations/Validations";
+import CustomFormButton from "./mailChimpSubscribe/CustomFormButton";
 
 interface Props {
   alert: any;
@@ -20,9 +20,9 @@ class Mailchimpbutton extends Component<Props, State, {}> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      email: '',
-      buttonState: '',
-      emailValidator: '',
+      email: "",
+      buttonState: "",
+      emailValidator: "",
       submitButtonListener: false,
     };
   }
@@ -33,27 +33,31 @@ class Mailchimpbutton extends Component<Props, State, {}> {
 
   clearInput = (): void => {
     this.setState({
-      email: '',
-      buttonState: '',
-      emailValidator: '',
+      email: "",
+      buttonState: "",
+      emailValidator: "",
     });
   };
 
   validateEmail = async (): Promise<void> => {
     const { email } = this.state;
     if (isValidEmail(email)) {
-      await new Promise((resolve) => this.setState({ emailValidator: 'true' }, resolve));
+      await new Promise((resolve) =>
+        this.setState({ emailValidator: "true" }, resolve)
+      );
     } else {
-      await new Promise((resolve) => this.setState({ emailValidator: 'false' }, resolve));
+      await new Promise((resolve) =>
+        this.setState({ emailValidator: "false" }, resolve)
+      );
     }
   };
 
   emailMessage = (): ReactElement<{}> => {
     const { emailValidator } = this.state;
-    if (emailValidator === 'true') {
+    if (emailValidator === "true") {
       return <div className="valid-feedback" />;
     }
-    if (emailValidator === 'false') {
+    if (emailValidator === "false") {
       return (
         <div className="invalid-feedback text-left">
           Please enter a valid email address
@@ -64,31 +68,28 @@ class Mailchimpbutton extends Component<Props, State, {}> {
   };
 
   colorToggle = (inputString: string): string => {
-    if (inputString === 'true') {
-      return 'is-valid';
+    if (inputString === "true") {
+      return "is-valid";
     }
-    if (inputString === 'false') {
-      return 'is-invalid';
+    if (inputString === "false") {
+      return "is-invalid";
     }
-    return '';
+    return "";
   };
 
   handleSubmitWithRecaptcha = async (event: any) => {
     event.preventDefault();
-    this.setState({ buttonState: 'running' });
+    this.setState({ buttonState: "running" });
     const { alert } = this.props;
-    await Promise.all([
-      this.validateEmail(),
-    ]);
-    const {
-      email,
-      emailValidator,
-    } = this.state;
-    if (emailValidator === 'true') {
-      this.setState((prevState) => ({ submitButtonListener: !prevState.submitButtonListener }));
+    await Promise.all([this.validateEmail()]);
+    const { email, emailValidator } = this.state;
+    if (emailValidator === "true") {
+      this.setState((prevState) => ({
+        submitButtonListener: !prevState.submitButtonListener,
+      }));
     }
     fetch(`${getServerURL()}/submit-issue`, {
-      method: 'POST',
+      method: "POST",
       body: JSON.stringify({
         email,
       }),
@@ -96,18 +97,18 @@ class Mailchimpbutton extends Component<Props, State, {}> {
       .then((response) => response.json())
       .then((responseJSON) => {
         const { status } = responseJSON;
-        if (status === 'SUCCESS') {
+        if (status === "SUCCESS") {
           alert.show(
-            'Thank you for your interest! We will get back to you promptly.',
+            "Thank you for your interest! We will get back to you promptly."
           );
           this.clearInput();
         } else {
-          alert.show('Please enter a valid email address');
-          this.setState({ buttonState: '' });
+          alert.show("Please enter a valid email address");
+          this.setState({ buttonState: "" });
         }
       })
       .catch(() => {
-        this.setState({ buttonState: '' });
+        this.setState({ buttonState: "" });
       });
   };
 
@@ -116,28 +117,25 @@ class Mailchimpbutton extends Component<Props, State, {}> {
   };
 
   render() {
-    const {
-      email,
-      buttonState,
-      emailValidator,
-      submitButtonListener,
-    } = this.state;
-    const url = 'https://keep.us7.list-manage.com/subscribe/post?u=9896e51b9ee0605d5e6745f82&amp;id=f16b440eb5';
+    const { email, buttonState, emailValidator, submitButtonListener } =
+      this.state;
+    const url =
+      "https://keep.us7.list-manage.com/subscribe/post?u=9896e51b9ee0605d5e6745f82&amp;id=f16b440eb5";
     return (
       <div>
         <div className="signup-heading">
-          <div className="text-center font-weight-bold">Sign up for our monthly email newsletter</div>
+          <div className="text-center font-weight-bold">
+            Sign up for our monthly email newsletter
+          </div>
         </div>
         <form>
           <div className="form-group input-group d-flex justify-content-center ">
-            <label
-              htmlFor="email"
-            >
+            <label htmlFor="email">
               <div>
                 <input
                   type="email"
                   className={`form-control w-100 mailchimp-email-input-button ${this.colorToggle(
-                    emailValidator,
+                    emailValidator
                   )}`}
                   id="email"
                   placeholder="Your email"
@@ -147,9 +145,7 @@ class Mailchimpbutton extends Component<Props, State, {}> {
                   required
                 />
               </div>
-              <div>
-                {this.emailMessage()}
-              </div>
+              <div>{this.emailMessage()}</div>
             </label>
             <div id="custom-button-container" style={{ height: 50 }}>
               <div>
