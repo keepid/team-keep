@@ -288,7 +288,9 @@ const AboutTeam = () => (
             description="Marketing Analyst"
             info="#carolyn"
             id="carolyn"
-            personDescription=""
+            personDescription="Graduate from University of Urbana-Champaign (UIUC), majored in Agricultural and Consumer Economics,
+            with an minor in Spanish. Currently working in the Midwest as a branch banker for PNC Bank. Involved with Keep.id as a
+            volunteer since spring 2021 in the marketing/fundraising division."
           />
         </div>
       </div>
