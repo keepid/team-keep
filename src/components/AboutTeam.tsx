@@ -12,7 +12,7 @@ import emmaTsaiImg from '../static/images/emmaTsai Small.png';
 import gaganKangImg from '../static/images/gaganKang Small.png';
 import ivyWangImg from '../static/images/ivyWang Small.png';
 import jacksonFoltzImg from '../static/images/jacksonFoltz Small.png';
-import jasonZhangImg from '../static/images/jasonZhang Small.png';
+import jasonZhangImg from '../static/images/jasonZhang.png';
 import jessicaHungImg from '../static/images/jessicaHung Small.png';
 import michaelHaganImg from '../static/images/michaelHagan.png';
 import nickRodriguezImg from '../static/images/nickRodriguez Small.png';
