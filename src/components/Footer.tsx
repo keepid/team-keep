@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Logo from "../static/images/logo.svg";
-import Email from "../static/images/email-icon.svg";
-import FacebookLogo from "../static/images/facebook.svg";
-import LinkedInLogo from "../static/images/linkedin.svg";
-import TwitterLogo from "../static/images/twitter.svg";
-import GithubLogo from "../static/images/github.svg";
-import InstagramLogo from "../static/images/instagram.svg";
-import CustomForm from "./mailChimpSubscribe/CustomForm";
-import CustomFormButton from "./mailChimpSubscribe/CustomFormButton";
-import ContactUs from "./ContactUs";
-import Mailchimpbutton from "./mailchimpbutton";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../static/images/logo.svg';
+import Email from '../static/images/email-icon.svg';
+import FacebookLogo from '../static/images/facebook.svg';
+import LinkedInLogo from '../static/images/linkedin.svg';
+import TwitterLogo from '../static/images/twitter.svg';
+import GithubLogo from '../static/images/github.svg';
+import InstagramLogo from '../static/images/instagram.svg';
+import CustomForm from './mailChimpSubscribe/CustomForm';
+import CustomFormButton from './mailChimpSubscribe/CustomFormButton';
+import ContactUs from './ContactUs';
+import Mailchimpbutton from './mailchimpbutton';
 
 class Footer extends Component<{}, {}> {
   render() {

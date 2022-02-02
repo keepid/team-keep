@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
-import ProfileCard from "./ProfileCard";
-import RectangleSVG from "../static/images/rectangle.svg";
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+import ProfileCard from './ProfileCard';
+import RectangleSVG from '../static/images/rectangle.svg';
 
 // image imports
-import ConnorChongImg from "../static/images/connorChong Small.png";
-import carolynCaiImg from "../static/images/carolynCai Small.png";
-import coraWenImg from "../static/images/coraWen Small.png";
-import emmaTsaiImg from "../static/images/emmaTsai Small.png";
-import gaganKangImg from "../static/images/gaganKang Small.png";
-import ivyWangImg from "../static/images/ivyWang Small.png";
-import jacksonFoltzImg from "../static/images/jacksonFoltz Small.png";
-import jasonZhangImg from "../static/images/jasonZhang Small.png";
-import jessicaHungImg from "../static/images/jessicaHung Small.png";
-import nickRodriguezImg from "../static/images/nickRodriguez Small.png";
-import sambaDiaImg from "../static/images/sambaDia Small.png";
-import sarinnaSungImg from "../static/images/sarinnaSung Small.png";
-import seanChungImg from "../static/images/seanChung Small.png";
-import steffenCornwellImg from "../static/images/steffenCornwell Small.png";
-import trangNguyenImg from "../static/images/trangNguyen Small.png";
-import yingTangImg from "../static/images/yingTang Small.png";
-import tirthaKharelImg from "../static/images/tirthaKharel.png";
-import blankImg from "../static/images/noPicture.png";
+import ConnorChongImg from '../static/images/connorChong Small.png';
+import carolynCaiImg from '../static/images/carolynCai Small.png';
+import coraWenImg from '../static/images/coraWen Small.png';
+import emmaTsaiImg from '../static/images/emmaTsai Small.png';
+import gaganKangImg from '../static/images/gaganKang Small.png';
+import ivyWangImg from '../static/images/ivyWang Small.png';
+import jacksonFoltzImg from '../static/images/jacksonFoltz Small.png';
+import jasonZhangImg from '../static/images/jasonZhang Small.png';
+import jessicaHungImg from '../static/images/jessicaHung Small.png';
+import nickRodriguezImg from '../static/images/nickRodriguez Small.png';
+import sambaDiaImg from '../static/images/sambaDia Small.png';
+import sarinnaSungImg from '../static/images/sarinnaSung Small.png';
+import seanChungImg from '../static/images/seanChung Small.png';
+import steffenCornwellImg from '../static/images/steffenCornwell Small.png';
+import trangNguyenImg from '../static/images/trangNguyen Small.png';
+import yingTangImg from '../static/images/yingTang Small.png';
+import tirthaKharelImg from '../static/images/tirthaKharel.png';
+import blankImg from '../static/images/noPicture.png';
 
 const AboutTeam = () => (
   <div>
@@ -155,7 +155,7 @@ const AboutTeam = () => (
             description="Front-end Developer"
             info="#gagan"
             id="gagan"
-            personDescription="My name is Gagandeep Kang and I'm a junior studying Computer Science with a minor 
+            personDescription="My name is Gagandeep Kang and I'm a junior studying Computer Science with a minor
             in Mathematics from Boston University. As someone with an interest in Full-Stack Development,
             I'm always looking for ways to use my technical skills to build software that will help those
             around me. At BU, I've had the opportunity to create meaningful projects through our Hack4Impact
@@ -169,10 +169,10 @@ const AboutTeam = () => (
             info="#nick"
             id="nick"
             personDescription="I graduated from high school in 2016 and deferred my college acceptance for a year
-            to attend a coding bootcamp in Chicago (Fullstack Academy). After the bootcamp, I started working 
-            full time at Catalytic and enjoyed it so much that I cancelled my college plans. I've been there 
+            to attend a coding bootcamp in Chicago (Fullstack Academy). After the bootcamp, I started working
+            full time at Catalytic and enjoyed it so much that I cancelled my college plans. I've been there
             for the last 4 years building an automation platform for businesses. I'm really inspired by the Keep.id
-            mission and have always wanted to work on something with a positive social impact, so I'm super excited 
+            mission and have always wanted to work on something with a positive social impact, so I'm super excited
             to be joining the team!"
           />
           <ProfileCard
@@ -182,7 +182,7 @@ const AboutTeam = () => (
             info="#jason"
             id="jason"
             personDescription="Hey everyone, my name Is Jason and I'm currently a junior majoring in CS at Boston University.
-            In my free time, I enjoy exercising (weights, and occasionally handball), and all things productivity-related. 
+            In my free time, I enjoy exercising (weights, and occasionally handball), and all things productivity-related.
             Looking forward to being able to contribute to the team while honing my own skills."
           />
 
@@ -217,7 +217,7 @@ const AboutTeam = () => (
             description="Designer"
             info="#ying"
             id="ying"
-            personDescription="Hello! I'm Ying, a designer and researcher working with a human-centred and service design lens. 
+            personDescription="Hello! I'm Ying, a designer and researcher working with a human-centred and service design lens.
             I aim to participate in practices making systems more empathetic and caring, and I'm excited to join the team.
             Let's connect if you like design for social good, strategy games, and dogs!"
           />
@@ -227,7 +227,7 @@ const AboutTeam = () => (
             description="Designer"
             info="#trang"
             id="trang"
-            personDescription="Hope you are doing well! My name is Trang Nguyen and I am currently a self-taught UX Designer. 
+            personDescription="Hope you are doing well! My name is Trang Nguyen and I am currently a self-taught UX Designer.
             I am very excited to join Team Keep and can’t wait to start working with the team. "
           />
         </div>
@@ -244,8 +244,8 @@ const AboutTeam = () => (
             info="#cora"
             id="cora"
             personDescription="I’m Cora, a sophomore studying Economics with minors in Finance and Spanish at Princeton University.
-            At Princeton, I’m involved with several groups all aimed to help people in my community, whether it be a student-run 
-            nutrition focused start-up, or a firm focused on decarbonizing industries. I’ve worked with both large and small 
+            At Princeton, I’m involved with several groups all aimed to help people in my community, whether it be a student-run
+            nutrition focused start-up, or a firm focused on decarbonizing industries. I’ve worked with both large and small
             nonprofits in the past and am excited to apply the unique set of skills that I’ve learned to help Keep.id!"
           />
         </div>
@@ -261,8 +261,8 @@ const AboutTeam = () => (
             description="Legal and Ops"
             info="#samba"
             id="samba"
-            personDescription="My name is Samba! I am 23 years old and a recent graduate from Macalester College in Minnesota 
-            by way of Frederick, Maryland! Some things I enjoy include listening to music, chatting with friends, and playing 
+            personDescription="My name is Samba! I am 23 years old and a recent graduate from Macalester College in Minnesota
+            by way of Frederick, Maryland! Some things I enjoy include listening to music, chatting with friends, and playing
             trumpet!"
           />
         </div>
@@ -278,8 +278,8 @@ const AboutTeam = () => (
             description="Marketing Analyst"
             info="#sean"
             id="sean"
-            personDescription="My name is Sean Chung and I am a student at Parkland Community College studying to be a 
-            Nurse Assistant. I've been volunteering at Keep.id for over half a year now. It has been a great opportunity to grow 
+            personDescription="My name is Sean Chung and I am a student at Parkland Community College studying to be a
+            Nurse Assistant. I've been volunteering at Keep.id for over half a year now. It has been a great opportunity to grow
             and learn about the homeless community and the steps that we can take in order to help them. I look forward to
             continue to work with them and look for ways to challenge myself to develop new skills to help the community."
           />
