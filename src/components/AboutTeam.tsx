@@ -7,12 +7,14 @@ import RectangleSVG from '../static/images/rectangle.svg';
 import ConnorChongImg from '../static/images/connorChong Small.png';
 import carolynCaiImg from '../static/images/carolynCai Small.png';
 import coraWenImg from '../static/images/coraWen Small.png';
+import danielJooImg from '../static/images/danielJoo.png';
 import emmaTsaiImg from '../static/images/emmaTsai Small.png';
 import gaganKangImg from '../static/images/gaganKang Small.png';
 import ivyWangImg from '../static/images/ivyWang Small.png';
 import jacksonFoltzImg from '../static/images/jacksonFoltz Small.png';
 import jasonZhangImg from '../static/images/jasonZhang Small.png';
 import jessicaHungImg from '../static/images/jessicaHung Small.png';
+import michaelHaganImg from '../static/images/michaelHagan.png';
 import nickRodriguezImg from '../static/images/nickRodriguez Small.png';
 import sambaDiaImg from '../static/images/sambaDia Small.png';
 import sarinnaSungImg from '../static/images/sarinnaSung Small.png';
@@ -76,12 +78,14 @@ const AboutTeam = () => (
             logistical barriers preventing them from reaching their full potential."
           />
           <ProfileCard
-            imgUrl={blankImg}
+            imgUrl={danielJooImg}
             title="Daniel Joo"
             description="Legal and Operations Lead"
             info="#daniel"
             id="daniel"
-            personDescription=""
+            personDescription="I am a third year undergraduate in Columbia University studying computer science,
+            math, and the premedical track. I was raised in Los Angeles, and I proudly enjoy the city life.
+            In my free time, I enjoy drawing, playing video games, and taking walks in the city."
           />
           <ProfileCard
             imgUrl={ivyWangImg}
@@ -95,7 +99,7 @@ const AboutTeam = () => (
             will accomplish next year!"
           />
           <ProfileCard
-            imgUrl={blankImg}
+            imgUrl={michaelHaganImg}
             title="Michael Hagan"
             description="Nonprofit Liaison"
             info="#michael"
@@ -155,7 +159,7 @@ const AboutTeam = () => (
             description="Front-end Developer"
             info="#gagan"
             id="gagan"
-            personDescription="My name is Gagandeep Kang and I'm a junior studying Computer Science with a minor
+            personDescription="My name is Gagandeep Kang and I'm currently studying Computer Science with a minor
             in Mathematics from Boston University. As someone with an interest in Full-Stack Development,
             I'm always looking for ways to use my technical skills to build software that will help those
             around me. At BU, I've had the opportunity to create meaningful projects through our Hack4Impact
@@ -181,7 +185,7 @@ const AboutTeam = () => (
             description="Back-end Developer"
             info="#jason"
             id="jason"
-            personDescription="Hey everyone, my name Is Jason and I'm currently a junior majoring in CS at Boston University.
+            personDescription="Hey everyone, my name is Jason and I'm currently majoring in CS at Boston University.
             In my free time, I enjoy exercising (weights, and occasionally handball), and all things productivity-related.
             Looking forward to being able to contribute to the team while honing my own skills."
           />

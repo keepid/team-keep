@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
@@ -13,10 +14,7 @@ const ProfileCard = ({
     <div className="card">
       <img className="profileCard-img" src={imgUrl} alt="" />
       <h1 className="profileCard-header">{`${title}`}</h1>
-      <h2 className="profileCard-text">
-        {`${description}`}
-        {' '}
-      </h2>
+      <h2 className="profileCard-text">{`${description}`} </h2>
       <a
         className="collapsed"
         type="button"
