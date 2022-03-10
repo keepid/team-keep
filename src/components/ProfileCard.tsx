@@ -10,7 +10,7 @@ const ProfileCard = ({
   id,
   personDescription,
 }) => (
-  <div className="card">
+  <div className="card-profile">
     <div className="profileGrid-item">
       <img className="profileCard-img" src={imgUrl} alt="" />
       <h1 className="profileCard-header">{`${title}`}</h1>

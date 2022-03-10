@@ -47,12 +47,12 @@ const AboutTeam = () => (
       </div>
     </div>
 
-    <h1 className="hero-header-aboutus text-black pb-3 ">Board of Directors</h1>
+    <h1 className="hero-header-aboutus text-black ">Board of Directors</h1>
     <div className="profile-sizing profile-body">
       <div className="grid">
         <div className="wrapper">
           <div className="row">
-            <div className="col-md d-flex ">
+            <div className="col-md-3">
               <ProfileCard
                 imgUrl={ConnorChongImg}
                 title="Connor Chong"
@@ -66,7 +66,7 @@ const AboutTeam = () => (
             table tennis table"
               />
             </div>
-            <div className="col-md d-flex ">
+            <div className="col-md-3">
               <ProfileCard
                 imgUrl={steffenCornwellImg}
                 title="Steffen Cornwell "
@@ -82,7 +82,7 @@ const AboutTeam = () => (
             logistical barriers preventing them from reaching their full potential."
               />
             </div>
-            <div className="col-md ">
+            <div className="col-md-3">
               <ProfileCard
                 imgUrl={danielJooImg}
                 title="Daniel Joo"
@@ -94,7 +94,7 @@ const AboutTeam = () => (
             In my free time, I enjoy drawing, playing video games, and taking walks in the city."
               />
             </div>
-            <div className="col-md">
+            <div className="col-md-3">
               <ProfileCard
                 imgUrl={ivyWangImg}
                 title="Ivy Wang"
@@ -176,7 +176,7 @@ const AboutTeam = () => (
       <div className="grid">
         <div className="wrapper">
           <div className="row">
-            <div className="col-md">
+            <div className="col-md-3">
               <ProfileCard
                 imgUrl={gaganKangImg}
                 title="Gagan Kang"
@@ -191,7 +191,7 @@ const AboutTeam = () => (
             opportunities at Keep.id!"
               />
             </div>
-            <div className="col-md">
+            <div className="col-md-3">
               <ProfileCard
                 imgUrl={nickRodriguezImg}
                 title="Nick Rodriguez"
@@ -206,7 +206,7 @@ const AboutTeam = () => (
             to be joining the team!"
               />
             </div>
-            <div className="col-md">
+            <div className="col-md-3">
               <ProfileCard
                 imgUrl={jasonZhangImg}
                 title="Jason Zhang"
@@ -218,15 +218,15 @@ const AboutTeam = () => (
             Looking forward to being able to contribute to the team while honing my own skills."
               />
             </div>
-            <div className="col-md">
+            <div className="col-md-3">
               <ProfileCard
                 imgUrl={sarinnaSungImg}
                 title="Sarinna Sung"
                 description="Front-end Developer"
                 info="#sarinna"
                 id="sarinna"
-                personDescription="My name is Sarinna Sung. I am currently studying Computer Science and Statistics at BU.
-            During my free time, I love hiking, biking, and pet sitting."
+                personDescription="My name is Sarinna Sung. I am currently studying Computer Science and Statistics at Boston University.
+            Outside of Keep.id, I am a major foodie, avid tree climber and makeup enthusiast"
               />
             </div>
           </div>
