@@ -101,17 +101,17 @@ class AboutUs extends Component<{}, {}> {
         <div className="bordered-background2 ">
           <div className=" my-auto text-center miniborder-background ">
             <div className=" container custom-vertical-center align-items-center viewport-height-100">
-              <div className="py-5 my-  3">
+              <div className="py-5 my-3">
                 <div className="mx-auto">
                   <h3 className="hero-header2 font-weight-bold pb-3">
                     What happens when you don&apos;t have identification?
                   </h3>
-                  <div className="row my-4">
-                    <div className="col-md-3 mx-auto hero-header2 ">
+                  <div className="row my-4 custom-vertical-center">
+                    <div className="col-md-3 mx-auto hero-header2 pb-3 pb-md-2">
                       54%
                     </div>
                     <div className="col-md-9 text-left my-auto">
-                      <p className="home-container-text text-white-issue ">
+                      <p className="home-container-text text-white-issue text-center text-md-left">
                         of homeless individuals report being denied
                         {' '}
                         <br />
@@ -120,12 +120,12 @@ class AboutUs extends Component<{}, {}> {
                     </div>
                   </div>
 
-                  <div className="row my-4">
-                    <div className="col-md-3 mx-auto hero-header2 ">
+                  <div className="row my-4 custom-vertical-center">
+                    <div className="col-md-3 mx-auto hero-header2 pb-3 pb-md-2">
                       53%
                     </div>
                     <div className="col-md-9 text-left my-auto">
-                      <p className="home-container-text text-white-issue ">
+                      <p className="home-container-text text-white-issue text-center text-md-left">
                         of homeless individuals report being denied
                         {' '}
                         <br />
@@ -135,12 +135,12 @@ class AboutUs extends Component<{}, {}> {
                     </div>
                   </div>
 
-                  <div className="row my-4">
-                    <div className="col-md-3 mx-auto hero-header2 ">
+                  <div className="row my-4 custom-vertical-center">
+                    <div className="col-md-3 mx-auto hero-header2 pb-3 pb-md-2">
                       45%
                     </div>
                     <div className="col-md-9 text-left my-auto">
-                      <p className="home-container-text text-white-issue ">
+                      <p className="home-container-text text-white-issue text-center text-md-left">
                         of homeless individuals report being denied access
                         {' '}
                         <br />
@@ -178,19 +178,20 @@ class AboutUs extends Component<{}, {}> {
             </div>
           </div>
         </div>
-
-        <div className="row bordered-background viewport-height-50 ">
-          <div className="container my-auto text-center">
-            <div className="custom-vertical-center align-items-center">
-              <div className="mx-auto">
-                <h1 className="hero-header text-black align-items-center ">
-                  We are here to help!
-                </h1>
-                <a href="https://teamkeep.nationbuilder.com/donate">
-                  <button type="button" className="btn btn-lg btn-secondary">
-                    Donate Now
-                  </button>
-                </a>
+        <div className="container-fluid">
+          <div className="row bordered-background viewport-height-50 ">
+            <div className="container my-auto text-center">
+              <div className="custom-vertical-center align-items-center">
+                <div className="mx-auto">
+                  <h1 className="hero-header text-black align-items-center ">
+                    We are here to help!
+                  </h1>
+                  <a href="https://www.paypal.com/donate/?hosted_button_id=UZ3C7N5LSXQQC">
+                    <button type="button" className="btn btn-lg btn-secondary">
+                      Donate Now
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
