@@ -8,12 +8,16 @@ import RectangleSVG from '../static/images/rectangle.svg';
 import ConnorChongImg from '../static/images/connorChong Small.png';
 import carolynCaiImg from '../static/images/carolynCai Small.png';
 import coraWenImg from '../static/images/coraWen Small.png';
+
+import danielJooImg from '../static/images/danielJoo.png';
+
 import emmaTsaiImg from '../static/images/emmaTsai Small.png';
 import gaganKangImg from '../static/images/gaganKang Small.png';
 import ivyWangImg from '../static/images/ivyWang Small.png';
 import jacksonFoltzImg from '../static/images/jacksonFoltz Small.png';
 import jasonZhangImg from '../static/images/jasonZhang.png';
 import jessicaHungImg from '../static/images/jessicaHung Small.png';
+import michaelHaganImg from '../static/images/michaelHagan.png';
 import nickRodriguezImg from '../static/images/nickRodriguez Small.png';
 import sambaDiaImg from '../static/images/sambaDia Small.png';
 import sarinnaSungImg from '../static/images/sarinnaSung Small.png';
@@ -22,8 +26,7 @@ import steffenCornwellImg from '../static/images/steffenCornwell Small.png';
 import trangNguyenImg from '../static/images/trangNguyen Small.png';
 import yingTangImg from '../static/images/yingTang Small.png';
 import tirthaKharelImg from '../static/images/tirthaKharel.png';
-import danielJooImg from '../static/images/danielJoo.png';
-import michaelHaganImg from '../static/images/michaelHagan.png';
+import blankImg from '../static/images/noPicture.png';
 
 const AboutTeam = () => (
   <div>
@@ -90,6 +93,7 @@ const AboutTeam = () => (
                 info="#daniel"
                 id="daniel"
                 personDescription="I am a third year undergraduate in Columbia University studying computer science,
+
             math, and the premedical track. I was raised in Los Angeles, and I proudly enjoy the city life.
             In my free time, I enjoy drawing, playing video games, and taking walks in the city."
               />
@@ -175,6 +179,7 @@ const AboutTeam = () => (
     <div className="profile-sizing profile-body">
       <div className="grid">
         <div className="wrapper">
+
           <div className="row">
             <div className="col-md-3">
               <ProfileCard
@@ -199,6 +204,7 @@ const AboutTeam = () => (
                 info="#nick"
                 id="nick"
                 personDescription="I graduated from high school in 2016 and deferred my college acceptance for a year
+
             to attend a coding bootcamp in Chicago (Fullstack Academy). After the bootcamp, I started working
             full time at Catalytic and enjoyed it so much that I cancelled my college plans. I've been there
             for the last 4 years building an automation platform for businesses. I'm really inspired by the Keep.id
@@ -282,6 +288,7 @@ const AboutTeam = () => (
     <div className="profile-sizing profile-body">
       <div className="grid">
         <div className="wrapper">
+
           <div className="row">
             <div className="col-md-2">
               <ProfileCard
