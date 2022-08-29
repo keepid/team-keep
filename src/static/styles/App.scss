@@ -47,8 +47,8 @@ $screen-lg-min: 62rem;
 $screen-xl-min: 75rem;
 
 // Exra small phone screens
-@mixin xs{
-	@media (max-width: #{$screen-xs-max}){
+@mixin xs {
+	@media (max-width: #{$screen-xs-max}) {
 		@content;
 	}
 }
@@ -86,7 +86,7 @@ hr {
 }
 
 @media (max-width: #{$screen-xs-max}) {
-	.font-small-mobile{
+	.font-small-mobile {
 		font-size: 1.09rem;
 		line-height: 1.5;
 	}
@@ -138,14 +138,13 @@ hr {
 	margin-top: -4rem;
 }
 
-.margin-left{
+.margin-left {
 	margin-left: 11.5em;
 }
 
-.align-center{
+.align-center {
 	align-items: center;
 }
-
 
 .navbar-brand {
 	color: $primary-theme !important;
@@ -193,30 +192,30 @@ hr {
 }
 
 //fix home: use this same techine on yellow part, previous color was .bg-secondary-dark
-.smallbluebox{
+.smallbluebox {
 	background-color: $secondary-dark-theme;
-	@include md{
+	@include md {
 		background-color: transparent;
 	}
 }
 
-.bigbluebox{
+.bigbluebox {
 	background-color: transparent;
-	@include md{
+	@include md {
 		background-color: $secondary-dark-theme;
 	}
 }
 
-.smallyellowbox{
+.smallyellowbox {
 	background-color: $secondary-theme-dark;
-	@include md{
+	@include md {
 		background-color: transparent;
 	}
 }
 
-.bigyellowbox{
+.bigyellowbox {
 	background-color: transparent;
-	@include md{
+	@include md {
 		background-color: $secondary-theme-dark;
 	}
 }
@@ -244,13 +243,13 @@ hr {
 	font-size: 2rem;
 	line-height: 1.2;
 	color: #f2f2f2;
-	@include sm{
+	@include sm {
 		font-size: 2.5rem;
 	}
-	@include md{
+	@include md {
 		font-size: 3.5rem;
 	}
-	@include lg{
+	@include lg {
 		font-size: 4.4625rem;
 	}
 }
@@ -303,7 +302,6 @@ hr {
 	min-width: #{"min(100vw, 31.25rem)"};
 }
 
-
 .right {
 	right: 0;
 }
@@ -312,23 +310,22 @@ hr {
 	color: $grey;
 }
 
-.text-purple{
+.text-purple {
 	color: #7b81ff;
 	font-size: 1.7rem;
 	font-weight: bold;
 	align-self: center;
-	@include sm{
-		font-size: 3em;;
+	@include sm {
+		font-size: 3em;
 	}
 }
 
-.text-purple1{
+.text-purple1 {
 	color: #7b81ff;
 	font-weight: bold;
 	align-self: center;
 	margin-top: 1em;
 }
-
 
 .text-light-grey {
 	color: $light-grey;
@@ -336,7 +333,7 @@ hr {
 
 .text-light-black {
 	color: #000000;
-	font-size: 1.8900rem;
+	font-size: 1.89rem;
 	margin-bottom: 2rem;
 }
 
@@ -368,24 +365,24 @@ hr {
 	font-weight: 600;
 }
 
-.font-weight-bold   { 
-	font-weight: bold; 
+.font-weight-bold {
+	font-weight: bold;
 }
 
-.miniborder-background{
+.miniborder-background {
 	background-color: #262867;
 }
 
 .bordered-background1 {
 	border: 3rem solid #262867;
-	@include md{
+	@include md {
 		border: 4.775rem solid #262867;
 	}
 }
 
 .bordered-background2 {
 	border: 3rem solid white;
-	@include md{
+	@include md {
 		border: 4.075rem solid white;
 	}
 }
@@ -510,6 +507,18 @@ hr {
 	border-color: white;
 }
 
+.signupbutton-size {
+	border-bottom-left-radius: 0rem;
+	border-top-left-radius: 0rem;
+}
+
+.mailchimp-email-input-button {
+	border: 0.0625rem solid $primary-theme;
+	border-radius: 0.35rem;
+	border-bottom-right-radius: 0rem;
+	border-top-right-radius: 0rem;
+}
+
 .footer-brand {
 	filter: invert(45%) sepia(50%) saturate(1499%) hue-rotate(213deg)
 	brightness(104%) contrast(101%);
@@ -556,6 +565,10 @@ hr {
 	color: $footer-text-color-accent;
 }
 
+.signup-heading {
+	color: white;
+}
+
 .story-card-img {
 	max-width: 25rem;
 }
@@ -576,6 +589,13 @@ hr {
 
 .bg-contact-us-hero-img {
 	background-image: url("../images/contactHero.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bg-our-team-cover-img {
+	background-image: url("../images/OurTeamCover.png");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -642,7 +662,6 @@ hr {
 	background-repeat: no-repeat;
 }
 
-
 .bg-issue-stat2-img {
 	background-image: url("../images/homeStat2.png");
 	background-position: center;
@@ -670,10 +689,10 @@ hr {
 	width: 0.625rem;
 	height: 0.625rem;
 	border-radius: 100%;
-	background-color: #D3D3D3;
+	background-color: #d3d3d3;
 }
 
-.carousel-indicators .active{
+.carousel-indicators .active {
 	background-color: #6129a8;
 }
 
@@ -709,7 +728,6 @@ hr {
 
 .grid-item:hover {
 	transform: translateY(-0.5%);
-	box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
 }
 
 .card-img {
@@ -772,4 +790,127 @@ hr {
 	.grid {
 		grid-gap: 3rem;
 	}
+}
+
+.card {
+	padding-bottom: 4%;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+	gap: 2rem;
+}
+
+.profileCard-header {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: $card-header-color;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	background-color: $white;
+	// text-align: center;
+	padding-right: 3rem;
+	padding-left: 2rem;
+	line-height: 70%;
+}
+
+.profileCard-text {
+	font-family: Inter;
+	font-size: 0.7rem;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+	line-height: 1.7;
+	color: $card-text-color;
+	margin-bottom: 0.5rem;
+	// text-align: center;
+	line-height: 70%;
+	vertical-align: bottom;
+	// padding-right: 2rem;
+	padding-left: 2rem;
+}
+
+.profileCard-img {
+	width: 260px; /* You can set the dimensions to whatever you want */
+	height: 255px;
+	object-fit: cover;
+}
+
+.profileCard-content {
+	padding: 1rem;
+}
+
+.profileGrid {
+	display: grid;
+	width: 140em;
+	grid-gap: 5rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	align-items: start;
+}
+
+.profileGrid-item {
+	background-color: #fff;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.125);
+	transition: 0.2s;
+}
+
+.profileGrid-item:hover {
+	transform: translateY(-0.5%);
+}
+
+.hero-header-aboutus {
+	font-family: Raleway;
+	font-weight: 900;
+	font-size: 12rem;
+	line-height: 1.2;
+	@include md {
+		font-size: 2.75rem;
+	}
+	@include lg {
+		font-size: 4.125rem;
+	}
+	text-align: center;
+	padding-top: 1.5rem;
+	padding-bottom: 0rem;
+}
+
+.profile-sizing {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+.profile-body {
+	font-family: "Inter", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 7.7rem;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+
+.card-btn1 {
+	display: block;
+	width: 40%;
+	padding: 0.1rem;
+	font-size: 0.75rem;
+	font-weight: 400;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.2rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+	color: white;
+	background-color: $primary-theme;
+	border-color: $primary-theme;
+	padding-top: 0.1rem;
+	padding-bottom: 0.05rem;
+	position: relative;
+	left: 32.5px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
