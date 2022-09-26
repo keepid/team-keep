@@ -1,10 +1,10 @@
-import React, { Component, ReactElement } from "react";
-import { Helmet } from "react-helmet";
-import ReCAPTCHA from "react-google-recaptcha";
-import { withAlert } from "react-alert";
-import { Link } from "react-router-dom";
-import { reCaptchaKey } from "../configVars";
-import { isValidEmail } from "../lib/Validations/Validations";
+import React, { Component, ReactElement } from 'react';
+import { Helmet } from 'react-helmet';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { withAlert } from 'react-alert';
+import { Link } from 'react-router-dom';
+import { reCaptchaKey } from '../configVars';
+import { isValidEmail } from '../lib/Validations/Validations';
 
 interface State {
   name: string;
@@ -32,17 +32,17 @@ class Information extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      name: "",
-      email: "",
-      AddressNum1: "",
-      AddressNum2: "",
-      city: "",
-      state: "",
-      country: "",
-      PostalCode: "",
-      nameValidator: "",
-      emailValidator: "",
-      recaptchaPayload: "",
+      name: '',
+      email: '',
+      AddressNum1: '',
+      AddressNum2: '',
+      city: '',
+      state: '',
+      country: '',
+      PostalCode: '',
+      nameValidator: '',
+      emailValidator: '',
+      recaptchaPayload: '',
       checked: true,
       submitButtonListener: false,
     };
@@ -54,17 +54,17 @@ class Information extends Component<Props, State> {
 
   clearInput = (): void => {
     this.setState({
-      name: "",
-      email: "",
-      AddressNum1: "",
-      AddressNum2: "",
-      city: "",
-      state: "",
-      country: "",
-      PostalCode: "",
-      nameValidator: "",
-      emailValidator: "",
-      recaptchaPayload: "",
+      name: '',
+      email: '',
+      AddressNum1: '',
+      AddressNum2: '',
+      city: '',
+      state: '',
+      country: '',
+      PostalCode: '',
+      nameValidator: '',
+      emailValidator: '',
+      recaptchaPayload: '',
     });
     this.resetRecaptcha();
   };
@@ -73,26 +73,24 @@ class Information extends Component<Props, State> {
     if (recaptchaRef !== null && recaptchaRef.current !== null) {
       recaptchaRef.current.reset();
     }
-    this.setState({ recaptchaPayload: "" });
+    this.setState({ recaptchaPayload: '' });
   };
 
   validateEmail = async (): Promise<void> => {
     const { email } = this.state;
     if (isValidEmail(email)) {
-      await new Promise((resolve) => this.setState({ emailValidator: "true" }));
+      await new Promise((resolve) => this.setState({ emailValidator: 'true' }));
     } else {
-      await new Promise((resolve) =>
-        this.setState({ emailValidator: "false" })
-      );
+      await new Promise((resolve) => this.setState({ emailValidator: 'false' }));
     }
   };
 
   emailMessage = (): ReactElement<{}> => {
     const { emailValidator } = this.state;
-    if (emailValidator === "true") {
+    if (emailValidator === 'true') {
       return <div className="valid-feedback" />;
     }
-    if (emailValidator === "false") {
+    if (emailValidator === 'false') {
       return (
         <div className="invalid-feedback text-left">
           Please enter a valid email address
@@ -105,30 +103,26 @@ class Information extends Component<Props, State> {
   validateName = async (): Promise<void> => {
     const { name, checked } = this.state;
     if (checked === true) {
-      const firstName = name.substr(0, name.indexOf(" "));
-      const lastName = name.substr(name.indexOf(" ") + 1).trim();
+      const firstName = name.substr(0, name.indexOf(' '));
+      const lastName = name.substr(name.indexOf(' ') + 1).trim();
       if (firstName && lastName) {
-        await new Promise((resolve) =>
-          this.setState({ nameValidator: "true" })
-        );
+        await new Promise((resolve) => this.setState({ nameValidator: 'true' }));
       } else {
-        await new Promise((resolve) =>
-          this.setState({ nameValidator: "false" })
-        );
+        await new Promise((resolve) => this.setState({ nameValidator: 'false' }));
       }
-    } else if (name !== "") {
-      await new Promise((resolve) => this.setState({ nameValidator: "true" }));
+    } else if (name !== '') {
+      await new Promise((resolve) => this.setState({ nameValidator: 'true' }));
     } else {
-      await new Promise((resolve) => this.setState({ nameValidator: "false" }));
+      await new Promise((resolve) => this.setState({ nameValidator: 'false' }));
     }
   };
 
   nameMessage = (): ReactElement<{}> => {
     const { nameValidator } = this.state;
-    if (nameValidator === "true") {
+    if (nameValidator === 'true') {
       return <div className="valid-feedback" />;
     }
-    if (nameValidator === "false") {
+    if (nameValidator === 'false') {
       return (
         <div className="invalid-feedback text-left">
           Please enter a valid name.
@@ -139,13 +133,13 @@ class Information extends Component<Props, State> {
   };
 
   colorToggle = (inputString: string): string => {
-    if (inputString === "true") {
-      return "is-valid";
+    if (inputString === 'true') {
+      return 'is-valid';
     }
-    if (inputString === "false") {
-      return "is-invalid";
+    if (inputString === 'false') {
+      return 'is-invalid';
     }
-    return "";
+    return '';
   };
 
   handleSubmitWithRecaptcha = async (event: any) => {
@@ -165,8 +159,8 @@ class Information extends Component<Props, State> {
       emailValidator,
     } = this.state;
     const { recaptchaPayload } = this.state;
-    if (emailValidator !== "true" || nameValidator !== "true") {
-      alert.show("Please fill out all fields correctly.");
+    if (emailValidator !== 'true' || nameValidator !== 'true') {
+      alert.show('Please fill out all fields correctly.');
       this.resetRecaptcha();
     }
   };
@@ -216,13 +210,12 @@ class Information extends Component<Props, State> {
       nameValidator,
       emailValidator,
     } = this.state;
-    const url =
-      "https://keep.us7.list-manage.com/subscribe/post?u=9896e51b9ee0605d5e6745f82&amp;id=f16b440eb5";
+    const url = 'https://keep.us7.list-manage.com/subscribe/post?u=9896e51b9ee0605d5e6745f82&amp;id=f16b440eb5';
     return (
       <div>
         <div
           style={{
-            borderBlockColor: "#445FEB",
+            borderBlockColor: '#445FEB',
           }}
         >
           <Helmet>
@@ -232,7 +225,7 @@ class Information extends Component<Props, State> {
 
           <div
             className="bordered-background my-3 py-4"
-            style={{ borderColor: "#445FEB" }}
+            style={{ borderColor: '#445FEB' }}
           >
             <div className="row pb-2 mb-2 mx-2">
               <div className="col-md-8 mx-auto">
@@ -260,7 +253,7 @@ class Information extends Component<Props, State> {
                       <input
                         type="text"
                         className={`w-100 form-control form-purple ${this.colorToggle(
-                          nameValidator
+                          nameValidator,
                         )}`}
                         id="name"
                         onChange={this.handleChangeName}
@@ -280,7 +273,7 @@ class Information extends Component<Props, State> {
                       <input
                         type="email"
                         className={`w-100 form-control form-purple ${this.colorToggle(
-                          emailValidator
+                          emailValidator,
                         )}`}
                         id="email"
                         value={email}
@@ -396,9 +389,9 @@ class Information extends Component<Props, State> {
                         type="button"
                         className="btn btn-lg btn-secondary"
                         style={{
-                          backgroundColor: "white",
-                          color: "#445FEB",
-                          borderColor: "#445FEB",
+                          backgroundColor: 'white',
+                          color: '#445FEB',
+                          borderColor: '#445FEB',
                         }}
                       >
                         Back
@@ -409,9 +402,9 @@ class Information extends Component<Props, State> {
                         type="button"
                         className="btn btn-lg btn-secondary"
                         style={{
-                          backgroundColor: "#445FEB",
-                          color: "white",
-                          borderColor: "#445FEB",
+                          backgroundColor: '#445FEB',
+                          color: 'white',
+                          borderColor: '#445FEB',
                         }}
                       >
                         Next
