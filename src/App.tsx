@@ -1,27 +1,29 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch,
-} from 'react-router-dom';
-import './static/styles/App.scss';
-import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
-import Header from './components/Header';
-import Error from './components/Error';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import AboutUs from './components/AboutUs';
-import ContactUs from './components/ContactUs';
-import Issue from './components/Issue';
-import Stories from './components/Stories';
-import Donation from './components/Donation';
-import AboutTeam from './components/AboutTeam';
-
+} from "react-router-dom";
+import "./static/styles/App.scss";
+import { Helmet } from "react-helmet";
+import ReactGA from "react-ga";
+import Header from "./components/Header";
+import Error from "./components/Error";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
+import Issue from "./components/Issue";
+import Stories from "./components/Stories";
+import Donation from "./components/Donation";
+import AboutTeam from "./components/AboutTeam";
+import ThankYouDonate from "./components/ThankYouDonate";
+import Information from "./components/Information";
+import SelectAmount from "./components/SelectAmount";
 
 window.onload = () => {
-  ReactGA.initialize('G-H1CSQJ6BGQ');
+  ReactGA.initialize("G-H1CSQJ6BGQ");
   ReactGA.pageview(window.location.pathname + window.location.search);
 };
 
@@ -50,11 +52,11 @@ class App extends React.Component<{}, State, {}> {
               <Route path="/about-us" render={() => <AboutUs />} />
               <Route path="/about-team" render={() => <AboutTeam />} />
               <Route path="/stories" render={() => <Stories />} />
-              <Route
-                path="/Issue"
-                render={() => <Issue />}
-              />
+              <Route path="/Issue" render={() => <Issue />} />
               <Route path="/donate" render={() => <Donation />} />
+              <Route path="/ThankYouDonate" render={() => <ThankYouDonate />} />
+              <Route path="/Information" render={() => <Information />} />
+              <Route path="/SelectAmount" render={() => <SelectAmount />} />
               <Route path="/error">
                 <Error />
               </Route>
