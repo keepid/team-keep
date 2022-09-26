@@ -17,15 +17,18 @@ import ContactUs from './components/ContactUs';
 import Issue from './components/Issue';
 import Stories from './components/Stories';
 import Donation from './components/Donation';
+import ThankYouDonate from './components/ThankYouDonate';
+import Information from './components/Information';
+import SelectAmount from './components/SelectAmount';
 
 window.onload = () => {
   ReactGA.initialize('G-H1CSQJ6BGQ');
   ReactGA.pageview(window.location.pathname + window.location.search);
 };
 
-interface State {
-  isLoggedIn: boolean;
-}
+// interface State {
+//   isLoggedIn: boolean;
+// }
 
 class App extends React.Component<{}, State, {}> {
   render() {
@@ -47,11 +50,11 @@ class App extends React.Component<{}, State, {}> {
               <Route path="/contact-us" render={() => <ContactUs />} />
               <Route path="/about-us" render={() => <AboutUs />} />
               <Route path="/stories" render={() => <Stories />} />
-              <Route
-                path="/Issue"
-                render={() => <Issue />}
-              />
+              <Route path="/Issue" render={() => <Issue />} />
               <Route path="/donate" render={() => <Donation />} />
+              <Route path="/ThankYouDonate" render={() => <ThankYouDonate />} />
+              <Route path="/Information" render={() => <Information />} />
+              <Route path="/SelectAmount" render={() => <SelectAmount />} />
               <Route path="/error">
                 <Error />
               </Route>

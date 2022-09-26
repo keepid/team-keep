@@ -47,8 +47,8 @@ $screen-lg-min: 62rem;
 $screen-xl-min: 75rem;
 
 // Exra small phone screens
-@mixin xs{
-	@media (max-width: #{$screen-xs-max}){
+@mixin xs {
+	@media (max-width: #{$screen-xs-max}) {
 		@content;
 	}
 }
@@ -86,7 +86,7 @@ hr {
 }
 
 @media (max-width: #{$screen-xs-max}) {
-	.font-small-mobile{
+	.font-small-mobile {
 		font-size: 1.09rem;
 		line-height: 1.5;
 	}
@@ -138,14 +138,13 @@ hr {
 	margin-top: -4rem;
 }
 
-.margin-left{
+.margin-left {
 	margin-left: 11.5em;
 }
 
-.align-center{
+.align-center {
 	align-items: center;
 }
-
 
 .navbar-brand {
 	color: $primary-theme !important;
@@ -193,30 +192,30 @@ hr {
 }
 
 //fix home: use this same techine on yellow part, previous color was .bg-secondary-dark
-.smallbluebox{
+.smallbluebox {
 	background-color: $secondary-dark-theme;
-	@include md{
+	@include md {
 		background-color: transparent;
 	}
 }
 
-.bigbluebox{
+.bigbluebox {
 	background-color: transparent;
-	@include md{
+	@include md {
 		background-color: $secondary-dark-theme;
 	}
 }
 
-.smallyellowbox{
+.smallyellowbox {
 	background-color: $secondary-theme-dark;
-	@include md{
+	@include md {
 		background-color: transparent;
 	}
 }
 
-.bigyellowbox{
+.bigyellowbox {
 	background-color: transparent;
-	@include md{
+	@include md {
 		background-color: $secondary-theme-dark;
 	}
 }
@@ -244,13 +243,13 @@ hr {
 	font-size: 2rem;
 	line-height: 1.2;
 	color: #f2f2f2;
-	@include sm{
+	@include sm {
 		font-size: 2.5rem;
 	}
-	@include md{
+	@include md {
 		font-size: 3.5rem;
 	}
-	@include lg{
+	@include lg {
 		font-size: 4.4625rem;
 	}
 }
@@ -303,7 +302,6 @@ hr {
 	min-width: #{"min(100vw, 31.25rem)"};
 }
 
-
 .right {
 	right: 0;
 }
@@ -312,23 +310,22 @@ hr {
 	color: $grey;
 }
 
-.text-purple{
+.text-purple {
 	color: #7b81ff;
 	font-size: 1.7rem;
 	font-weight: bold;
 	align-self: center;
-	@include sm{
-		font-size: 3em;;
+	@include sm {
+		font-size: 3em;
 	}
 }
 
-.text-purple1{
+.text-purple1 {
 	color: #7b81ff;
 	font-weight: bold;
 	align-self: center;
 	margin-top: 1em;
 }
-
 
 .text-light-grey {
 	color: $light-grey;
@@ -336,7 +333,7 @@ hr {
 
 .text-light-black {
 	color: #000000;
-	font-size: 1.8900rem;
+	font-size: 1.89rem;
 	margin-bottom: 2rem;
 }
 
@@ -368,24 +365,24 @@ hr {
 	font-weight: 600;
 }
 
-.font-weight-bold   { 
-	font-weight: bold; 
+.font-weight-bold {
+	font-weight: bold;
 }
 
-.miniborder-background{
+.miniborder-background {
 	background-color: #262867;
 }
 
 .bordered-background1 {
 	border: 3rem solid #262867;
-	@include md{
+	@include md {
 		border: 4.775rem solid #262867;
 	}
 }
 
 .bordered-background2 {
 	border: 3rem solid white;
-	@include md{
+	@include md {
 		border: 4.075rem solid white;
 	}
 }
@@ -642,7 +639,6 @@ hr {
 	background-repeat: no-repeat;
 }
 
-
 .bg-issue-stat2-img {
 	background-image: url("../images/homeStat2.png");
 	background-position: center;
@@ -670,10 +666,10 @@ hr {
 	width: 0.625rem;
 	height: 0.625rem;
 	border-radius: 100%;
-	background-color: #D3D3D3;
+	background-color: #d3d3d3;
 }
 
-.carousel-indicators .active{
+.carousel-indicators .active {
 	background-color: #6129a8;
 }
 
@@ -771,5 +767,316 @@ hr {
 
 	.grid {
 		grid-gap: 3rem;
+	}
+}
+
+.credit-card-box {
+	padding: 1.25rem;
+	border: 0.044rem solid black;
+	margin: 0 auto;
+}
+
+.hero-header-payment-method {
+	font-family: Raleway, sans-serif;
+	font-weight: bold;
+	font-size: 1.25rem;
+	line-height: 2;
+	text-align: left;
+	// 992px window width and more
+	@include md {
+		font-size: 1.875rem;
+		font-weight: bold;
+	}
+	@include lg {
+		font-size: 2.5rem;
+		font-weight: bold;
+	}
+}
+
+.bordered-background-payment {
+	border: 0.7rem solid #445feb;
+
+	@include md {
+		border: 3rem solid #445feb;
+	}
+	@include lg {
+		border: 4.375rem solid #445feb;
+	}
+}
+
+.payment-back-button {
+	display: block;
+	width: 15.5%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	text-align: center;
+	color: #445feb;
+	background-color: $white;
+	border: 0.075rem solid #445feb;
+	border-radius: 0.4rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+	margin-top: 1.563rem;
+	margin-bottom: 0 auto;
+}
+
+@media only screen and (max-width: 60rem) {
+	body {
+		padding: 3rem;
+	}
+
+	.grid {
+		grid-gap: 3rem;
+	}
+}
+
+.payment-done-button {
+	display: block;
+	width: 15.5%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	text-align: center;
+	color: $white;
+	background-color: #445feb;
+	border: 0.075rem solid #445feb;
+	border-radius: 0.4rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+	margin-top: 1.563rem;
+	margin-bottom: 0 auto;
+}
+
+@media only screen and (max-width: 60em) {
+	body {
+		padding: 3rem;
+	}
+
+	.grid {
+		grid-gap: 3rem;
+	}
+}
+
+.center-payment {
+	position: absolute;
+	top: 88%;
+	left: 60%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	@media only screen and (max-width: 60rem) {
+		body {
+			padding: 3rem;
+		}
+
+		.grid {
+			grid-gap: 3rem;
+		}
+	}
+}
+
+.center-payment-back {
+	margin: 10;
+	position: absolute;
+	top: 88%;
+	left: 40%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.credit-card-box-line {
+	display: block;
+	margin: 0 -1.25rem;
+	margin-top: 1.25rem;
+	margin-bottom: 0.625rem;
+	overflow: hidden;
+	border-style: inset;
+	border-width: 0.063rem;
+}
+
+.top-card {
+	overflow: hidden;
+	justify-content: space-around;
+	white-space: nowrap;
+	display: inline;
+}
+
+.credit-card-Img {
+	margin-right: 100%;
+	margin-left: 0;
+	max-width: 3.125rem;
+	max-height: 3.125rem;
+	display: inline-block;
+	margin-bottom: 0.625rem;
+	margin-top: 0.063rem;
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		max-width: 3.125rem;
+		max-height: 3.125rem;
+	}
+	@media only screen and (max-device-width: 30rem) {
+
+		/* styles for mobile browsers smaller than 480px; (iPhone) */
+		max-width: 1.563rem;
+		max-height: 1.563rem;
+	}
+	@media only screen and (device-width: 48rem) {
+
+		/* default iPad screens */
+		max-width: 0.781rem;
+		max-height: 0.781rem;
+	}
+}
+
+.heading-card {
+	margin-left: 0.625rem;
+	font-size: 1.25rem;
+	max-width: 10%;
+	max-height: 10%;
+	display: inline-block;
+	margin-top: 0.019rem;
+
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		font-size: 0.938rem;
+	}
+	@media only screen and (max-device-width: 30rem) {
+
+		/* styles for mobile browsers smaller than 480px; (iPhone) */
+		font-size: 0.625rem;
+	}
+	@media only screen and (device-width: 48rem) {
+
+		/* default iPad screens */
+		font-size: 0.313rem;
+	}
+}
+
+.creditcardsImg {
+	display: inline-block;
+
+	@media only screen and (max-device-width: 30rem) {
+
+		/* styles for mobile browsers smaller than 480px; (iPhone) */
+	}
+	@media only screen and (device-width: 48rem) {
+
+		/* default iPad screens */
+	}
+}
+
+.headinginfo {
+	float: left;
+	margin-top: 0.313rem;
+	margin-bottom: 0.313rem;
+}
+
+.Thank-you-box {
+	background-color: #445feb;
+	height: 21.313rem;
+	display: inline-block;
+	text-align: center;
+}
+
+.img-container {
+	width: 6.25rem;
+	display: inline-block;
+}
+
+.beggarimage {
+	width: 42%;
+	height: 21.313rem;
+}
+
+.thank-you-msg {
+	color: white;
+	text-shadow: 0.125rem 0.125rem 0.313rem black;
+	margin-top: 15%;
+	margin-left: 10%;
+	font-weight: bold;
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		line-height: 100%;
+		margin-right: 10%;
+		size: 10%;
+	}
+}
+
+.spacingthankyou {
+	font-weight: bold;
+	line-height: 50%;
+	margin-right: 17%;
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		size: 10%;
+		line-height: 100%;
+		margin-right: 10%;
+	}
+	@media only screen and (max-device-width: 30rem) {
+
+		/* styles for mobile browsers smaller than 480px; (iPhone) */
+		size: 10%;
+		line-height: 100%;
+	}
+	@media only screen and (device-width: 48rem) {
+
+		/* default iPad screens */
+		size: 10%;
+		line-height: 100%;
+	}
+}
+
+.Thank-you-box {
+	background-color: #445feb;
+	height: 21.313rem;
+	display: inline-block;
+	text-align: left;
+}
+
+.bearded-beggarimg {
+	display: flex;
+	flex-direction: row;
+	padding-left: 40%;
+	height: 0.625rem;
+}
+
+.beardimage {
+	width: 28.938rem;
+	height: 21.25rem;
+}
+
+.topping {
+	margin-top: 10%;
+}
+
+.intro-msg {
+	color: white;
+	text-shadow: 0.125rem 0.125rem 0.313rem black;
+	font-weight: bold;
+
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		line-height: 100%;
+		margin-right: 10%;
+		size: 10%;
+	}
+}
+
+.intro-msg2 {
+	color: white;
+	text-shadow: 0.125rem 0.125rem 0.125rem black;
+	font-weight: light;
+	font-size: 1.75rem;
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		line-height: 100%;
+		margin-right: 10%;
+		size: 10%;
 	}
 }
