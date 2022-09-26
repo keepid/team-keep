@@ -1,34 +1,34 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch,
-} from 'react-router-dom';
-import './static/styles/App.scss';
-import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
-import Header from './components/Header';
-import Error from './components/Error';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import AboutUs from './components/AboutUs';
-import ContactUs from './components/ContactUs';
-import Issue from './components/Issue';
-import Stories from './components/Stories';
-import Donation from './components/Donation';
-import ThankYouDonate from './components/ThankYouDonate';
-import Information from './components/Information';
-import SelectAmount from './components/SelectAmount';
+} from "react-router-dom";
+import "./static/styles/App.scss";
+import { Helmet } from "react-helmet";
+import ReactGA from "react-ga";
+import Header from "./components/Header";
+import Error from "./components/Error";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
+import Issue from "./components/Issue";
+import Stories from "./components/Stories";
+import Donation from "./components/Donation";
+import ThankYouDonate from "./components/ThankYouDonate";
+import Information from "./components/Information";
+import SelectAmount from "./components/SelectAmount";
 
 window.onload = () => {
-  ReactGA.initialize('G-H1CSQJ6BGQ');
+  ReactGA.initialize("G-H1CSQJ6BGQ");
   ReactGA.pageview(window.location.pathname + window.location.search);
 };
 
-// interface State {
-//   isLoggedIn: boolean;
-// }
+interface State {
+  isLoggedIn: boolean;
+}
 
 class App extends React.Component<{}, State, {}> {
   render() {
