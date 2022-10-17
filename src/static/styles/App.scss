@@ -783,16 +783,17 @@ hr {
 }
 
 @media only screen and (max-width: 60rem) {
+
 	body {
 		padding: 3rem;
 	}
-
 	.grid {
 		grid-gap: 3rem;
 	}
 }
 
 .profileCard-header {
+
 	font-size: 1rem;
 	font-weight: 600;
 	color: $card-header-color;
@@ -821,6 +822,35 @@ hr {
 	width: 16.25rem; /* You can set the dimensions to whatever you want */
 	height: 16.25rem;
 	object-fit: cover;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $card-header-color;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: $white;
+  padding-right: 3rem;
+  padding-left: 2rem;
+  line-height: 100%;
+}
+
+.profileCard-text {
+  font-family: Inter;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: $card-text-color;
+  margin-bottom: 0.5rem;
+  line-height: 100%;
+  vertical-align: bottom;
+  padding-left: 2rem;
+}
+
+.profileCard-img {
+  width: 16.25rem; /* You can set the dimensions to whatever you want */
+  height: 16.25rem;
+  object-fit: cover;
+
 }
 
 .profileCard-content {
@@ -828,6 +858,7 @@ hr {
 }
 
 .profileGrid {
+
 	display: grid;
 	width: 140rem;
 	grid-gap: 5rem;
@@ -864,6 +895,43 @@ hr {
 	justify-content: center;
 	padding-top: 1.5rem;
 	padding-bottom: 0rem;
+  display: grid;
+  width: 140rem;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: start;
+}
+
+.profileGrid-item:hover {
+  transform: translateY(-0.5%);
+}
+
+.profileGrid-item {
+  padding-bottom: 0.625rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.125);
+  transition: 0.2s;
+}
+
+.hero-header-aboutus {
+  font-family: Raleway;
+  font-weight: 900;
+  font-size: 14rem;
+  line-height: 1.2;
+  @include md {
+    font-size: 2.75rem;
+  }
+  @include lg {
+    font-size: 4.125rem;
+  }
+  font-size: 9vw;
+  text-align: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 0rem;
+
 }
 
 .profile-sizing {
@@ -1217,4 +1285,44 @@ hr {
 		margin-right: 10%;
 		size: 10%;
 	}
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7.7rem;
+  padding-top: 1rem;
+}
+
+.card-btn1 {
+  display: block;
+  width: 100%;
+  padding: 0.1rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
+  transition: 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  color: white;
+  background-color: $primary-theme;
+  border-color: $primary-theme;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  position: relative;
+  left: 2.031rem;
+  padding-left: 0.563rem;
+  padding-right: 0.563rem;
+}
+
+.card-body {
+  width: 15.938rem; /* You can set the dimensions to whatever you want */
+  object-fit: cover;
+}
+
+.card-profile {
+  width: 16.2rem;
+  margin-bottom: 2rem;
 }
