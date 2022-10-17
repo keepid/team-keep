@@ -17,7 +17,8 @@ import Partners from '../static/images/partners.png';
 import StoryImg1 from '../static/images/story1.png';
 import StoryImg2 from '../static/images/story2.png';
 import StoryImg3 from '../static/images/story3.png';
-import AnnualReport from '../static/images/2020AnnualReport.pdf';
+import AnnualReport2021 from '../static/images/2021AnnualReport.pdf';
+import AnnualReport2020 from '../static/images/2020AnnualReport.pdf';
 import fireworks from '../static/images/fireworks.svg';
 import statementOfSolidarity from '../static/images/Team Keep AAPI Solidarity Statement.pdf';
 
@@ -214,13 +215,22 @@ class Home extends Component<{}, {}> {
                     <img src={fireworks} height="90" width="100" className="float-left" alt="confetti" />
                     <img src={fireworks} height="90" width="100" className="float-right" alt="confetti" />
                     <h3 className="hero-header text-light-grey pb-3">
-                      Our 2020 Annual Report
+                      Our Annual Reports
                     </h3>
-                    <a href={AnnualReport}>
-                      <button type="button" className="btn btn-lg btn-primary">
-                        View PDF
-                      </button>
-                    </a>
+                    <div className="row">
+                      <div className="mx-auto">
+                        <a href={AnnualReport2021}>
+                          <button type="button" className="btn btn-lg btn-primary mx-3 mb-3">
+                            2021 Annual Report
+                          </button>
+                        </a>
+                        <a href={AnnualReport2020}>
+                          <button type="button" className="btn btn-lg btn-primary mx-3 mb-3">
+                            2020 Annual Report
+                          </button>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -14,7 +14,7 @@ const ThankYouDonate = () => (
     </Helmet>
     <div className="container-fluid">
       <div className="row align-items-start">
-        <img src={sidewaysbeggarImg} className="beggarimage col-xs-4" />
+        <img alt="something" src={sidewaysbeggarImg} className="beggarimage col-xs-4" />
         <div className="col-sm img-container Thank-you-box col-xs-9">
           <div className="thank-you-msg col-xs-9">
             <h1> Thank you for your donation! </h1>

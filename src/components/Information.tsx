@@ -19,7 +19,6 @@ interface State {
   emailValidator: string;
   recaptchaPayload: string;
   checked: boolean;
-  submitButtonListener: boolean;
 }
 
 interface Props {
@@ -44,7 +43,6 @@ class Information extends Component<Props, State> {
       emailValidator: '',
       recaptchaPayload: '',
       checked: true,
-      submitButtonListener: false,
     };
   }
 

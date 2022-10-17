@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { withAlert } from 'react-alert';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import creditcardImg from '../static/images/creditcardImg.png';
 import creditcardsImg from '../static/images/credit-cardsImg.png';
 import getServerURL from '../serverOverride';
@@ -94,13 +95,13 @@ const Donation = () => {
                       <div className="credit-card-Img">
                         <img
                           src={creditcardImg}
-                          alt="credit-card"
+                          alt="ccdonation"
                           className="img-fluid"
                         />
                         <div className="heading-card">Pay with Card</div>
                       </div>
                       <div className="creditcardsImg">
-                        <img src={creditcardsImg} alt="credit-card" />
+                        <img src={creditcardsImg} alt="ccfor donation portal" />
                       </div>
                     </Col>
                   </Row>
