@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import braintree from 'braintree-web';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Helmet } from 'react-helmet';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { withAlert } from 'react-alert';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import creditcardImg from '../static/images/creditcardImg.png';

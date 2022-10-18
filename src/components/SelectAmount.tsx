@@ -89,7 +89,7 @@ class SelectAmount extends Component<Props, State> {
                     </div>
                     <div className="col-md-6 px-0 py-0 custom-vertical-center px-4">
                       <img
-                        alt="Create an account image"
+                        alt="Create an account"
                         className="home-form-svg text-left"
                         src={ManWithBeard}
                         style={{ width: '100%', height: 'auto' }}
@@ -103,7 +103,7 @@ class SelectAmount extends Component<Props, State> {
               <div>
                 <div className="container px-0 mx-0 py-0 my-0">
                   <img
-                    alt="Create an account image"
+                    alt="Create an account1"
                     className="home-form-svg text-left"
                     src={ManWithBeard}
                     style={{ width: '100%', height: 'auto' }}
@@ -193,6 +193,7 @@ class SelectAmount extends Component<Props, State> {
                             $60
                           </button>
                           <button
+                            type="button"
                             className="btn btn-outline-primary mt-3 px-5"
                             placeholder="$"
                           >
@@ -301,6 +302,7 @@ class SelectAmount extends Component<Props, State> {
                         </div>
                         <div className="row">
                           <button
+                            type="button"
                             className="btn btn-outline-primary mt-3 px-5"
                             placeholder="$"
                           >
