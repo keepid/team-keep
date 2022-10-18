@@ -8,6 +8,7 @@ import {
 import './static/styles/App.scss';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
+import PropTypes from 'prop-types';
 import Header from './components/Header';
 import Error from './components/Error';
 import Footer from './components/Footer';
@@ -16,7 +17,10 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Issue from './components/Issue';
 import Stories from './components/Stories';
-import AboutTeam from './components/AboutTeam';
+import Donation from './components/Donation';
+import ThankYouDonate from './components/ThankYouDonate';
+import Information from './components/Information';
+import SelectAmount from './components/SelectAmount';
 
 window.onload = () => {
   ReactGA.initialize('G-H1CSQJ6BGQ');
@@ -46,12 +50,12 @@ class App extends React.Component<{}, State, {}> {
               <Route path="/home" render={() => <Home />} />
               <Route path="/contact-us" render={() => <ContactUs />} />
               <Route path="/about-us" render={() => <AboutUs />} />
-              <Route path="/about-team" render={() => <AboutTeam />} />
               <Route path="/stories" render={() => <Stories />} />
-              <Route
-                path="/Issue"
-                render={() => <Issue />}
-              />
+              <Route path="/Issue" render={() => <Issue />} />
+              <Route path="/donate" render={() => <Donation />} />
+              <Route path="/ThankYouDonate" render={() => <ThankYouDonate />} />
+              <Route path="/Information" render={() => <Information />} />
+              <Route path="/SelectAmount" render={() => <SelectAmount />} />
               <Route path="/error">
                 <Error />
               </Route>

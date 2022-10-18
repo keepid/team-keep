@@ -3,6 +3,7 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { Helmet } from 'react-helmet';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { withAlert } from 'react-alert';
+import PropTypes from 'prop-types';
 import getServerURL from '../serverOverride';
 import { reCaptchaKey } from '../configVars';
 import { isValidEmail } from '../lib/Validations/Validations';
@@ -125,7 +126,8 @@ class ContactUs extends Component<Props, State, {}> {
     if (nameValidator === 'false') {
       return (
         <div className="invalid-feedback text-left">
-          Please enter a valid name. Include first and last if subscribing to our newsletter.
+          Please enter a valid name. Include first and last if subscribing to
+          our newsletter.
         </div>
       );
     }
@@ -204,7 +206,9 @@ class ContactUs extends Component<Props, State, {}> {
     let { description, recaptchaPayload } = this.state;
     // if user wanted to subscribe to email list
     if (checked && nameValidator === 'true') {
-      this.setState((prevState) => ({ submitButtonListener: !prevState.submitButtonListener }));
+      this.setState((prevState) => ({
+        submitButtonListener: !prevState.submitButtonListener,
+      }));
     }
     if (
       emailValidator !== 'true'
@@ -323,7 +327,11 @@ class ContactUs extends Component<Props, State, {}> {
                 </p>
                 {/* onSubmit={this.handleSubmitWithRecaptcha} */}
                 <form>
-                  <input type="hidden" name="u" value="9896e51b9ee0605d5e6745f82" />
+                  <input
+                    type="hidden"
+                    name="u"
+                    value="9896e51b9ee0605d5e6745f82"
+                  />
                   <input type="hidden" name="id" value="f16b440eb5" />
                   <input type="hidden" name="c" value="?" />
                   <div className="form-row form-group d-flex align-content-start pb-3">
@@ -389,8 +397,19 @@ class ContactUs extends Component<Props, State, {}> {
                     </label>
                   </div>
                   <div className="form-row form-group d-flex align-content-start pb-3 form-check">
-                    <label htmlFor="emailSubscribe" className="font-weight-bold form-check-label">
-                      <input id="emailSubscribe" type="checkbox" className="form-check-input" name="subscribe" onChange={(e) => { this.setState({ checked: e.target.checked }); }} />
+                    <label
+                      htmlFor="emailSubscribe"
+                      className="font-weight-bold form-check-label"
+                    >
+                      <input
+                        id="emailSubscribe"
+                        type="checkbox"
+                        className="form-check-input"
+                        name="subscribe"
+                        onChange={(e) => {
+                          this.setState({ checked: e.target.checked });
+                        }}
+                      />
                       Subscribe to our newsletter
                     </label>
                   </div>

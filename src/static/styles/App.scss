@@ -783,15 +783,45 @@ hr {
 }
 
 @media only screen and (max-width: 60rem) {
-  body {
-    padding: 3rem;
-  }
+
+	body {
+		padding: 3rem;
+	}
 	.grid {
 		grid-gap: 3rem;
 	}
 }
 
 .profileCard-header {
+
+	font-size: 1rem;
+	font-weight: 600;
+	color: $card-header-color;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	background-color: $white;
+	padding-right: 3rem;
+	padding-left: 2rem;
+	line-height: 100%;
+}
+
+.profileCard-text {
+	font-family: Inter;
+	font-size: 0.7rem;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+	line-height: 1.7;
+	color: $card-text-color;
+	margin-bottom: 0.5rem;
+	line-height: 100%;
+	vertical-align: bottom;
+	padding-left: 2rem;
+}
+
+.profileCard-img {
+	width: 16.25rem; /* You can set the dimensions to whatever you want */
+	height: 16.25rem;
+	object-fit: cover;
   font-size: 1rem;
   font-weight: 600;
   color: $card-header-color;
@@ -820,6 +850,7 @@ hr {
   width: 16.25rem; /* You can set the dimensions to whatever you want */
   height: 16.25rem;
   object-fit: cover;
+
 }
 
 .profileCard-content {
@@ -827,6 +858,43 @@ hr {
 }
 
 .profileGrid {
+
+	display: grid;
+	width: 140rem;
+	grid-gap: 5rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	align-items: start;
+}
+
+.profileGrid-item:hover {
+	transform: translateY(-0.5%);
+}
+
+.profileGrid-item {
+	padding-bottom: 0.625rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.125);
+	transition: 0.2s;
+}
+
+.hero-header-aboutus {
+	font-family: Raleway;
+	font-weight: 900;
+	font-size: 14rem;
+	line-height: 1.2;
+	@include md {
+		font-size: 2.75rem;
+	}
+	@include lg {
+		font-size: 4.125rem;
+	}
+	font-size: 9vw;
+	text-align: center;
+	justify-content: center;
+	padding-top: 1.5rem;
+	padding-bottom: 0rem;
   display: grid;
   width: 140rem;
   grid-gap: 5rem;
@@ -863,6 +931,7 @@ hr {
   justify-content: center;
   padding-top: 1.5rem;
   padding-bottom: 0rem;
+
 }
 
 .profile-sizing {
@@ -871,6 +940,351 @@ hr {
 }
 
 .profile-body {
+	font-family: "Inter", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 7.7rem;
+	padding-top: 1rem;
+}
+
+.card-btn1 {
+	display: block;
+	width: 100%;
+	padding: 0.1rem;
+	font-size: 0.75rem;
+	font-weight: 400;
+	border: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.2rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+	color: white;
+	background-color: $primary-theme;
+	border-color: $primary-theme;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	position: relative;
+	left: 2.031rem;
+	padding-left: 0.563rem;
+	padding-right: 0.563rem;
+}
+
+.card-body {
+	width: 15.938rem; /* You can set the dimensions to whatever you want */
+	object-fit: cover;
+}
+
+.card-profile {
+	width: 16.2rem;
+	margin-bottom: 2rem;
+}
+
+.hero-header-payment-method {
+	font-family: Raleway, sans-serif;
+	font-weight: bold;
+	font-size: 1.25rem;
+	line-height: 2;
+	text-align: left;
+	// 992px window width and more
+	@include md {
+		font-size: 1.875rem;
+		font-weight: bold;
+	}
+	@include lg {
+		font-size: 2.5rem;
+		font-weight: bold;
+	}
+}
+
+.bordered-background-payment {
+	border: 0.7rem solid #445feb;
+
+	@include md {
+		border: 3rem solid #445feb;
+	}
+	@include lg {
+		border: 4.375rem solid #445feb;
+	}
+}
+
+.payment-back-button {
+	display: block;
+	width: 15.5%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	text-align: center;
+	color: #445feb;
+	background-color: $white;
+	border: 0.075rem solid #445feb;
+	border-radius: 0.4rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+	margin-top: 1.563rem;
+	margin-bottom: 0 auto;
+}
+
+@media only screen and (max-width: 60rem) {
+	body {
+		padding: 3rem;
+	}
+
+	.grid {
+		grid-gap: 3rem;
+	}
+}
+
+.payment-done-button {
+	display: block;
+	width: 15.5%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	text-align: center;
+	color: $white;
+	background-color: #445feb;
+	border: 0.075rem solid #445feb;
+	border-radius: 0.4rem;
+	transition: 0.2s;
+	cursor: pointer;
+	letter-spacing: 0.1rem;
+	margin-top: 1.563rem;
+	margin-bottom: 0 auto;
+}
+
+@media only screen and (max-width: 60em) {
+	body {
+		padding: 3rem;
+	}
+
+	.grid {
+		grid-gap: 3rem;
+	}
+}
+
+.center-payment {
+	position: absolute;
+	top: 88%;
+	left: 60%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	@media only screen and (max-width: 60rem) {
+		body {
+			padding: 3rem;
+		}
+
+		.grid {
+			grid-gap: 3rem;
+		}
+	}
+}
+
+.center-payment-back {
+	margin: 10;
+	position: absolute;
+	top: 88%;
+	left: 40%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.credit-card-box-line {
+	display: block;
+	margin: 0 -1.25rem;
+	margin-top: 1.25rem;
+	margin-bottom: 0.625rem;
+	overflow: hidden;
+	border-style: inset;
+	border-width: 0.063rem;
+}
+
+.top-card {
+	overflow: hidden;
+	justify-content: space-around;
+	white-space: nowrap;
+	display: inline;
+}
+
+.credit-card-Img {
+	margin-right: 100%;
+	margin-left: 0;
+	max-width: 3.125rem;
+	max-height: 3.125rem;
+	display: inline-block;
+	margin-bottom: 0.625rem;
+	margin-top: 0.063rem;
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		max-width: 3.125rem;
+		max-height: 3.125rem;
+	}
+	@media only screen and (max-device-width: 30rem) {
+
+		/* styles for mobile browsers smaller than 480px; (iPhone) */
+		max-width: 1.563rem;
+		max-height: 1.563rem;
+	}
+	@media only screen and (device-width: 48rem) {
+
+		/* default iPad screens */
+		max-width: 0.781rem;
+		max-height: 0.781rem;
+	}
+}
+
+.heading-card {
+	margin-left: 0.625rem;
+	font-size: 1.25rem;
+	max-width: 10%;
+	max-height: 10%;
+	display: inline-block;
+	margin-top: 0.019rem;
+
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		font-size: 0.938rem;
+	}
+	@media only screen and (max-device-width: 30rem) {
+
+		/* styles for mobile browsers smaller than 480px; (iPhone) */
+		font-size: 0.625rem;
+	}
+	@media only screen and (device-width: 48rem) {
+
+		/* default iPad screens */
+		font-size: 0.313rem;
+	}
+}
+
+.creditcardsImg {
+	display: inline-block;
+
+	@media only screen and (max-device-width: 30rem) {
+
+		/* styles for mobile browsers smaller than 480px; (iPhone) */
+	}
+	@media only screen and (device-width: 48rem) {
+
+		/* default iPad screens */
+	}
+}
+
+.headinginfo {
+	float: left;
+	margin-top: 0.313rem;
+	margin-bottom: 0.313rem;
+}
+
+.Thank-you-box {
+	background-color: #445feb;
+	height: 21.313rem;
+	display: inline-block;
+	text-align: center;
+}
+
+.img-container {
+	width: 6.25rem;
+	display: inline-block;
+}
+
+.beggarimage {
+	width: 42%;
+	height: 21.313rem;
+}
+
+.thank-you-msg {
+	color: white;
+	text-shadow: 0.125rem 0.125rem 0.313rem black;
+	margin-top: 15%;
+	margin-left: 10%;
+	font-weight: bold;
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		line-height: 100%;
+		margin-right: 10%;
+		size: 10%;
+	}
+}
+
+.spacingthankyou {
+	font-weight: bold;
+	line-height: 50%;
+	margin-right: 17%;
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		size: 10%;
+		line-height: 100%;
+		margin-right: 10%;
+	}
+	@media only screen and (max-device-width: 30rem) {
+
+		/* styles for mobile browsers smaller than 480px; (iPhone) */
+		size: 10%;
+		line-height: 100%;
+	}
+	@media only screen and (device-width: 48rem) {
+
+		/* default iPad screens */
+		size: 10%;
+		line-height: 100%;
+	}
+}
+
+.Thank-you-box {
+	background-color: #445feb;
+	height: 21.313rem;
+	display: inline-block;
+	text-align: left;
+}
+
+.bearded-beggarimg {
+	display: flex;
+	flex-direction: row;
+	padding-left: 40%;
+	height: 0.625rem;
+}
+
+.beardimage {
+	width: 28.938rem;
+	height: 21.25rem;
+}
+
+.topping {
+	margin-top: 10%;
+}
+
+.intro-msg {
+	color: white;
+	text-shadow: 0.125rem 0.125rem 0.313rem black;
+	font-weight: bold;
+
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		line-height: 100%;
+		margin-right: 10%;
+		size: 10%;
+	}
+}
+
+.intro-msg2 {
+	color: white;
+	text-shadow: 0.125rem 0.125rem 0.125rem black;
+	font-weight: light;
+	font-size: 1.75rem;
+	@media only screen and (min-width: 125rem) {
+
+		/* for sumo sized (mac) screens */
+		line-height: 100%;
+		margin-right: 10%;
+		size: 10%;
+	}
   font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;

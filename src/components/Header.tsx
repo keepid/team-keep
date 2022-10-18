@@ -97,11 +97,11 @@ class Header extends Component<{}, {}, {}> {
                 </Link>
               </li>
               <li className="nav-item my-1 mr-3 ml-2">
-                <a href="https://www.paypal.com/donate/?hosted_button_id=UZ3C7N5LSXQQC">
+                <Link className="nav-link" to="/selectamount">
                   <button type="submit" className="btn btn-secondary w-40 mr-2">
                     Donate
                   </button>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

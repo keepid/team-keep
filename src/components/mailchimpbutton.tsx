@@ -1,6 +1,8 @@
 import React, { Component, ReactElement } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import { withAlert } from 'react-alert';
+import ReCAPTCHA from 'react-google-recaptcha';
+import PropTypes from 'prop-types';
 import getServerURL from '../serverOverride';
 import { isValidEmail } from '../lib/Validations/Validations';
 import CustomFormButton from './mailChimpSubscribe/CustomFormButton';
@@ -8,6 +10,8 @@ import CustomFormButton from './mailChimpSubscribe/CustomFormButton';
 interface Props {
   alert: any;
 }
+
+const recaptchaRef: React.RefObject<ReCAPTCHA> = React.createRef();
 
 interface State {
   email: string;
@@ -42,9 +46,9 @@ class Mailchimpbutton extends Component<Props, State, {}> {
   validateEmail = async (): Promise<void> => {
     const { email } = this.state;
     if (isValidEmail(email)) {
-      await new Promise((resolve) => this.setState({ emailValidator: 'true' }, resolve));
+      await new Promise((resolve) => this.setState({ emailValidator: 'true' }));
     } else {
-      await new Promise((resolve) => this.setState({ emailValidator: 'false' }, resolve));
+      await new Promise((resolve) => this.setState({ emailValidator: 'false' }));
     }
   };
 
@@ -174,6 +178,7 @@ class Mailchimpbutton extends Component<Props, State, {}> {
           />
         </div>
       </div>
+
     );
   }
 }
