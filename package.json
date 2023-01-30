@@ -39,7 +39,7 @@
     "react-switch": "^5.0.1",
     "react-test-renderer": "^17.0.1",
     "switch": "0.0.0",
-    "typescript": "^3.9.7",
+    "typescript": "^4.9.4",
     "valid-url": "^1.0.9"
   },
   "devDependencies": {
