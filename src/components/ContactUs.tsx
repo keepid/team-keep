@@ -1,13 +1,13 @@
-import React, { Component, ReactElement } from 'react';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import { Helmet } from 'react-helmet';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { withAlert } from 'react-alert';
-import getServerURL from '../serverOverride';
-import { reCaptchaKey } from '../configVars';
-import { isValidEmail } from '../lib/Validations/Validations';
-import RectangleSVG from '../static/images/rectangle.svg';
-import CustomForm from './mailChimpSubscribe/CustomForm';
+import React, { Component, ReactElement } from "react";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+import { Helmet } from "react-helmet";
+import ReCAPTCHA from "react-google-recaptcha";
+import { withAlert } from "react-alert";
+import getServerURL from "../serverOverride";
+import { reCaptchaKey } from "../configVars";
+import { isValidEmail } from "../lib/Validations/Validations";
+import RectangleSVG from "../static/images/rectangle.svg";
+import CustomForm from "./mailChimpSubscribe/CustomForm";
 
 interface Props {
   alert: any;
@@ -31,19 +31,33 @@ interface State {
 const recaptchaRef: React.RefObject<ReCAPTCHA> = React.createRef();
 
 class ContactUs extends Component<Props, State, {}> {
+  state: {
+    name: string;
+    nonprofit: string;
+    description: string;
+    email: string;
+    buttonState: string;
+    nameValidator: string;
+    nonprofitValidator: string;
+    emailValidator: string;
+    descriptionValidator: string;
+    recaptchaPayload: string;
+    checked: boolean;
+    submitButtonListener: boolean;
+  };
   constructor(props: Props) {
     super(props);
     this.state = {
-      name: '',
-      nonprofit: '',
-      description: '',
-      email: '',
-      buttonState: '',
-      nameValidator: '',
-      nonprofitValidator: '',
-      emailValidator: '',
-      descriptionValidator: '',
-      recaptchaPayload: '',
+      name: "",
+      nonprofit: "",
+      description: "",
+      email: "",
+      buttonState: "",
+      nameValidator: "",
+      nonprofitValidator: "",
+      emailValidator: "",
+      descriptionValidator: "",
+      recaptchaPayload: "",
       checked: false,
       submitButtonListener: false,
     };
@@ -55,16 +69,16 @@ class ContactUs extends Component<Props, State, {}> {
 
   clearInput = (): void => {
     this.setState({
-      name: '',
-      nonprofit: '',
-      description: '',
-      email: '',
-      buttonState: '',
-      nameValidator: '',
-      nonprofitValidator: '',
-      emailValidator: '',
-      descriptionValidator: '',
-      recaptchaPayload: '',
+      name: "",
+      nonprofit: "",
+      description: "",
+      email: "",
+      buttonState: "",
+      nameValidator: "",
+      nonprofitValidator: "",
+      emailValidator: "",
+      descriptionValidator: "",
+      recaptchaPayload: "",
     });
     this.resetRecaptcha();
   };
@@ -73,24 +87,28 @@ class ContactUs extends Component<Props, State, {}> {
     if (recaptchaRef !== null && recaptchaRef.current !== null) {
       recaptchaRef.current.reset();
     }
-    this.setState({ recaptchaPayload: '' });
+    this.setState({ recaptchaPayload: "" });
   };
 
   validateEmail = async (): Promise<void> => {
     const { email } = this.state;
     if (isValidEmail(email)) {
-      await new Promise((resolve) => this.setState({ emailValidator: 'true' }, resolve));
+      await new Promise((resolve) =>
+        this.setState({ emailValidator: "true" }, resolve)
+      );
     } else {
-      await new Promise((resolve) => this.setState({ emailValidator: 'false' }, resolve));
+      await new Promise((resolve) =>
+        this.setState({ emailValidator: "false" }, resolve)
+      );
     }
   };
 
   emailMessage = (): ReactElement<{}> => {
     const { emailValidator } = this.state;
-    if (emailValidator === 'true') {
+    if (emailValidator === "true") {
       return <div className="valid-feedback" />;
     }
-    if (emailValidator === 'false') {
+    if (emailValidator === "false") {
       return (
         <div className="invalid-feedback text-left">
           Please enter a valid email address
@@ -103,29 +121,38 @@ class ContactUs extends Component<Props, State, {}> {
   validateName = async (): Promise<void> => {
     const { name, checked } = this.state;
     if (checked === true) {
-      const firstName = name.substr(0, name.indexOf(' '));
-      const lastName = name.substr(name.indexOf(' ') + 1).trim();
+      const firstName = name.substr(0, name.indexOf(" "));
+      const lastName = name.substr(name.indexOf(" ") + 1).trim();
       if (firstName && lastName) {
-        await new Promise((resolve) => this.setState({ nameValidator: 'true' }, resolve));
+        await new Promise((resolve) =>
+          this.setState({ nameValidator: "true" }, resolve)
+        );
       } else {
-        await new Promise((resolve) => this.setState({ nameValidator: 'false' }, resolve));
+        await new Promise((resolve) =>
+          this.setState({ nameValidator: "false" }, resolve)
+        );
       }
-    } else if (name !== '') {
-      await new Promise((resolve) => this.setState({ nameValidator: 'true' }, resolve));
+    } else if (name !== "") {
+      await new Promise((resolve) =>
+        this.setState({ nameValidator: "true" }, resolve)
+      );
     } else {
-      await new Promise((resolve) => this.setState({ nameValidator: 'false' }, resolve));
+      await new Promise((resolve) =>
+        this.setState({ nameValidator: "false" }, resolve)
+      );
     }
   };
 
   nameMessage = (): ReactElement<{}> => {
     const { nameValidator } = this.state;
-    if (nameValidator === 'true') {
+    if (nameValidator === "true") {
       return <div className="valid-feedback" />;
     }
-    if (nameValidator === 'false') {
+    if (nameValidator === "false") {
       return (
         <div className="invalid-feedback text-left">
-          Please enter a valid name. Include first and last if subscribing to our newsletter.
+          Please enter a valid name. Include first and last if subscribing to
+          our newsletter.
         </div>
       );
     }
@@ -133,15 +160,17 @@ class ContactUs extends Component<Props, State, {}> {
   };
 
   validateNonprofit = async (): Promise<void> => {
-    await new Promise((resolve) => this.setState({ nonprofitValidator: 'true' }, resolve));
+    await new Promise((resolve) =>
+      this.setState({ nonprofitValidator: "true" }, resolve)
+    );
   };
 
   nonprofitMessage = (): ReactElement<{}> => {
     const { nonprofitValidator } = this.state;
-    if (nonprofitValidator === 'true') {
+    if (nonprofitValidator === "true") {
       return <div className="valid-feedback"> </div>;
     }
-    if (nonprofitValidator === 'false') {
+    if (nonprofitValidator === "false") {
       return (
         <div className="invalid-feedback text-left">
           Please provide additional details.
@@ -152,15 +181,17 @@ class ContactUs extends Component<Props, State, {}> {
   };
 
   validateDescription = async (): Promise<void> => {
-    await new Promise((resolve) => this.setState({ descriptionValidator: 'true' }, resolve));
+    await new Promise((resolve) =>
+      this.setState({ descriptionValidator: "true" }, resolve)
+    );
   };
 
   descriptionMessage = (): ReactElement<{}> => {
     const { descriptionValidator } = this.state;
-    if (descriptionValidator === 'true') {
+    if (descriptionValidator === "true") {
       return <div className="valid-feedback"> </div>;
     }
-    if (descriptionValidator === 'false') {
+    if (descriptionValidator === "false") {
       return (
         <div className="invalid-feedback text-left">
           Please provide additional details.
@@ -171,19 +202,19 @@ class ContactUs extends Component<Props, State, {}> {
   };
 
   colorToggle = (inputString: string): string => {
-    if (inputString === 'true') {
-      return 'is-valid';
+    if (inputString === "true") {
+      return "is-valid";
     }
-    if (inputString === 'false') {
-      return 'is-invalid';
+    if (inputString === "false") {
+      return "is-invalid";
     }
-    return '';
+    return "";
   };
 
   handleSubmitWithRecaptcha = async (event: any) => {
     event.preventDefault();
 
-    this.setState({ buttonState: 'running' });
+    this.setState({ buttonState: "running" });
     const { alert } = this.props;
     await Promise.all([
       this.validateEmail(),
@@ -203,18 +234,20 @@ class ContactUs extends Component<Props, State, {}> {
     } = this.state;
     let { description, recaptchaPayload } = this.state;
     // if user wanted to subscribe to email list
-    if (checked && nameValidator === 'true') {
-      this.setState((prevState) => ({ submitButtonListener: !prevState.submitButtonListener }));
+    if (checked && nameValidator === "true") {
+      this.setState((prevState) => ({
+        submitButtonListener: !prevState.submitButtonListener,
+      }));
     }
     if (
-      emailValidator !== 'true'
-      || nameValidator !== 'true'
-      || nonprofitValidator !== 'true'
-      || descriptionValidator !== 'true'
+      emailValidator !== "true" ||
+      nameValidator !== "true" ||
+      nonprofitValidator !== "true" ||
+      descriptionValidator !== "true"
     ) {
-      alert.show('Please fill out all fields correctly.');
+      alert.show("Please fill out all fields correctly.");
       this.resetRecaptcha();
-      this.setState({ buttonState: '' });
+      this.setState({ buttonState: "" });
       return;
     }
     if (recaptchaRef !== null && recaptchaRef.current !== null) {
@@ -222,11 +255,11 @@ class ContactUs extends Component<Props, State, {}> {
       this.setState({ recaptchaPayload });
     } else return;
     const title = `${name} - ${nonprofit}`;
-    if (description.trim() === '') {
-      description = 'blank note';
+    if (description.trim() === "") {
+      description = "blank note";
     }
     fetch(`${getServerURL()}/submit-issue`, {
-      method: 'POST',
+      method: "POST",
       body: JSON.stringify({
         email,
         title,
@@ -237,20 +270,20 @@ class ContactUs extends Component<Props, State, {}> {
       .then((response) => response.json())
       .then((responseJSON) => {
         const { status } = responseJSON;
-        if (status === 'SUCCESS') {
+        if (status === "SUCCESS") {
           alert.show(
-            'Thank you for your interest! We will get back to you promptly.',
+            "Thank you for your interest! We will get back to you promptly."
           );
           this.clearInput();
         } else {
-          alert.show('Failed to submit. Please fill out all fields correctly.');
-          this.setState({ buttonState: '' });
+          alert.show("Failed to submit. Please fill out all fields correctly.");
+          this.setState({ buttonState: "" });
           this.resetRecaptcha();
         }
       })
       .catch(() => {
-        alert.show('Failed to submit. Please try again.');
-        this.setState({ buttonState: '' });
+        alert.show("Failed to submit. Please try again.");
+        this.setState({ buttonState: "" });
         this.resetRecaptcha();
       });
   };
@@ -285,7 +318,8 @@ class ContactUs extends Component<Props, State, {}> {
       checked,
       submitButtonListener,
     } = this.state;
-    const url = 'https://keep.us7.list-manage.com/subscribe/post?u=9896e51b9ee0605d5e6745f82&amp;id=f16b440eb5';
+    const url =
+      "https://keep.us7.list-manage.com/subscribe/post?u=9896e51b9ee0605d5e6745f82&amp;id=f16b440eb5";
     return (
       <div>
         <Helmet>
@@ -323,7 +357,11 @@ class ContactUs extends Component<Props, State, {}> {
                 </p>
                 {/* onSubmit={this.handleSubmitWithRecaptcha} */}
                 <form>
-                  <input type="hidden" name="u" value="9896e51b9ee0605d5e6745f82" />
+                  <input
+                    type="hidden"
+                    name="u"
+                    value="9896e51b9ee0605d5e6745f82"
+                  />
                   <input type="hidden" name="id" value="f16b440eb5" />
                   <input type="hidden" name="c" value="?" />
                   <div className="form-row form-group d-flex align-content-start pb-3">
@@ -335,7 +373,7 @@ class ContactUs extends Component<Props, State, {}> {
                       <input
                         type="text"
                         className={`w-100 form-control form-purple ${this.colorToggle(
-                          nameValidator,
+                          nameValidator
                         )}`}
                         id="name"
                         placeholder="Your name"
@@ -356,7 +394,7 @@ class ContactUs extends Component<Props, State, {}> {
                       <input
                         type="text"
                         className={`w-100 form-control form-purple ${this.colorToggle(
-                          nonprofitValidator,
+                          nonprofitValidator
                         )}`}
                         id="nonprofit"
                         placeholder="Nonprofit name"
@@ -376,7 +414,7 @@ class ContactUs extends Component<Props, State, {}> {
                       <input
                         type="email"
                         className={`w-100 form-control form-purple ${this.colorToggle(
-                          emailValidator,
+                          emailValidator
                         )}`}
                         id="email"
                         placeholder="Enter your email"
@@ -389,8 +427,19 @@ class ContactUs extends Component<Props, State, {}> {
                     </label>
                   </div>
                   <div className="form-row form-group d-flex align-content-start pb-3 form-check">
-                    <label htmlFor="emailSubscribe" className="font-weight-bold form-check-label">
-                      <input id="emailSubscribe" type="checkbox" className="form-check-input" name="subscribe" onChange={(e) => { this.setState({ checked: e.target.checked }); }} />
+                    <label
+                      htmlFor="emailSubscribe"
+                      className="font-weight-bold form-check-label"
+                    >
+                      <input
+                        id="emailSubscribe"
+                        type="checkbox"
+                        className="form-check-input"
+                        name="subscribe"
+                        onChange={(e) => {
+                          this.setState({ checked: e.target.checked });
+                        }}
+                      />
                       Subscribe to our newsletter
                     </label>
                   </div>
@@ -402,7 +451,7 @@ class ContactUs extends Component<Props, State, {}> {
                       Send us a note
                       <textarea
                         className={`w-100 form-control form-purple text-area-custom ${this.colorToggle(
-                          descriptionValidator,
+                          descriptionValidator
                         )}`}
                         id="description"
                         placeholder="If you would like to tell us a bit about yourself"
@@ -417,14 +466,11 @@ class ContactUs extends Component<Props, State, {}> {
                     <div className="d-flex text-center">
                       <span className="text-muted recaptcha-login-text">
                         This page is protected by reCAPTCHA, and subject to the
-                        Google
-                        {' '}
+                        Google{" "}
                         <a href="https://www.google.com/policies/privacy/">
-                          Privacy Policy
-                          {' '}
+                          Privacy Policy{" "}
                         </a>
-                        and
-                        {' '}
+                        and{" "}
                         <a href="https://www.google.com/policies/terms/">
                           Terms of Service
                         </a>
