@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
-import { withAlert } from 'react-alert';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Helmet } from "react-helmet";
+import { withAlert } from "react-alert";
+import { Link } from "react-router-dom";
 // import ReCAPTCHA from 'react-google-recaptcha';
 // import getServerURL from '../serverOverride';
 // import { reCaptchaKey } from '../configVars';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 // image imports
-import HeroImage from '../static/images/personalData.svg';
-import RectangleSVG from '../static/images/rectangle.svg';
-import ArrowDown from '../static/images/arrow-down.svg';
-import HomeImg1 from '../static/images/homeImg1.png';
-import HomeImg2 from '../static/images/homeImg2.png';
-import Partners from '../static/images/partners.png';
-import StoryImg1 from '../static/images/story1.png';
-import StoryImg2 from '../static/images/story2.png';
-import StoryImg3 from '../static/images/story3.png';
-import AnnualReport2021 from '../static/images/2021AnnualReport.pdf';
-import AnnualReport2020 from '../static/images/2020AnnualReport.pdf';
-import fireworks from '../static/images/fireworks.svg';
-import statementOfSolidarity from '../static/images/Team Keep AAPI Solidarity Statement.pdf';
+import HeroImage from "../static/images/personalData.svg";
+import RectangleSVG from "../static/images/rectangle.svg";
+import ArrowDown from "../static/images/arrow-down.svg";
+import HomeImg1 from "../static/images/homeImg1.png";
+import HomeImg2 from "../static/images/homeImg2.png";
+import Partners from "../static/images/partners.png";
+import StoryImg1 from "../static/images/story1.png";
+import StoryImg2 from "../static/images/story2.png";
+import StoryImg3 from "../static/images/story3.png";
+import AnnualReport2021 from "../static/images/2021AnnualReport.pdf";
+import AnnualReport2020 from "../static/images/2020AnnualReport.pdf";
+import fireworks from "../static/images/fireworks.svg";
+import statementOfSolidarity from "../static/images/Team Keep AAPI Solidarity Statement.pdf";
 
 const iconSize = 20;
 class Home extends Component<{}, {}> {
@@ -157,8 +157,8 @@ class Home extends Component<{}, {}> {
                         We use technology to empower a vulnerable population.
                       </h3>
                       <p className="home-container-text">
-                        We build long-term partnerships with homeless services and
-                        bring them on to our cloud platform, Keep.id.
+                        We build long-term partnerships with homeless services
+                        and bring them on to our cloud platform, Keep.id.
                       </p>
                       <p className="home-container-text">
                         Keep.id assists individuals experiencing homelessness in
@@ -212,20 +212,58 @@ class Home extends Component<{}, {}> {
               <div className="row viewport-height-100 custom-vertical-center">
                 <div className="col-md-12 text-center">
                   <div>
-                    <img src={fireworks} height="90" width="100" className="float-left" alt="confetti" />
-                    <img src={fireworks} height="90" width="100" className="float-right" alt="confetti" />
+                    <img
+                      src={fireworks}
+                      height="90"
+                      width="100"
+                      className="float-left"
+                      alt="confetti"
+                    />
+                    <img
+                      src={fireworks}
+                      height="90"
+                      width="100"
+                      className="float-right"
+                      alt="confetti"
+                    />
                     <h3 className="hero-header text-light-grey pb-3">
                       Our Annual Reports
                     </h3>
                     <div className="row">
                       <div className="mx-auto">
-                        <a href={AnnualReport2021}>
-                          <button type="button" className="btn btn-lg btn-primary mx-3 mb-3">
+                        <a
+                          href="https://www.canva.com/design/DAFUy5hOxIY/fDmczXWlTtWtKgekVSHuig/view?utm_content=DAFUy5hOxIY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          <button
+                            type="button"
+                            className="btn btn-lg btn-primary mx-3 mb-3"
+                          >
+                            2022 Annual Report
+                          </button>
+                        </a>
+                        <a
+                          href={AnnualReport2021}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          <button
+                            type="button"
+                            className="btn btn-lg btn-primary mx-3 mb-3"
+                          >
                             2021 Annual Report
                           </button>
                         </a>
-                        <a href={AnnualReport2020}>
-                          <button type="button" className="btn btn-lg btn-primary mx-3 mb-3">
+                        <a
+                          href={AnnualReport2020}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          <button
+                            type="button"
+                            className="btn btn-lg btn-primary mx-3 mb-3"
+                          >
                             2020 Annual Report
                           </button>
                         </a>
